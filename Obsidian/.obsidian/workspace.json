@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "37a03581d7bb23e6",
+        "id": "d9f524715d4c8763",
         "type": "tabs",
         "children": [
           {
-            "id": "072123f7f87b7853",
+            "id": "926f31c3020c9f0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -136,9 +136,17 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "db15642cef95d071",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -156,7 +164,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "072123f7f87b7853",
+  "active": "926f31c3020c9f0f",
   "lastOpenFiles": [
     "1.Daily/2024-01-02.md",
     "Notes/Plug-in.md",
