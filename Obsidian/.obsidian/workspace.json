@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "c1a9d6c7fe40fd25",
+    "type": "split",
+    "children": [
+      {
+        "id": "37a03581d7bb23e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "072123f7f87b7853",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Plug-in.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "193edfd2c430783e",
+    "type": "split",
+    "children": [
+      {
+        "id": "b073cbd0f72d7ccc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "837145ae825b8a1e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7f7b652e7f5f872f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5bf0e49f20dc9487",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0f8fe5afc0c615da",
+    "type": "split",
+    "children": [
+      {
+        "id": "ef5497272a890927",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33c58be7f6abee7d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Notes/Plug-in.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c91530c8601474e8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Notes/Plug-in.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7198b84824d303dc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fc7f1c92b673c5fe",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Notes/Plug-in.md"
+              }
+            }
+          },
+          {
+            "id": "84cb11047b7edfd3",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "periodic-notes:Open today": false
+    }
+  },
+  "active": "072123f7f87b7853",
+  "lastOpenFiles": [
+    "1.Daily/2024-01-02.md",
+    "Notes/Plug-in.md",
+    "Notes/Obsidian Setting.md",
+    "Attatched/Pasted image 20240102145852.png",
+    "Attatched/Pasted image 20240102145028.png",
+    "Attatched",
+    "Notes",
+    "4.Yearly",
+    "3.Monthly",
+    "2.Weekly",
+    "1.Daily",
+    "무제 파일.md",
+    "Pasted image 20240102144835.png",
+    "2024-01-02.md",
+    "Pasted image 20240102144136.png",
+    "banner.png",
+    "banner.png.crdownload",
+    "무제 파일 1.md"
+  ]
+}
