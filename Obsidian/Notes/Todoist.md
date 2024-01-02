@@ -1,4 +1,4 @@
-## Eiisenhower Matrix
+## Eisenhower Matrix
 ![[Pasted image 20240102180056.png]]
 - 업무의 우선 순위를 결정하기 위한 도구
 - 중요성과 긴급성을 고려하여 업무를 분류하고 처리 순서를 결정
