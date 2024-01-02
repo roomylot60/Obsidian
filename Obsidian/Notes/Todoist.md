@@ -13,4 +13,4 @@
 ## Todoist
 - Schelduler + Reminder
 - **Google Calender** 와 동기화 가능(1계정 만)
-- 
+- 추후 **Obsidian**과 동기화 시도 예정
