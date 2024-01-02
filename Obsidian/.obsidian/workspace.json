@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e776702195956dff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Todoist.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Plug-in.md",
+                "file": "Notes/Todoist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Plug-in.md",
+                "file": "Notes/Todoist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Plug-in.md"
+                "file": "Notes/Todoist.md"
               }
             }
           },
@@ -164,10 +177,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "926f31c3020c9f0f",
+  "active": "e776702195956dff",
   "lastOpenFiles": [
-    "1.Daily/2024-01-02.md",
+    "Attatched/Pasted image 20240102180056.png",
     "Notes/Plug-in.md",
+    "Notes/Todoist.md",
+    "1.Daily/2024-01-02.md",
     "Notes/Obsidian Setting.md",
     "Attatched/Pasted image 20240102145852.png",
     "Attatched/Pasted image 20240102145028.png",
