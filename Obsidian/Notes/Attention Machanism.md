@@ -21,4 +21,4 @@ V = Values # 모든 시점의 encoder cell의 hidden states
 - Attention Distribution : e^{t}에 softmax를 적용하여 얻어낸 확률 분포(총 합은 1)
 - Attention Weight : Attention Distribution의 각각의 값![[../Attatched/Pasted image 20240103144125.png]]
 - Attention Value : 각 encoder의 hidden state, attention weight의 곱들을 합한 Weighted Sum; Context Vector![[../Attatched/Pasted image 20240103144422.png]]
-- 
+- Concatenate Vector : Attention Function의 결과로 얻은 Attention Value; `a_{t}`와 decoder의 hidden state; `s_{t}`를 concatenate(결합)하여 얻은 벡터
