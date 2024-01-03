@@ -17,3 +17,6 @@ V = Values # 모든 시점의 encoder cell의 hidden states
 
 ## Dot-Product Attention
 ![[../Attatched/Pasted image 20240103142716.png]]
+- Attention Score : 현재 decoder의 `t 시점`에서의 단어를 예측하기 위해 encoder의 모든 hidden state의 값(`h_{i}`)이 decoder의 현재 hidden state(`s_{t}`)와 얼마나 유사한지를 판단하는 값으로, s__{t}^{T}와 h_{i}의 dot product(내적) 결과로 모두 Scalar 값; `score(s_{t}, h_{i}) =  s__{t}^{T}h_{i}` ![[../Attatched/Pasted image 20240103143640.png]](e^{t}는 모든 score의 모음값)
+- Attention Distribution : e^{t}에 softmax를 적용하여 얻어낸 확률 분포(총 합은 1)
+- Attention Weight : Attention Distribution의 각각의 값
