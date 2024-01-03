@@ -3,5 +3,6 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "Notes",
   "promptDelete": false,
-  "newLinkFormat": "relative"
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true
 }
