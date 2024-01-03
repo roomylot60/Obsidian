@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "51dd56e8470e0371",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Attention Machanism.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Todoist.md",
+                "file": "Notes/Attention Machanism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Todoist.md",
+                "file": "Notes/Attention Machanism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Todoist.md"
+                "file": "Notes/Attention Machanism.md"
               }
             }
           },
@@ -177,11 +190,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e776702195956dff",
+  "active": "51dd56e8470e0371",
   "lastOpenFiles": [
+    "Attatched/Pasted image 20240103142716.png",
+    "Attatched/Pasted image 20240103142101.png",
+    "Notes/Todoist.md",
+    "Notes/Attention Machanism.md",
     "Attatched/Pasted image 20240102180056.png",
     "Notes/Plug-in.md",
-    "Notes/Todoist.md",
     "1.Daily/2024-01-02.md",
     "Notes/Obsidian Setting.md",
     "Attatched/Pasted image 20240102145852.png",
