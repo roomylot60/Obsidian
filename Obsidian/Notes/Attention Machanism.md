@@ -32,7 +32,7 @@ Q = Query # t-1 시점의 디코더 셀에서의 은닉 상태
 K = Keys # 모든 시점의 인코더 셀의 은닉 상태들
 V = Values # 모든 시점의 인코더 셀의 은닉 상태들
 ```
-1. Attention Score :  Decoder의 t 시점이 아닌, t-1 시점의 hidden state; s_{t-1}을 사용
-2. Attention Distribution
-3. Attention Value
-4. Context Vector를 통해 Decoder의 t 시점의 hidden state
+1. Attention Score :  Decoder의 t 시점이 아닌, **t-1 시점**의 hidden state; `s_{t-1}`을 사용하여 score를 출력![[../Attatched/Pasted image 20240103150221.png]]
+2. Attention Distribution : Score의 모음인 `e^{t}`에 softmax를 적용
+3. Attention Value : Attention Weight와 Encoder의 hidden state을 가중 합하여 Context vector를 출력
+4. Context Vector와 입력 단어의 embedding vector를 concatenate하고 입력으로 사용하여, Decoder의 t 시점의 hidden state; `s_{t}`를 출력
