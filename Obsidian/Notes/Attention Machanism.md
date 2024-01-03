@@ -22,4 +22,5 @@ V = Values # 모든 시점의 encoder cell의 hidden states
 - Attention Weight : Attention Distribution의 각각의 값![[../Attatched/Pasted image 20240103144125.png]]
 - Attention Value : 각 encoder의 hidden state, attention weight의 곱들을 합한 Weighted Sum; Context Vector![[../Attatched/Pasted image 20240103144422.png]]
 - Concatenate Vector : Attention Function의 결과로 얻은 Attention Value; `a_{t}`와 decoder의 hidden state; `s_{t}`를 concatenate(결합)하여 얻은 벡터![[../Attatched/Pasted image 20240103145013.png]]
+- 결합 벡터와 가중치 행렬의 곱을 hyperbolic tangent에 입력하여 얻은 값을 출력층의 입력으로 사용하여 예측 벡터를 출력![[../Attatched/Pasted image 20240103145252.png]]![[../Attatched/Pasted image 20240103145326.png]]
 - 
