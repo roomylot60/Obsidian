@@ -23,4 +23,16 @@ V = Values # 모든 시점의 encoder cell의 hidden states
 - Attention Value : 각 encoder의 hidden state, attention weight의 곱들을 합한 Weighted Sum; Context Vector![[../Attatched/Pasted image 20240103144422.png]]
 - Concatenate Vector : Attention Function의 결과로 얻은 Attention Value; `a_{t}`와 decoder의 hidden state; `s_{t}`를 concatenate(결합)하여 얻은 벡터![[../Attatched/Pasted image 20240103145013.png]]
 - 결합 벡터와 가중치 행렬의 곱을 hyperbolic tangent에 입력하여 얻은 값을 출력층의 입력으로 사용하여 예측 벡터를 출력![[../Attatched/Pasted image 20240103145252.png]]![[../Attatched/Pasted image 20240103145326.png]]
-- 
+---
+## Bahdanau Attention
+```python
+t # 어텐션 메커니즘이 수행되는 디코더 셀의 현재 시점을 의미.
+
+Q = Query # t-1 시점의 디코더 셀에서의 은닉 상태
+K = Keys # 모든 시점의 인코더 셀의 은닉 상태들
+V = Values # 모든 시점의 인코더 셀의 은닉 상태들
+```
+1. Attention Score :  Decoder의 t 시점이 아닌, t-1 시점의 hidden state; s_{t-1}을 사용
+2. Attention Distribution
+3. Attention Value
+4. Context Vector를 통해 Decoder의 t 시점의 hidden state
