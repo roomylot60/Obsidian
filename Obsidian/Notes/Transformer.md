@@ -75,7 +75,7 @@ V = Values # 모든 시점의 encoder cell의 hidden states = weight과 곱해�
 ```
 - Self-Attention : Q, K, V가 모두 입력 문장의 모든 단어 벡터들을 의미
 	- d_{model}의 차원을 갖는 단어 벡터들을 num_heads로 나눈 값을 Q, K, V의 벡터의 차원으로 결정
-- Scaled dot-product Attention
+- Scaled dot-product Attention : 내적만을 사용하는 Attention Function에 대해서 특정값 √n으로 나누어 scaling `score(q, k) = q · k / √n`
 - Multi-head Attention : Self Attention을 병렬적으로 사용
 - Padding Mask
 - Residual connection(잔차 연결)
