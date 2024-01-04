@@ -60,7 +60,7 @@ class PositionalEncoding(tf.keras.layers.Layer):
 ### Encoder-Decoder Attention
 ---
 ## Encoder
-### First sublayer
+### First sublayer : Self-Attention
 #### Self-Attention
 - Attention : Query에 대해서, Key와의 유사도를 mapping된 각각의 Value에 반영, Value의 가중합을 return
 ```python
@@ -176,6 +176,7 @@ class MultiHeadAttention(tf.keras.layers.Layer):
 
     return outputs
 ```
+### Second sublayer : FFNN
 - Residual connection(잔차 연결) : Sublayer의 입력과 출력을 합(같은 차원을 가지므로 가능)을 구하는 과정 [입력과 출력의 합과 모델의 학습 관련 논문](https://arxiv.org/pdf/1512.03385.pdf)
 - Layer Normalization(층 정규화) : Tensor의 마지막 차원; d_{model} 차원에 대해서 평균과 분산을 구하고, 이를 가지고 정규화하여 학습에 활용 [층 정규화 논문]( https://arxiv.org/pdf/1607.06450.pdf)
 #### Encoder layer code
@@ -210,8 +211,32 @@ def encoder_layer(dff, d_model, num_heads, dropout, name="encoder_layer"):
   return tf.keras.Model(
       inputs=[inputs, padding_mask], outputs=outputs, name=name)
 ```
-### Second sublayer : FFNN
 ---
+### Encoder Code
+```python
+def encoder(vocab_size, num_layers, dff,
+            d_model, num_heads, dropout,
+            name="encoder"):
+  inputs = tf.keras.Input(shape=(None,), name="inputs")
+
+  # 인코더는 패딩 마스크 사용
+  padding_mask = tf.keras.Input(shape=(1, 1, None), name="padding_mask")
+
+  # 포지셔널 인코딩 + 드롭아웃
+  embeddings = tf.keras.layers.Embedding(vocab_size, d_model)(inputs)
+  embeddings *= tf.math.sqrt(tf.cast(d_model, tf.float32))
+  embeddings = PositionalEncoding(vocab_size, d_model)(embeddings)
+  outputs = tf.keras.layers.Dropout(rate=dropout)(embeddings)
+
+  # 인코더를 num_layers개 쌓기
+  for i in range(num_layers):
+    outputs = encoder_layer(dff=dff, d_model=d_model, num_heads=num_heads,
+        dropout=dropout, name="encoder_layer_{}".format(i),
+    )([outputs, padding_mask])
+
+  return tf.keras.Model(
+      inputs=[inputs, padding_mask], outputs=outputs, name=name)
+```
 ## Decoder
 ### First sublayer
 - Self-Attention
