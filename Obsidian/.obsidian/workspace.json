@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Attention Machanism.md",
+                "file": "Notes/Transformer.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Attention Machanism.md",
+                "file": "Notes/Transformer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Attention Machanism.md",
+                "file": "Notes/Transformer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Attention Machanism.md"
+                "file": "Notes/Transformer.md"
               }
             }
           },
@@ -166,8 +166,8 @@
   },
   "active": "7aaadf358476f0b6",
   "lastOpenFiles": [
-    "Notes/Transformer.md",
     "Notes/Attention Machanism.md",
+    "Notes/Transformer.md",
     "Attatched/Pasted image 20240103142101.png",
     "1.Daily/2024-01-04.md",
     "Notes/2024-01-04.md",
