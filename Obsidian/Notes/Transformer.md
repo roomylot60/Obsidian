@@ -63,16 +63,23 @@ class PositionalEncoding(tf.keras.layers.Layer):
 ### Encoder Self-Attention
 ### Masked Decoder Self-Attention
 ### Encoder-Decoder Attention
-
+---
 ## Encoder
-### Self-Attention
-- Q, K, V
+### First sublayer
+#### Self-Attention
+- Query에 대해서, Key와의 유사도를 mapping된 각각의 Value에 반영, Value의 가중합을 return
 - Scaled dot-product Attention
-- Multi-head Attention
+- Multi-head Attention : Self Attention을 병렬적으로 사용
 - Padding Mask
 - Residual connection(잔차 연결)
 - Layer Normalization(층 정규화)
+### Second sublayer : FFNN
+---
 ## Decoder
-### Self Attention
-### Look-ahead Mask
+### First sublayer
+- Self-Attention
+- Look-ahead Mask
+### Second sublayer
+- Encoder-Decoder Attention
+---
 ## Position-wise FFNN
