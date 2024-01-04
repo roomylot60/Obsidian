@@ -16,7 +16,7 @@
 3. num_heads : Transformer에서 Attention을 사용할 때 분할 및 병렬 수행, 결과값을 통합하는 방식을 사용하는데, 이 때의 병렬 수
 4. d_{ff} : Transformer 내부에 존재하는 Feed Forward Neural Network의 크기(이 때의 FFNN의 입출력층의 크기는 d_{model})
 
-## Code
+## PE Code
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
