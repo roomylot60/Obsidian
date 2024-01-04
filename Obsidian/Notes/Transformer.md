@@ -5,7 +5,7 @@
 	- transformer : Encoder, Decoder 단위(Layer)가 N 개로 구성되는 구조
 - RNN을 사용하지 않았음에도 성능적인 우수성
 	- Positional information : RNN은 단어의 위치에 따라 단어를 순차적(Sequential) 처리를 하여 단어의 위치 정보를 보유
-	- Positional Encoding : Transformer는 단어의 위치 정보(sin, cos)를 각 단어의 Embedding vector에 더하여 Model의 입력으로 사용![](../Attatched/Pasted%20image%2020240104161019.png)
+	- Positional Encoding : Transformer는 단어의 위치 정보(sin, cos)를 각 단어의 Embedding vector에 더하여 Model의 입력으로 사용![](../Attatched/Pasted%20image%2020240104161019.png)![](../Attatched/Pasted%20image%2020240104162143.png)
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
