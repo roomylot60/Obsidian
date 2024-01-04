@@ -73,7 +73,8 @@ Q = Query # t 시점의 decoder cell에서의 hidden state = t 시점의 encoder
 K = Keys # 모든 시점의 encoder cell의 hidden states = dot product의 대상이 되는 set
 V = Values # 모든 시점의 encoder cell의 hidden states = weight과 곱해지는 vector의 set
 ```
-- Self-Attention : Q, K, V가 모두 
+- Self-Attention : Q, K, V가 모두 입력 문장의 모든 단어 벡터들을 의미
+	- d_{model}의 차원을 갖는 단어 벡터들을 num_heads로 나눈 값을 Q, K, V의 벡터의 차원으로 결정
 - Scaled dot-product Attention
 - Multi-head Attention : Self Attention을 병렬적으로 사용
 - Padding Mask
