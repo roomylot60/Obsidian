@@ -71,6 +71,8 @@ V = Values # 모든 시점의 encoder cell의 hidden states = weight과 곱해�
 - Self-Attention : Q, K, V가 모두 입력 문장의 모든 단어 벡터들을 의미
 	- d_{model}의 차원을 갖는 단어 벡터들을 num_heads로 나눈 값을 Q, K, V의 벡터의 차원으로 결정
 - Scaled dot-product Attention : 내적만을 사용하는 Attention Function에 대해서 특정값 √n으로 나누어 scaling 하여 각 벡터의 모음; 행렬에 대해 연산하여 일괄 계산`score(q, k) = q · k / √n (n = d_{model} / num_heads = 각 Q, K, V의 차원값 d_{k})`![scaled dot-product attention with image](../Attatched/Pasted%20image%2020240104175031.png)![equation of SDA](../Attatched/Pasted%20image%2020240104175125.png)
+	- Padding Mask : Scaled dot-product attention에서 `<PAD>` token은 실질적인 의미를 갖지 않는 단어이므로, 이를 제외하기 위해 매우 작은 음수를 넣어 유사도에 반영되는 것을 막는 연산
+
 ```python
 def scaled_dot_product_attention(query, key, value, mask):
   # query 크기 : (batch_size, num_heads, query의 문장 길이, d_model/num_heads)
@@ -101,8 +103,6 @@ def scaled_dot_product_attention(query, key, value, mask):
   return output, attention_weights
 
 ```
-<br>	
-	- Padding Mask : Scaled dot-product attention에서 `<PAD>` token은 실질적인 의미를 갖지 않는 단어이므로, 이를 제외하기 위해 매우 작은 음수를 넣어 유사도에 반영되는 것을 막는 연산
 - Multi-head Attention : Self Attention을 병렬적으로 사용하여 각각의 Attention head가 갖는 ![가중치 행렬](../Attatched/Pasted%20image%2020240104180009.png)이 다르게 설정; 여러 시점으로 정보를 수집하여 sequence를 구성하는 단어들간의 연관도를 측정<br>![각 헤드에 따른 attention score](../Attatched/Pasted%20image%2020240104180133.png)
 ```python
 # Multi-head Attention Implementation
@@ -176,8 +176,9 @@ class MultiHeadAttention(tf.keras.layers.Layer):
 
     return outputs
 ```
-- Residual connection(잔차 연결)
-- Layer Normalization(층 정규화)
+- Residual connection(잔차 연결) : Sublayer의 입력과 출력을 합(같은 차원을 가지므로 가능)을 구하는 과정 [입력과 출력의 합과 모델의 학습 관련 논문](https://arxiv.org/pdf/1512.03385.pdf)
+- Layer Normalization(층 정규화) : Tensor의 마지막 차원; d_{model} 차원에 대해서 평균과 분산을 구하고, 이를 가지고 정규화하여 학습에 활용 [층 정규화 논문]( https://arxiv.org/pdf/1607.06450.pdf)
+#### Encoder code
 ### Second sublayer : FFNN
 ---
 ## Decoder
@@ -188,6 +189,6 @@ class MultiHeadAttention(tf.keras.layers.Layer):
 - Encoder-Decoder Attention
 ---
 ## Position-wise FFNN
-
+- Encoder, Decoder에서 공통적으로 가지고 있는 FFNN형태의 sublayer
 ## Ref. Chatbot Code
 [Transformer_Korean_Chatbot](../Attatched/Transformer_Korean_Chatbot.ipynb)
