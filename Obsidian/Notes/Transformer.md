@@ -101,6 +101,8 @@ def scaled_dot_product_attention(query, key, value, mask):
   return output, attention_weights
 
 ```
+<br>	
+	- Padding Mask : Scaled dot-product attention에서 `<PAD>` token은 실질적인 의미를 갖지 않는 단어이므로, 이를 제외하기 위해 매우 작은 음수를 넣어 유사도에 반영되는 것을 막는 연산
 - Multi-head Attention : Self Attention을 병렬적으로 사용하여 각각의 Attention head가 갖는 ![가중치 행렬](../Attatched/Pasted%20image%2020240104180009.png)이 다르게 설정; 여러 시점으로 정보를 수집하여 sequence를 구성하는 단어들간의 연관도를 측정<br>![각 헤드에 따른 attention score](../Attatched/Pasted%20image%2020240104180133.png)
 ```python
 # Multi-head Attention Implementation
@@ -174,7 +176,6 @@ class MultiHeadAttention(tf.keras.layers.Layer):
 
     return outputs
 ```
-- Padding Mask
 - Residual connection(잔차 연결)
 - Layer Normalization(층 정규화)
 ### Second sublayer : FFNN
