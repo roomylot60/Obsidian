@@ -9,7 +9,7 @@ Decoder에서 출력 단어를 예측하는 매 time step마다, Encoder에서 �
 
 ## Attention Function
 - **Key-Value** 자료형; Dictionary 자료형 : Key 값을 통해 mapping 된 value 값을 찾을 수 있음
-- Attention function : 주어진 Query에 대해서 모든 Key와의 유사도를 구해 Value에 반영하고, Value의 총 합(Attention value)을 return; `Attention(Q, K, V) = Attention Value`![Attention Value](../Attatched/Pasted%image%20240103142101.png)
+- Attention function : 주어진 Query에 대해서 모든 Key와의 유사도를 구해 Value에 반영하고, Value의 총 합(Attention value)을 return; `Attention(Q, K, V) = Attention Value`![Attention Value](../Attatched/Pasted%20image%2020240103142101.png)
 ```python
 Q = Query # t 시점의 decoder cell에서의 hidden state
 K = Keys # 모든 시점의 encoder cell의 hidden states

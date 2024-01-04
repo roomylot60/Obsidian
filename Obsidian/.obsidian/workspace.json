@@ -4,26 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d9f524715d4c8763",
+        "id": "a2f65d3d8983f0bb",
         "type": "tabs",
         "children": [
           {
-            "id": "4dd1ce35f67316c4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Attatched/Pasted image 20240103142101.png"
-              }
-            }
-          },
-          {
-            "id": "450bb14871293d00",
+            "id": "7aaadf358476f0b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Notes/Attention Machanism.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Attatched/Pasted image 20240103142101.png",
+                "file": "Notes/Attention Machanism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Attatched/Pasted image 20240103142101.png",
+                "file": "Notes/Attention Machanism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Attatched/Pasted image 20240103142101.png"
+                "file": "Notes/Attention Machanism.md"
               }
             }
           },
@@ -174,10 +164,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "837145ae825b8a1e",
+  "active": "7aaadf358476f0b6",
   "lastOpenFiles": [
-    "Notes/Attention Machanism.md",
     "Notes/Transformer.md",
+    "Notes/Attention Machanism.md",
+    "Attatched/Pasted image 20240103142101.png",
     "1.Daily/2024-01-04.md",
     "Notes/2024-01-04.md",
     "Attatched/Pasted image 20240104162143.png",
@@ -193,7 +184,6 @@
     "Attatched/Pasted image 20240103145013.png",
     "Attatched/Pasted image 20240103144422.png",
     "Attatched/Pasted image 20240103144125.png",
-    "Attatched/Pasted image 20240103143640.png",
     "Notes/Plug-in.md",
     "Notes/Obsidian Setting.md",
     "Attatched",
