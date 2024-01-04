@@ -7,16 +7,6 @@
 	- Positional information : RNN은 단어의 위치에 따라 단어를 순차적(Sequential) 처리를 하여 단어의 위치 정보를 보유
 	- Positional Encoding : Transformer는 단어의 위치 정보(sin, cos)를 각 단어의 Embedding vector에 더하여 Model의 입력으로 사용![Positional Encoding](../Attatched/Pasted%20image%2020240104161019.png)![Embedding vector + PE](../Attatched/Pasted%20image%2020240104162143.png)
 
-
-### seq2seq Model의 문제
-- Input sequence를 하나의 벡터(context vector)로 압축하는 과정에서의 정보 손실
-### Hyper-parameter in Transformer
-1. d_{model} : Encoder, Decoder, Embedding vector에서의 차원
-2. num_layers : Layer(Encoder+Decoder)의 층 수
-3. num_heads : Transformer에서 Attention을 사용할 때 분할 및 병렬 수행, 결과값을 통합하는 방식을 사용하는데, 이 때의 병렬 수
-4. d_{ff} : Transformer 내부에 존재하는 Feed Forward Neural Network의 크기(이 때의 FFNN의 입출력층의 크기는 d_{model})
-
-## PE Code
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -56,8 +46,13 @@ class PositionalEncoding(tf.keras.layers.Layer):
 	def call(self, inputs):
 		return inputs + self.pos_encoding[:, :tf.shape(inputs)[1], :]
 ```
-[Transformer_Korean_Chatbot](../Attatched/Transformer_Korean_Chatbot.ipynb)
-
+### seq2seq Model의 문제
+- Input sequence를 하나의 벡터(context vector)로 압축하는 과정에서의 정보 손실
+### Hyper-parameter in Transformer
+1. d_{model} : Encoder, Decoder, Embedding vector에서의 차원
+2. num_layers : Layer(Encoder+Decoder)의 층 수
+3. num_heads : Transformer에서 Attention을 사용할 때 분할 및 병렬 수행, 결과값을 통합하는 방식을 사용하는데, 이 때의 병렬 수
+4. d_{ff} : Transformer 내부에 존재하는 Feed Forward Neural Network의 크기(이 때의 FFNN의 입출력층의 크기는 d_{model})
 ---
 ## Attention in TM
 ### Encoder Self-Attention
@@ -120,3 +115,6 @@ def scaled_dot_product_attention(query, key, value, mask):
 - Encoder-Decoder Attention
 ---
 ## Position-wise FFNN
+
+## Ref. Chatbot Code
+[Transformer_Korean_Chatbot](../Attatched/Transformer_Korean_Chatbot.ipynb)
