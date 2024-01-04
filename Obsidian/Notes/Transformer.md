@@ -4,6 +4,8 @@
 	- seq2seq : Encoder, Decoder에서 각각 하나의 RNN이 t 개의 시점을 가지는 구조
 	- transformer : Encoder, Decoder 단위(Layer)가 N 개로 구성되는 구조
 - RNN을 사용하지 않았음에도 성능적인 우수성
+	- Positional information : RNN은 단어의 위치에 따라 단어를 순차적(Sequential) 처리를 하여 단어의 위치 정보를 보유
+	- Positional Encoding : Transformer는 단어의 위치 정보를 각 단어의 Embedding vector에 더하여 Model의 입력으로 사용
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
