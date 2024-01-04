@@ -7,3 +7,4 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 ```
+[Transformer_Korean_Chatbot](../Attatched/Transformer_Korean_Chatbot.ipynb)

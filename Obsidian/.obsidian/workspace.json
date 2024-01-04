@@ -44,6 +44,14 @@
             }
           },
           {
+            "id": "ab6388da9d82fc15",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
             "id": "317a80dbe80f585b",
             "type": "leaf",
             "state": {
@@ -200,6 +208,7 @@
   },
   "active": "4dd1ce35f67316c4",
   "lastOpenFiles": [
+    "Attatched/Transformer_Korean_Chatbot.ipynb",
     "Notes/Todoist.md",
     "Notes/Transformer.md",
     "무제 파일.canvas",
