@@ -67,7 +67,12 @@ class PositionalEncoding(tf.keras.layers.Layer):
 ## Encoder
 ### First sublayer
 #### Self-Attention
-- Query에 대해서, Key와의 유사도를 mapping된 각각의 Value에 반영, Value의 가중합을 return
+- Attention : Query에 대해서, Key와의 유사도를 mapping된 각각의 Value에 반영, Value의 가중합을 return
+```python
+Q = Query # t 시점의 decoder cell에서의 hidden state
+K = Keys # 모든 시점의 encoder cell의 hidden states
+V = Values # 모든 시점의 encoder cell의 hidden states
+```
 - Scaled dot-product Attention
 - Multi-head Attention : Self Attention을 병렬적으로 사용
 - Padding Mask
