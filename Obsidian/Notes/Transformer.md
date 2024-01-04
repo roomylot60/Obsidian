@@ -75,7 +75,37 @@ V = Values # 모든 시점의 encoder cell의 hidden states = weight과 곱해�
 ```
 - Self-Attention : Q, K, V가 모두 입력 문장의 모든 단어 벡터들을 의미
 	- d_{model}의 차원을 갖는 단어 벡터들을 num_heads로 나눈 값을 Q, K, V의 벡터의 차원으로 결정
-- Scaled dot-product Attention : 내적만을 사용하는 Attention Function에 대해서 특정값 √n으로 나누어 scaling `score(q, k) = q · k / √n`
+- Scaled dot-product Attention : 내적만을 사용하는 Attention Function에 대해서 특정값 √n으로 나누어 scaling 하여 각 벡터의 모음; 행렬에 대해 연산하여 일괄 계산`score(q, k) = q · k / √n (n = d_{model} / num_heads = 각 Q, K, V의 차원값 d_{k})`![scaled dot-product attention with image](../Attatched/Pasted%20image%2020240104175031.png)![equation of SDA](../Attatched/Pasted%20image%2020240104175125.png)
+```python
+def scaled_dot_product_attention(query, key, value, mask):
+  # query 크기 : (batch_size, num_heads, query의 문장 길이, d_model/num_heads)
+  # key 크기 : (batch_size, num_heads, key의 문장 길이, d_model/num_heads)
+  # value 크기 : (batch_size, num_heads, value의 문장 길이, d_model/num_heads)
+  # padding_mask : (batch_size, 1, 1, key의 문장 길이)
+
+  # Q와 K의 곱. 어텐션 스코어 행렬.
+  matmul_qk = tf.matmul(query, key, transpose_b=True)
+
+  # 스케일링
+  # dk의 루트값으로 나눠준다.
+  depth = tf.cast(tf.shape(key)[-1], tf.float32)
+  logits = matmul_qk / tf.math.sqrt(depth)
+
+  # 마스킹. 어텐션 스코어 행렬의 마스킹 할 위치에 매우 작은 음수값을 넣는다.
+  # 매우 작은 값이므로 소프트맥스 함수를 지나면 행렬의 해당 위치의 값은 0이 된다.
+  if mask is not None:
+    logits += (mask * -1e9)
+
+  # 소프트맥스 함수는 마지막 차원인 key의 문장 길이 방향으로 수행된다.
+  # attention weight : (batch_size, num_heads, query의 문장 길이, key의 문장 길이)
+  attention_weights = tf.nn.softmax(logits, axis=-1)
+
+  # output : (batch_size, num_heads, query의 문장 길이, d_model/num_heads)
+  output = tf.matmul(attention_weights, value)
+
+  return output, attention_weights
+
+```
 - Multi-head Attention : Self Attention을 병렬적으로 사용
 - Padding Mask
 - Residual connection(잔차 연결)
