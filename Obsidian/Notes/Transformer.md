@@ -15,7 +15,7 @@
 2. num_layers : Layer(Encoder+Decoder)의 층 수
 3. num_heads : Transformer에서 Attention을 사용할 때 분할 및 병렬 수행, 결과값을 통합하는 방식을 사용하는데, 이 때의 병렬 수
 4. d_{ff} : Transformer 내부에 존재하는 Feed Forward Neural Network의 크기(이 때의 FFNN의 입출력층의 크기는 d_{model})
----
+
 ## Code
 ```python
 import numpy as np
@@ -57,3 +57,22 @@ class PositionalEncoding(tf.keras.layers.Layer):
 		return inputs + self.pos_encoding[:, :tf.shape(inputs)[1], :]
 ```
 [Transformer_Korean_Chatbot](../Attatched/Transformer_Korean_Chatbot.ipynb)
+
+---
+## Attention in TM
+### Encoder Self-Attention
+### Masked Decoder Self-Attention
+### Encoder-Decoder Attention
+
+## Encoder
+### Self-Attention
+- Q, K, V
+- Scaled dot-product Attention
+- Multi-head Attention
+- Padding Mask
+- Residual connection(잔차 연결)
+- Layer Normalization(층 정규화)
+## Decoder
+### Self Attention
+### Look-ahead Mask
+## Position-wise FFNN
