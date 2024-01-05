@@ -1,15 +1,10 @@
 ## Natural Language Processing; NLP
 - Natural Language(자연어) : 일상 생활에서 사용하는 언어
 - Natural Language Processing(자연어 처리) : 자연어의 의미를 분석하여 컴퓨터가 처리할 수 있도록 하는 일(ex - 음성 인식, 내용 요약, 번역, 감정 분석, 텍스트 분류, 질의 응답, 챗봇)
-
-## 사용 Tools
+### 사용 Tools
 - Anaconda : Python과 관련된 여러 패키지(Numpy, Pandas, JupyterNB, IPython, Scikit-learn, matplotlib, seaborn, etc)를 모아놓은 파일
-
-- Colab : Google에서 지원하는 Online IDE
-Tensorflow는 기본적으로 64-bit platform만을 지원하고, DL에서는 GPU를 이용하는 경우가 많으므로, 개인 PC환경이 이를 지원하지 않을 경우 이용하는 것이 용이
-[Google-Colab](https://colab.research.google.com/)
-
-## 필요 프레임워크
+- [Google-Colab](https://colab.research.google.com/) : Google에서 지원하는 Online IDE로, Tensorflow는 기본적으로 64-bit platform만을 지원하고, DL에서는 GPU를 이용하는 경우가 많기에, 개인 PC환경이 이를 지원하지 않을 경우 이용하는 것이 용이
+### 필요 프레임워크
 1. Tensorflow
 2. Keras
 3. Gensim : ML을 사용하여 토픽 모델링과 자연어 처리 등을 수행할 수 있게 해주는 오픈소스 라이브러리
@@ -23,8 +18,10 @@ Tensorflow는 기본적으로 64-bit platform만을 지원하고, DL에서는 GP
     * JPype : JAVA, Python 연결해주는 역할을 하며 설치된 Python의 버전과 Windows OS의 bit에 맞게 설치(ex - JPype1-0.6.3-cp36-cp36m-win_amd64.whl)
 ---
 ## Text Preprocessing(텍스트 전처리)
-`Text Preprocessing` : 문제의 용도에 맞게 텍스트를 사전에 처리하는 작업
+### Text Preprocessing
+- 문제의 용도에 맞게 텍스트를 사전에 처리하는 작업
 
+### Text Preprocessing Progress
 1. Tokenization(토큰화) : 전처리되지 않은 상태의 Copus 데이터는 용도에 맞게 토큰화, 정제, 정규화 작업을 통해 처리된다.
 - Word Tokenization : 토큰의 기준을 단어(단어, 단어구, 의미를 갖는 문자열)로 설정
     * `NLTK`의 `word_tokenize()` <br> 띄어쓰기 단위로 구분

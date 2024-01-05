@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Convolution Neural Network.md",
+                "file": "Notes/Natural Language Processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Convolution Neural Network.md",
+                "file": "Notes/Natural Language Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Convolution Neural Network.md",
+                "file": "Notes/Natural Language Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Convolution Neural Network.md"
+                "file": "Notes/Natural Language Processing.md"
               }
             }
           },
@@ -166,6 +166,7 @@
   },
   "active": "1b490d8e4ddcae85",
   "lastOpenFiles": [
+    "Notes/Convolution Neural Network.md",
     "Notes/Attention Machanism.md",
     "Notes/Plug-in.md",
     "Notes/Subword Tokenizer.md",
@@ -176,7 +177,6 @@
     "Notes/Long Short-Term Memory.md",
     "Notes/Deep Learning.md",
     "Notes/Sequence-to-Sequence.md",
-    "Notes/Convolution Neural Network.md",
     "Notes/Transformer.md",
     "1.Daily/2024-01-04.md",
     "1.Daily/2024-01-02.md",
