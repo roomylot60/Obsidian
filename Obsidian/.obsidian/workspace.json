@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Notes/Deep Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Notes/Deep Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Notes/Deep Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Transformer.md"
+                "file": "Notes/Deep Learning.md"
               }
             }
           },
@@ -166,8 +166,16 @@
   },
   "active": "ce5d6b5d3fb92b6b",
   "lastOpenFiles": [
-    "Notes/Attention Machanism.md",
+    "Notes/Convolution Neural Network.md",
     "Notes/Transformer.md",
+    "Notes/RNN.md",
+    "Notes/NLP_tutorial.md",
+    "Notes/ML_tutorial.md",
+    "Notes/LSTM.md",
+    "Notes/En_De_RNN.md",
+    "Notes/Deep Learning.md",
+    "Notes/Subword_Tokenizer.md",
+    "Notes/Attention Machanism.md",
     "1.Daily/2024-01-04.md",
     "1.Daily/2024-01-02.md",
     "Attatched/chatbot_transformer.ipynb",
