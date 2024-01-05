@@ -244,10 +244,10 @@ def encoder(vocab_size, num_layers, dff,
 Embedding layer + Positional Encoding & Teacher Forcing
 문장 행렬로 한 번에 입력하므로, 현재 시점의 단어를 예측하는 데에 미래 시점의 단어까지 참고
 - Self-Attention을 통해 Attention score를 얻고, Masking을 실시; 자기 자신과 이전 단어들만을 참고할 수 있음
-- Look-ahead Mask : 현재 시점보다 미래에 있는 단어를 참고하지 못하도록 하는 역할로, 
+- Look-ahead Mask : 현재 시점보다 미래에 있는 단어를 참고하지 못하도록 하는 역할 
 - Scaled dot-product Attention Function에 Look-ahead mask를 전달
-### Second sublayer
-- Encoder-Decoder Attention
+### Second sublayer : Encoder-Decoder Attention
+- 
 ---
 ## Position-wise FFNN
 - Encoder, Decoder에서 공통적으로 가지고 있는 FFNN형태의 sublayer
