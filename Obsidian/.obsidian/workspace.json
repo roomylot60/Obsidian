@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "Notes/Attention Machanism.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "Notes/Attention Machanism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "Notes/Attention Machanism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md"
+                "file": "Notes/Attention Machanism.md"
               }
             }
           },
@@ -166,18 +166,19 @@
   },
   "active": "1b490d8e4ddcae85",
   "lastOpenFiles": [
-    "Notes/Natural Language Processing.md",
-    "Notes/Recurrent Neural Network.md",
+    "Notes/Transformer.md",
+    "Notes/Todoist.md",
+    "Notes/Subword Tokenizer.md",
     "Notes/Sequence-to-Sequence.md",
+    "Notes/Recurrent Neural Network.md",
     "Notes/Attention Machanism.md",
+    "Notes/Natural Language Processing.md",
     "Notes/Convolution Neural Network.md",
     "Notes/Plug-in.md",
-    "Notes/Subword Tokenizer.md",
     "무제 파일.canvas",
     "Notes/Machine Learning.md",
     "Notes/Long Short-Term Memory.md",
     "Notes/Deep Learning.md",
-    "Notes/Transformer.md",
     "1.Daily/2024-01-04.md",
     "1.Daily/2024-01-02.md",
     "Attatched/chatbot_transformer.ipynb",
@@ -191,7 +192,6 @@
     "Attatched/Pasted image 20240104162143.png",
     "Attatched/Pasted image 20240104161019.png",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
-    "Notes/Todoist.md",
     "Attatched/Pasted image 20240103150221.png",
     "Attatched/Pasted image 20240103145326.png",
     "Notes/Obsidian Setting.md",
