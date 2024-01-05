@@ -260,9 +260,8 @@ def create_look_ahead_mask(x):
 ```
 ### Second sublayer : Encoder-Decoder Attention
 #### Q : Decoder, K = V : Encoder
-- Q, K, V가 같을 경우 Self-Attention이라고 함
-- Query가 Decoder
-- Key, Value Encoder
+- Q, K, V의 출처가 같을 경우 Self-Attention이라고 함
+- Query는 Decoder의 1st sublayer로부터, Key, Value는 Encoder의 마지막 layer로부터 받음
 ---
 ## Position-wise FFNN
 - Encoder, Decoder에서 공통적으로 가지고 있는 FFNN형태의 sublayer
