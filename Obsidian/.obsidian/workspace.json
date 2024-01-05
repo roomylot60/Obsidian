@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#feed-forward-neural-network",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,7 +166,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c82ceaf67ca6fa67",
+  "active": "7f7b652e7f5f872f",
   "lastOpenFiles": [
     "Attatched/Pasted image 20240105144425.png",
     "Attatched/Pasted image 20240104180133.png",
