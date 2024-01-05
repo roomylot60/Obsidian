@@ -244,7 +244,7 @@ def encoder(vocab_size, num_layers, dff,
 Embedding layer + Positional Encoding & Teacher Forcing
 문장 행렬로 한 번에 입력하므로, 현재 시점의 단어를 예측하는 데에 미래 시점의 단어까지 참고
 - Self-Attention
-- Look-ahead Mask
+- Look-ahead Mask : 현재 시점보다 미래에 있는 단어를 참고하지 못하도록 하는 역할
 ### Second sublayer
 - Encoder-Decoder Attention
 ---
