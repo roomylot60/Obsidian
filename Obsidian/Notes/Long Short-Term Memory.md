@@ -7,10 +7,9 @@
     * 삭제 게이트(망각 게이트) : 이전 시점의 입력을 얼마나 반영할 지를 결정, 기억을 삭제하기 위한 게이트로 0에 가까울 수록 많이 제거된 상태(`f_t = sigmoid(x_t*W_(xf) + h_(t-1)*W_(hf))`)
     * 출력 게이트 : 현재 시점의 x값과 이전 시점의 은닉 상태가 시그모이드 함수를 지난 값으로 현재 시점의 은닉 상태를 결정(`o_t = sigmoid(x_t*W_(xo)+h_(t-1)*W_(ho)), h_t = o_tㅇtanh(c_t)`)
 
-### Gated Recurrent Unit;GRU
+### Gated Recurrent Unit; GRU
 - GRU : LSTM에서 3개의 게이트(출력, 입력, 삭제)를 사용했던 반면, GRU에서는 업데이트 게이트, 리셋 게이트 2개를 사용하여 LSTM의 구조를 간략화 ![GRU](./img/GRU.jpg)
-
-### RNN Language Model
+### [RNN](./Recurrent%20Neural%20Network) Language Model
 - Teacher Forcing(교사 강요) : 테스트 과정에서 t시점의 출력값이 t+1시점의 입력값으로 들어가도록 하는 RNN model에서, 훈련 과정 중에는 입력에 대한 예측값을 입력으로 하지 않고, 이미 정답을 알고 있는 레이블을 기반으로 훈련하여 훈련 과정을 단축하는 기법, 활성화 함수로는 softmax, 손실 함수로는 cross entropy를 사용
 - Input layer : 특정 시점에서의 입력 단어에 대한 one-hot vector로 입력 받아 입력층의 가중치 행렬을 거쳐 embedding vector를 출력, NNLM과의 차이로는 window로 입력받아 한번에 처리된 lookup table과는 달리, 단어 입력 시점에 따라 입력층의 가중칠 행렬의 변화가 발생하기에 같은 단어에 대한 embedding vector 값이 다를 수 있음
 - Embedding layer(linear) : Projection layer(투사층)의 역할로, 결과로 얻는 벡터를 Embedding vector 라고 함.

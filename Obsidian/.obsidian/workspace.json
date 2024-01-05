@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Attention Machanism.md",
+                "file": "Notes/Natural Language Processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Attention Machanism.md",
+                "file": "Notes/Natural Language Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Attention Machanism.md",
+                "file": "Notes/Natural Language Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Attention Machanism.md"
+                "file": "Notes/Natural Language Processing.md"
               }
             }
           },
@@ -166,18 +166,18 @@
   },
   "active": "1b490d8e4ddcae85",
   "lastOpenFiles": [
+    "Notes/Recurrent Neural Network.md",
+    "Notes/Long Short-Term Memory.md",
+    "Notes/Convolution Neural Network.md",
+    "Notes/Attention Machanism.md",
     "Notes/Transformer.md",
     "Notes/Todoist.md",
     "Notes/Subword Tokenizer.md",
     "Notes/Sequence-to-Sequence.md",
-    "Notes/Recurrent Neural Network.md",
-    "Notes/Attention Machanism.md",
     "Notes/Natural Language Processing.md",
-    "Notes/Convolution Neural Network.md",
     "Notes/Plug-in.md",
     "무제 파일.canvas",
     "Notes/Machine Learning.md",
-    "Notes/Long Short-Term Memory.md",
     "Notes/Deep Learning.md",
     "1.Daily/2024-01-04.md",
     "1.Daily/2024-01-02.md",
