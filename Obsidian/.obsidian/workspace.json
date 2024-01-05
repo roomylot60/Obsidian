@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Natural Language Processing.md",
+                "file": "Notes/Attention Machanism.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Natural Language Processing.md",
+                "file": "Notes/Attention Machanism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Natural Language Processing.md",
+                "file": "Notes/Attention Machanism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Natural Language Processing.md"
+                "file": "Notes/Attention Machanism.md"
               }
             }
           },
@@ -166,21 +166,21 @@
   },
   "active": "1b490d8e4ddcae85",
   "lastOpenFiles": [
+    "Notes/Plug-in.md",
+    "Notes/Todoist.md",
+    "1.Daily/2024-01-02.md",
+    "1.Daily/2024-01-04.md",
+    "Notes/Natural Language Processing.md",
     "Notes/Recurrent Neural Network.md",
     "Notes/Long Short-Term Memory.md",
     "Notes/Convolution Neural Network.md",
     "Notes/Attention Machanism.md",
     "Notes/Transformer.md",
-    "Notes/Todoist.md",
     "Notes/Subword Tokenizer.md",
     "Notes/Sequence-to-Sequence.md",
-    "Notes/Natural Language Processing.md",
-    "Notes/Plug-in.md",
     "무제 파일.canvas",
     "Notes/Machine Learning.md",
     "Notes/Deep Learning.md",
-    "1.Daily/2024-01-04.md",
-    "1.Daily/2024-01-02.md",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Pasted image 20240105144425.png",
     "Attatched/Pasted image 20240104180133.png",
