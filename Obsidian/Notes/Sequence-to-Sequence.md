@@ -1,4 +1,4 @@
-## RNN을 이용한 Encoder-Decoder
+## [RNN](./Recurrent Neural Network)을 이용한 Encoder-Decoder
 
 - 하나의 RNN을 Encoder, 다른 하나를 Decoder로 구현하여 이를 연결하여 하용하는 구조로 입력 문장과 출력 문장의 길이가 다를 경우에 사용(ex - 번역기, 텍스트 요약)
 
