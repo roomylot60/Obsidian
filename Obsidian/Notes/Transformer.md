@@ -311,7 +311,7 @@ def decoder_layer(dff, d_model, num_heads, dropout, name="decoder_layer"):
       outputs=outputs,
       name=name)
 ```
-### Third sublayer : FFNN
+### Third sublayer : [FFNN](### Second%20sublayer%20:%20FFNN)
 ### Decoder Code
 ```python
 def decoder(vocab_size, num_layers, dff,
