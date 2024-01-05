@@ -61,7 +61,7 @@ class PositionalEncoding(tf.keras.layers.Layer):
 ### Encoder-Decoder Attention
 ---
 ## Encoder
-### First sublayer : Self-Attention
+### First sublayer : Multi-head Self-Attention
 #### Self-Attention
 - Attention : Query에 대해서, Key와의 유사도를 mapping된 각각의 Value에 반영, Value의 가중합을 return
 ```python
@@ -240,14 +240,26 @@ def encoder(vocab_size, num_layers, dff,
 ```
 ---
 ## Decoder
-### First sublayer : Masked Multi-head Self Attention
-Embedding layer + Positional Encoding & Teacher Forcing
-문장 행렬로 한 번에 입력하므로, 현재 시점의 단어를 예측하는 데에 미래 시점의 단어까지 참고
-- Self-Attention을 통해 Attention score를 얻고, Masking을 실시; 자기 자신과 이전 단어들만을 참고할 수 있음
-- Look-ahead Mask : 현재 시점보다 미래에 있는 단어를 참고하지 못하도록 하는 역할 
-- Scaled dot-product Attention Function에 Look-ahead mask를 전달
+### First sublayer : Masked Multi-head Self-Attention
+- 기본적으로 Transformer에서는 Multi-head Attention을 수행하고, 내부에서 Scaled dot-product Attention Function을 호출하여 Masking을 적용
+	1. **Encoders**' Self-Attention : Padding Mask
+	2. **Decoders**' Masked Self-Attention : Look-ahead Mask
+	3. **Decoders**' Encoder-Decoder Attention : Padding Mask
+#### Look-ahead Mask
+- Input : Embedding layer + Positional Encoding(with Teacher Forcing)
+- 번역할 문장을 문장 행렬로 입력 받을 때, RNN과는 달리 *한꺼번에* 입력되어 현재 시점의 단어를 예측하는 데에 미래 시점의 단어까지 참고
+- Look-ahead Mask : 현재 시점보다 미래에 있는 단어를 참고하지 못하도록 하는 역할
+- Masked Self-Attention : Self-Attention을 통해 Attention score를 얻고, Scaled dot-product Attention Function에 Look-ahead mask를 전달 후 Masking을 실시; 자기 자신과 이전 단어들 만을 참고할 수 있음
+```python
+# 디코더의 첫번째 서브층(sublayer)에서 미래 토큰을 Mask하는 함수 
+def create_look_ahead_mask(x): 
+	seq_len = tf.shape(x)[1]
+	look_ahead_mask = 1 - tf.linalg.band_part(tf.ones((seq_len, seq_len)), -1, 0)
+	padding_mask = create_padding_mask(x) # 패딩 마스크도 포함
+	return tf.maximum(look_ahead_mask, padding_mask)
+```
 ### Second sublayer : Encoder-Decoder Attention
-- 
+#### 
 ---
 ## Position-wise FFNN
 - Encoder, Decoder에서 공통적으로 가지고 있는 FFNN형태의 sublayer
