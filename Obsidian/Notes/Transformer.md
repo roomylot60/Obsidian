@@ -1,4 +1,4 @@
-## Transformer Model
+## 1. Transformer Model
 ![Encoder-Decoder Structure](../Attatched/Pasted%20image%2020240105144425.png)
 - 2017년 Google에서 발표한 "Attention is all you need" 논문에서 제시한 모델
 - [Attention Machanism](Attention%20Machanism.md) 만을 사용하여 seq2seq의 구조인 *encoder-decoder*로 구현
@@ -48,19 +48,18 @@ class PositionalEncoding(tf.keras.layers.Layer):
 		return inputs + self.pos_encoding[:, :tf.shape(inputs)[1], :]
 ```
 ### seq2seq Model의 문제
-- Input sequence를 하나의 벡터(context vector)로 압축하는 과정에서의 정보 손실
+- Input sequence를 하나의 벡터(context vector)로 압축하는 과정에서 정보 손실 발생
 ### Hyper-parameter in Transformer
 1. d_{model} : Encoder, Decoder, Embedding vector에서의 차원
 2. num_layers : Layer(Encoder+Decoder)의 층 수
 3. num_heads : Transformer에서 Attention을 사용할 때 분할 및 병렬 수행, 결과값을 통합하는 방식을 사용하는데, 이 때의 병렬 수
 4. d_{ff} : Transformer 내부에 존재하는 Feed Forward Neural Network의 크기(이 때의 FFNN의 입출력층의 크기는 d_{model})
+### Attention in TM
+1. Encoder Self-Attention
+2. Masked Decoder Self-Attention
+3. Encoder-Decoder Attention
 ---
-## Attention in TM
-### Encoder Self-Attention
-### Masked Decoder Self-Attention
-### Encoder-Decoder Attention
----
-## Encoder
+## 2. Encoder
 ### First sublayer : Multi-head Self-Attention
 #### Self-Attention
 - Attention : Query에 대해서, Key와의 유사도를 mapping된 각각의 Value에 반영, Value의 가중합을 return
@@ -178,6 +177,7 @@ class MultiHeadAttention(tf.keras.layers.Layer):
     return outputs
 ```
 ### Second sublayer : FFNN
+#FFNN
 - Residual connection(잔차 연결) : Sublayer의 입력과 출력을 합(같은 차원을 가지므로 가능)을 구하는 과정 [입력과 출력의 합과 모델의 학습 관련 논문](https://arxiv.org/pdf/1512.03385.pdf)
 - Layer Normalization(층 정규화) : Tensor의 마지막 차원; d_{model} 차원에 대해서 평균과 분산을 구하고, 이를 가지고 정규화하여 학습에 활용 [층 정규화 논문]( https://arxiv.org/pdf/1607.06450.pdf)
 #### Encoder layer code
@@ -239,7 +239,7 @@ def encoder(vocab_size, num_layers, dff,
       inputs=[inputs, padding_mask], outputs=outputs, name=name)
 ```
 ---
-## Decoder
+## 3. Decoder
 ### First sublayer : Masked Multi-head Self-Attention
 - 기본적으로 Transformer에서는 Multi-head Attention을 수행하고, 내부에서 Scaled dot-product Attention Function을 호출하여 Masking을 적용
 	1. **Encoders**' Self-Attention : Padding Mask
@@ -312,6 +312,7 @@ def decoder_layer(dff, d_model, num_heads, dropout, name="decoder_layer"):
       outputs=outputs,
       name=name)
 ```
+### Third sublayer : [FFNN](#FFNN)
 ### Decoder Code
 ```python
 def decoder(vocab_size, num_layers, dff,
@@ -343,9 +344,9 @@ def decoder(vocab_size, num_layers, dff,
       name=name)
 ```
 ---
-## Position-wise FFNN
+## 4. Position-wise FFNN
 - Encoder, Decoder에서 공통적으로 가지고 있는 FFNN형태의 sublayer
-## Transformer Implementation
+## 5. Transformer Implementation
 ### Transformer Code
 ```python
 def transformer(vocab_size, num_layers, dff,
