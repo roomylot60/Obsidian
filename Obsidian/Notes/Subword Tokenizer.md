@@ -1,12 +1,13 @@
-### Subword Tokenizer
+## Subword Tokenizer
+#### Subword
 - OOV(Out-Of Vocabulary) : 새로 제시된 단어에 대해 기존의 dictionary 내의 단어가 아닌 경우
 - Subword : 하나의 단어를 구성하는 더 작은 단위의 의미를 가진 어구
 - Subword segmenation : 하나의 단어를 여러 서브 워드로 분리해서 단어를 인코딩 및 임베딩하는 전처리 작업
     * Byte Pair Encoding;BPE : 연속적으로 가장 많이 등장한 `글자의 쌍(Byte Pair)`을 찾아서 하나의 글자로 병합하는 방식을 수행하는 알고리즘        
         1. 글자 단위에서 단어 집합을 만들어 내는 Bottom up 방식의 접근을 사용
-        2. Dictionary 내의 단어에 대해 사용자가 정한 반복횟수만큼 가장 빈도수가 높은 유니그램의 쌍을 하나의 유니그램으로 통합하는 과정을 반복
-        3. 반복을 통해 얻은 유니그램을 dictionary에 update
-        4. 새로 제시된 단어를 글자 단위로 분할하여 dictionary 내의 유니그램으로 구성되었는지 여부를 확인
+        2. Dictionary 내의 단어에 대해 사용자가 정한 반복횟수만큼 가장 빈도수가 높은 Unigram의 쌍을 하나의 Unigram으로 통합하는 과정을 반복
+        3. 반복을 통해 얻은 Unigram을 dictionary에 update
+        4. 새로 제시된 단어를 글자 단위로 분할하여 dictionary 내의 Unigram으로 구성되었는지 여부를 확인
 
         ```python
         import re, collections
@@ -20,7 +21,7 @@
                     'w i d e s t <\w>' : 3}
         
         def get_stats(dictionary):
-            # 유니그램의 pair들의 빈도수를 카운트
+            # Unigram의 pair들의 빈도수를 카운트
             pairs = collections.defaultdict(int)
             for word, freq in dictionary.items():
                 symbols = word.split()
@@ -124,7 +125,7 @@
 
         ```
 
-    * WordPiece Tokenizer : BPE의 변형 알고리즘 중 하나로, BPE가 빈도수에 기반하여 가장 많이 등장한 쌍을 병합하는 것과는 달리, 병합되었을 때 corpus의 Likelihood(우도)를 가장 높이는 쌍을 병합; 띄어쓰기를 사용하여 subword들을 구분하고, '_'를 사용하여 기존 문장의 띄어쓰기를 구분
+    * WordPiece Tokenizer : BPE의 변형 알고리즘 중 하나로, BPE가 빈도수에 기반하여 가장 많이 등장한 쌍을 병합하는 것과는 달리, 병합되었을 때 corpus의 Likelihood(우도)를 가장 높이는 쌍을 병합; 띄어쓰기를 사용하여 subword들을 구분하고, `'_'`를 사용하여 기존 문장의 띄어쓰기를 구분
 - Sentence Piece : 내부 단어 분리를 위한 패키지로, pretokenization 없이 전처리를 하지 않은 raw data에 바로 단어 분리 토크나이저를 사용할 수 있어 언어에 종속되지 않도록 BPE 알고리즘과 Unigram LM Tokenizer를 구현
 - Subword Text Encoder : Tensorflow를 통해 사용할 수 있는 Subword Tokenizer로 Wordpiece Model을 채택
 - Huggingface's Tokenizers : 자주 등장하는 서브워드들을 하나의 토큰으로 취급하는 다양한 Subword Tokenizer를 제공

@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "95a5339fe7948072",
+        "id": "8e55f25df104feca",
         "type": "tabs",
         "children": [
           {
-            "id": "ce5d6b5d3fb92b6b",
+            "id": "40c30f6e3b1f666b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Deep Learning.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Deep Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Deep Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Notes/Deep Learning.md"
-              }
+              "state": {}
             }
           },
           {
@@ -164,17 +156,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "ce5d6b5d3fb92b6b",
+  "active": "40c30f6e3b1f666b",
   "lastOpenFiles": [
+    "Notes/Plug-in.md",
+    "Notes/Subword Tokenizer.md",
+    "무제 파일.canvas",
+    "Notes/Recurrent Neural Network.md",
+    "Notes/Natural Language Processing.md",
+    "Notes/Machine Learning.md",
+    "Notes/Long Short-Term Memory.md",
+    "Notes/Deep Learning.md",
+    "Notes/Sequence-to-Sequence.md",
     "Notes/Convolution Neural Network.md",
     "Notes/Transformer.md",
-    "Notes/RNN.md",
-    "Notes/NLP_tutorial.md",
-    "Notes/ML_tutorial.md",
-    "Notes/LSTM.md",
-    "Notes/En_De_RNN.md",
-    "Notes/Deep Learning.md",
-    "Notes/Subword_Tokenizer.md",
     "Notes/Attention Machanism.md",
     "1.Daily/2024-01-04.md",
     "1.Daily/2024-01-02.md",
@@ -190,10 +184,8 @@
     "Attatched/Pasted image 20240104161019.png",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
     "Notes/Todoist.md",
-    "무제 파일.canvas",
     "Attatched/Pasted image 20240103150221.png",
     "Attatched/Pasted image 20240103145326.png",
-    "Notes/Plug-in.md",
     "Notes/Obsidian Setting.md",
     "Attatched",
     "Notes",

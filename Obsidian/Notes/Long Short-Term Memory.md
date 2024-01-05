@@ -1,4 +1,4 @@
-### Long Short-Term Memory;LSTM
+## Long Short-Term Memory; LSTM
 - The problem of long-term dependencies : Vanila RNN(기본형 RNN)은   비교적 짧은 시퀀스에 대해서만 효과를 보임(시점이 길어질 수록 앞의 정보가 뒤로 충분히 전달되지 못하는 현상 발생)
 - `LSTM` : 은닉층의 메모리 셀에 입력 게이트, 망각 게이트, 출력 게이트를 추가하여 불필요한 기억은 지우고, 기억해야할 것들을 선정 ![LSTM](./img/LSTM_architecture.jpg)
     * Cell state : 이전 시점의 셀 상태가 다음 시점의 셀 상태를 구하기 위한 입력으로 사용, 삭제 게이트의 값이 0에 가까울 수록 이전 시점의 셀 상태값의 영향력이 작아지고, 입력 게이트의 값이 현 시점의 셀 상태에 영향을 미침(`$$C_{t} = f_{t}ｏC_{t-1} + i_{t}ｏg_{t}$$`) 

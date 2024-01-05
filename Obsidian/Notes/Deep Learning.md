@@ -2,6 +2,7 @@
 - Artificial Neural Network(인공 신경망)의 층을 연속적으로 쌓아올려 데이터를 학습
 - 기계가 가중치를 스스로 찾아내도록 자동화 시키는 심층 신경망의 학습
 
+## Conception
 ### Perceptron(퍼셉트론)
 - 초기 형태의 인공 신경망
 - 입력값 x 벡터에 대해 가중치 w를 곱하고 편향 b(-임계값)을 더해 결과값 y를 도출
@@ -269,7 +270,7 @@ model.fit(X, y, epochs=300)
 
 ---
 
-## Neural Network Language Model;NNLM(신경망 언어 모델)
+## Neural Network Language Model; NNLM(신경망 언어 모델)
 - NNLM : 자연어 학습에 대해 과거의 통계적인 접근방식(SLM)이 아닌, 인공 신경망을 사용하는 방식으로(ex - FFNNLM, RNNLM, BiLM)
     * 앞의 모든 단어를 참고하는 것이 아니라 정해진 개수의 단어(window)만을 참고하여 해당 window의 one-hot vector를 생성
     * 입력된 one-hot vector들을 은닉층 중 활성화 함수가 존재하지 않는 투사층(projection layer)에서 가중치 행렬과 곱하여 lookup table을 생성
@@ -282,10 +283,10 @@ model.fit(X, y, epochs=300)
 - Language Modeling : 주어진 문맥으로부터 모르는 단어를 예측하는 것
 - N-gram LM : 바로 앞의 `n-1`개의 단어를 참고하여 `n`번째 단어를 예측하는 모델
 
-## Recurrent Neural Network;RNN
+## Recurrent Neural Network; RNN
 - RNN : 입력과 출력을 sequence(묶음) 단위로 처리하는 모델
 
-### 순환 신경망
+### RNN(순환 신경망)
 - FFNN : 은닉층에서 활성화 함수를 거친 값이 출력층 방향으로만 진행
 - RNN : 은닉층에서 활성화 함수(`tanh`를 주로 사용)를 거친 값이 출력층 혹은 은닉층 노드로 진행
     * Memory Cell;RNN Cell : 은닉층에서 activation function을 거친 값을 내보내면서 이전 시점의 값을 기억하고 이를 입력으로 사용하는 노드

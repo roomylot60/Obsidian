@@ -1,4 +1,4 @@
-## NLP
+## Natural Language Processing; NLP
 - Natural Language(자연어) : 일상 생활에서 사용하는 언어
 - Natural Language Processing(자연어 처리) : 자연어의 의미를 분석하여 컴퓨터가 처리할 수 있도록 하는 일(ex - 음성 인식, 내용 요약, 번역, 감정 분석, 텍스트 분류, 질의 응답, 챗봇)
 
