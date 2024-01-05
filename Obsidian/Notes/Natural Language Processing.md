@@ -18,9 +18,7 @@
     * JPype : JAVA, Python 연결해주는 역할을 하며 설치된 Python의 버전과 Windows OS의 bit에 맞게 설치(ex - JPype1-0.6.3-cp36-cp36m-win_amd64.whl)
 ---
 ## Text Preprocessing(텍스트 전처리)
-### Text Preprocessing
 - 문제의 용도에 맞게 텍스트를 사전에 처리하는 작업
-
 ### Text Preprocessing Progress
 1. Tokenization(토큰화) : 전처리되지 않은 상태의 Copus 데이터는 용도에 맞게 토큰화, 정제, 정규화 작업을 통해 처리된다.
 - Word Tokenization : 토큰의 기준을 단어(단어, 단어구, 의미를 갖는 문자열)로 설정
