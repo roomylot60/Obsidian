@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a2f65d3d8983f0bb",
+        "id": "95a5339fe7948072",
         "type": "tabs",
         "children": [
           {
-            "id": "c82ceaf67ca6fa67",
+            "id": "ce5d6b5d3fb92b6b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -165,25 +164,25 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c82ceaf67ca6fa67",
+  "active": "ce5d6b5d3fb92b6b",
   "lastOpenFiles": [
+    "Notes/Attention Machanism.md",
+    "Notes/Transformer.md",
+    "1.Daily/2024-01-04.md",
+    "1.Daily/2024-01-02.md",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Pasted image 20240105144425.png",
     "Attatched/Pasted image 20240104180133.png",
     "Attatched/Pasted image 20240104180009.png",
     "Attatched/Pasted image 20240104175125.png",
     "Attatched/Pasted image 20240104175031.png",
-    "Notes/Attention Machanism.md",
-    "Notes/Transformer.md",
     "Attatched/Pasted image 20240103142101.png",
-    "1.Daily/2024-01-04.md",
     "Notes/2024-01-04.md",
     "Attatched/Pasted image 20240104162143.png",
     "Attatched/Pasted image 20240104161019.png",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
     "Notes/Todoist.md",
     "무제 파일.canvas",
-    "1.Daily/2024-01-02.md",
     "Attatched/Pasted image 20240103150221.png",
     "Attatched/Pasted image 20240103145326.png",
     "Notes/Plug-in.md",
