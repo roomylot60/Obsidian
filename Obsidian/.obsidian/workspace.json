@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "8e55f25df104feca",
+        "id": "aff56ee69843c37c",
         "type": "tabs",
         "children": [
           {
-            "id": "40c30f6e3b1f666b",
+            "id": "1b490d8e4ddcae85",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Convolution Neural Network.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Convolution Neural Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Convolution Neural Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Convolution Neural Network.md"
+              }
             }
           },
           {
@@ -138,7 +146,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -156,8 +164,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "40c30f6e3b1f666b",
+  "active": "1b490d8e4ddcae85",
   "lastOpenFiles": [
+    "Notes/Attention Machanism.md",
     "Notes/Plug-in.md",
     "Notes/Subword Tokenizer.md",
     "무제 파일.canvas",
@@ -169,7 +178,6 @@
     "Notes/Sequence-to-Sequence.md",
     "Notes/Convolution Neural Network.md",
     "Notes/Transformer.md",
-    "Notes/Attention Machanism.md",
     "1.Daily/2024-01-04.md",
     "1.Daily/2024-01-02.md",
     "Attatched/chatbot_transformer.ipynb",
