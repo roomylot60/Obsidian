@@ -259,7 +259,10 @@ def create_look_ahead_mask(x):
 	return tf.maximum(look_ahead_mask, padding_mask)
 ```
 ### Second sublayer : Encoder-Decoder Attention
-#### 
+#### Q : Decoder, K = V : Encoder
+- Q, K, V가 같을 경우 Self-Attention이라고 함
+- Query가 Decoder
+- Key, Value Encoder
 ---
 ## Position-wise FFNN
 - Encoder, Decoder에서 공통적으로 가지고 있는 FFNN형태의 sublayer
