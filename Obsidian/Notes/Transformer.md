@@ -177,7 +177,6 @@ class MultiHeadAttention(tf.keras.layers.Layer):
     return outputs
 ```
 ### Second sublayer : FFNN
-#feed-forward-neural-network
 - Residual connection(잔차 연결) : Sublayer의 입력과 출력을 합(같은 차원을 가지므로 가능)을 구하는 과정 [입력과 출력의 합과 모델의 학습 관련 논문](https://arxiv.org/pdf/1512.03385.pdf)
 - Layer Normalization(층 정규화) : Tensor의 마지막 차원; d_{model} 차원에 대해서 평균과 분산을 구하고, 이를 가지고 정규화하여 학습에 활용 [층 정규화 논문]( https://arxiv.org/pdf/1607.06450.pdf)
 #### Encoder layer code
@@ -312,7 +311,7 @@ def decoder_layer(dff, d_model, num_heads, dropout, name="decoder_layer"):
       outputs=outputs,
       name=name)
 ```
-### Third sublayer : [FFNN](#feed-forward-neural-network)
+### Third sublayer : [FFNN](### Second sublayer : FFNN)
 ### Decoder Code
 ```python
 def decoder(vocab_size, num_layers, dff,
