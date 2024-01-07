@@ -42,8 +42,8 @@
     - Optimizer(최적화 알고리즘) : 비용 함수를 최소화 하는 매개 변수 w, b를 찾을 때 사용하는 알고리즘 (ex - Gradient Descent)
 ### Logistic Regression
 * Logistic Regression : BCF에 사용하는 알고리즘으로, 연속적인 범위의 입력에 대해 결과를 2가지로 출력
-    - Sigmoid Function : x, y간의 관계에서 y값이 0과 1사이의 값을 가지면서 S자 형태로 그려지는 함수 ![Sigmoid Function](../Attatched/sigmoid.jpg)
-    - Cross Entropy : 가중치 `w`를 최소로하는 비용함수를 만들 때, y값이 0일 때와 1일 때에 대한 값을 고려하여 생성한 Objective Function ![Cross Entropy](../Attatched/Cross_Entropy.jpg)
+    - **Sigmoid Function** : x, y간의 관계에서 y값이 0과 1사이의 값을 가지면서 S자 형태로 그려지는 함수 ![Sigmoid Function](../Attatched/sigmoid.jpg)
+    - **Cross Entropy** : 가중치 `w`를 최소로하는 비용함수를 만들 때, y값이 0일 때와 1일 때에 대한 값을 고려하여 생성한 Objective Function ![Cross Entropy](../Attatched/Cross_Entropy.jpg)
     
 ### Softmax Regression
 * Softmax Regression : 3개 이상의 선택지에 대한 다중 클래스 분류 문제에 사용
