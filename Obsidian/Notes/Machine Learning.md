@@ -26,7 +26,9 @@
 ## Classification
 - Classification(분류) : 주어진 선택지(불 연속적인 범위)에 대한 답을 결정
 ### Binary Classification
+- Binary Classification(이진 분류) : 입력에 따라 Model이 분류한 Category가 2 가지인 분류 알고리즘으로, 주로 참, 거짓 분류에 사용
 ### Multi-class Classification
+- Multi-class Calssification(다중 분류) : 입력에 따라 분류된 Category가 3 가지 이상인 분류 알고리즘
 ---
 ## Regression
 - Regression(회귀) : 연속적인 값의 범위 내에서 예측값이 나오는 경우
@@ -38,12 +40,11 @@
     - Cost Function : `w`와 `b`를 찾기 위해서 세운 실제값과 예측값의 오차를 계산하는 식
     - Mean Squared Error(평균 제곱 오차) : 오차의 제곱합에 대한 평균 ![MSE](../Attatched/MSE.jpg)
     - Optimizer(최적화 알고리즘) : 비용 함수를 최소화 하는 매개 변수 w, b를 찾을 때 사용하는 알고리즘 (ex - Gradient Descent)
-    
 ### Logistic Regression
 * Logistic Regression : BCF에 사용하는 알고리즘
-        + Sigmoid Function : x, y간의 관계에서 y값이 0과 1사이의 값을 가지면서 S자 형태로 그려지는 함수 ![Sigmoid Function](../Attatched/sigmoid.jpg)
-        + Cross Entropy : 가중치 w를 최소로하는 비용함수를 만들 때, y값이 0일 때와 1일 때에 대한 값을 고려하여 생성한 Objective Function ![Cross Entropy](../Attatched/Cross_Entropy.jpg)
+    - Sigmoid Function : x, y간의 관계에서 y값이 0과 1사이의 값을 가지면서 S자 형태로 그려지는 함수 ![Sigmoid Function](../Attatched/sigmoid.jpg)
+    - Cross Entropy : 가중치 `w`를 최소로하는 비용함수를 만들 때, y값이 0일 때와 1일 때에 대한 값을 고려하여 생성한 Objective Function ![Cross Entropy](../Attatched/Cross_Entropy.jpg)
     
 ### Softmax Regression
 * Softmax Regression : 3개 이상의 선택지에 대한 다중 클래스 분류 문제에 사용
-        + Softmax Function : 선택지의 수 k에 대해 k차원의 벡터 z를 입력받아 각 클래스에 대한 확률을 추정 ![softmax Function](../Attatched/softmax.jpg)<br> 입력값으로 들어오는 독립변수 x의 차원수가 m 일 때, 이를 k 차원으로 축소시키는 작업이 필요(가중치 벡터 `m x k`)하고 이 때의 비용 함수는 Cross Entropy 함수 ![Cross Entropy in Softmax](../Attatched/Cross_Entropy_SF.jpg)
+    - Softmax Function : 선택지의 수 k에 대해 k차원의 벡터 z를 입력받아 각 클래스에 대한 확률을 추정 ![softmax Function](../Attatched/softmax.jpg)<br> 입력값으로 들어오는 독립변수 x의 차원수가 m 일 때, 이를 k 차원으로 축소시키는 작업이 필요(가중치 벡터 `m x k`)하고 이 때의 비용 함수는 Cross Entropy 함수 ![Cross Entropy in Softmax](../Attatched/Cross_Entropy_SF.jpg)
