@@ -9,8 +9,9 @@
         + One-to-Many : Image Captioning
         + Many-to-One : Sentiment Classification, Spam Detection
         + Many-to-Many : Chatbot, Translator, Tagging task
-#### RNN Code
+#### RNN Code with Keras and Python
 ```python
+# Keras를 사용하여 RNN 생성
 from tensorflow.keras.layers import SimpleRNN
 
 # 추가 인자를 활용한 RNN layer 생성
@@ -28,6 +29,7 @@ model.add(SimpleRNN(hidden_units, input_shape=(timesteps, input_dim)))
     * output_dim : 최종 시점의 은닉 상태인 출력 벡터의 차원 수;출력 단어 하나의 길이
     * timesteps : 메모리 셀의 각 시점의 은닉 상태값(hidden states)
 ```python
+# Python으로 직접 RNN 구성
 import numpy as np
 
 timestpes = 10 # Sequence의 길이
@@ -113,7 +115,21 @@ Wx, Wh, b shapes :  (8, 4) (8, 8) (8,)
  [0.89504751 0.38634984 0.83208148 0.62738128 0.65260641 0.60001641
   0.74679467 0.73196294]]
 ```
-### RNN Text Classification
+### Deep RNN(깊은 순환 신경망)
+- 은닉층의 개수(깊이)가 복수인 경우
+#### Code
+```python
+model = Sequential()
+# 첫번째 은닉층을 정의할 때, 각 시점의 값을 다음 은닉층으로 값을 전달하기 위해 retrun_sequences 값을 True로 설정
+model.add(SimpleRNN(hidden_units, input_length=10, input_dim=5, return_sequences=True))
+model.add(SimpleRNN(hidden_units, return_sequences=True))
+```
+
+### Bidirectional RNN(양방향 RNN)
+- 시점 t의 출력값을 예측할 때, t 이전 시점의 입력뿐만 아니라, 이후 시점의 입력 또한 예측에 기여할 수 있다는 아이디어 기반 RNN
+- 기본적으로는 두 개의 메모리 셀을 사용하여 첫 번째에서는 Forward States를, 두 번째에서는 Backward States를 전달 받아 Hidden State를 계산
+---
+## RNN Text Classification
 - Binary Classification
 - Multi-Class Classification
 ### Text Classification using Keras(supervised learning)
@@ -130,9 +146,6 @@ model.add(SimpleRNN(hidden_units, input_shape=(timesteps, input_dim)))
 # timesteps : 시점의 수; 각 문서의 단어 수
 # input_dim : 입력의 크기; 임베딩 벡터의 차원
 ```
-
----
-
 ### Tagging Task using Keras
 - 지도 학습을 통해 이루어지는 분류 작업
     * Named Entity Recognition(개체명 인식) : 이름(의미)을 갖는 개체를 보고 해당 단어(개체)의 유형 파악

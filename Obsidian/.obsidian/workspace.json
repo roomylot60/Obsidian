@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Deep Learning.md",
+                "file": "Notes/Convolution Neural Network.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -180,6 +179,7 @@
   },
   "active": "c6e43d3e7660b5ff",
   "lastOpenFiles": [
+    "Notes/Convolution Neural Network.md",
     "Notes/Deep Learning.md",
     "Notes/Recurrent Neural Network.md",
     "Attatched/Pasted image 20240107171654.png",
@@ -197,7 +197,6 @@
     "Attatched/n_probability.jpg",
     "Notes/Transformer.md",
     "Notes/Subword Tokenizer.md",
-    "Notes/Convolution Neural Network.md",
     "Notes/Attention Machanism.md",
     "Notes/Plug-in.md",
     "Notes/Todoist.md",

@@ -1,15 +1,12 @@
 ## Deep Learning
 - Artificial Neural Network(인공 신경망)의 층을 연속적으로 쌓아올려 데이터를 학습
 - 기계가 가중치를 스스로 찾아내도록 자동화 시키는 심층 신경망의 학습
-
 ## Concept
 ### Perceptron(퍼셉트론)
 - 초기 형태의 인공 신경망
 - 입력값 x 벡터에 대해 가중치 w를 곱하고 편향 b(-임계값)을 더해 결과값 y를 도출
-
 ### Single-Layer Perceptron
 - Input layer(입력층)과 Output layer(출력층)으로 구성
-
 ### Multi-Layer Perceptron
 - Input, Output layer 사이에 Hidden layer(은닉층)을 두어 좀 더 복잡한 문제에 대응
     * Feed-Forward Neural Network(FFNN) : 입력층에서 출력층방향으로 연산이 전개
@@ -22,13 +19,10 @@
         + ReLU Function : 음수 입력에 대해 0을 출력하고, 양수는 입력값을 출력
         + Leaky ReLU
         + Softmax Function : 시그모이드 함수처럼 출력층에서 주로 사용되며, 시그모이드가 이진 분류에 사용되는 반면, 소프트맥스는 다중 클래스 분류에 주로 사용
-
 ### Forward Propagation(순전파)
 - 입력층에서 출력층 방향으로 연산을 진행하는 과정
-
 ### BackPropagation(역전파)
 - 순전파 과정을 진행하여 예측값과 실제값의 오차를 계산하였을 때, 경사 하강법을 사용하여 학습률을 반영해 가중치를 업데이트하는 과정
-
 ### Concept
 - Loss function : 실제값과 예측값의 차이를 수치화 해주는 함수
     * MSE
@@ -53,7 +47,6 @@
     * Batch Normalization(배치 정규화) : 인공 신경망에 들어가는 각 입력을 평균과 분산으로 정규화
         + Internal Covariate Shift(내부 공변량 변화) : 학습에 의해 가중치가 변화하면, 입력 시점에 따라 입력 데이터의 분포가 변화하는 것
     * Layer Normalization(층 정규화)
-
 ### 과적합을 방지하는 방법
 1. 데이터의 양을 늘리기 : 데이터의 양이 적을 때, 데이터의 특정 패턴이나 노이즈까지 쉽게 암기할 수 있으므로, 데이터의 양을 늘려 일반적인 패턴을 학습(ex - Data Augmentation, Back Translation)
 
@@ -63,10 +56,7 @@
     - L1 regularization : 가중치 w들의 절댓값의 합을 비용함수에 추가
     - L2 regularization : 모든 가중치 w들의 제곱합을 비용함수에 추가
 4. Dropout : 학습 과정에서 설정한 비율로 랜덤한 신경망을 사용하지 않는 방법으로, 특정 뉴런 또는 특정 조합에 너무 의존적으로 되는 것을 방지
-
----
-
-## Keras
+### Code with Keras
 - Preprocessing
     * Tokenizer() : 토큰화, 정수 인코딩을 통해 단어 집합 생성
     
@@ -174,7 +164,6 @@
 - Save & Load
     * save("model_path + model_name") : hdf5 file로 저장
     * load_model("model_path + model_name") : 저장 된 모델 로드
-
 ### Functional API
 Layer 생성에 있어서 각 층을 일종의 함수로서 정의하고 연산자를 통해 신경망을 설계
 - FFNN
@@ -237,7 +226,6 @@ output = Dense(1, activation='sigmoid')(x)
 
 model = Model(inputs=inputs, outputs=output)
 ```
-
 ### Sub-Classing API
 - Linear Regression
 
@@ -267,9 +255,7 @@ sgd = tf.keras.optimizers.SGD(lr=0.01)
 model.compile(optimizer=sgd, loss='mse', metrics=['mse'])
 model.fit(X, y, epochs=300)
 ```
-
 ---
-
 ## Neural Network Language Model; NNLM(신경망 언어 모델)
 - NNLM : 자연어 학습에 대해 과거의 통계적인 접근방식(SLM)이 아닌, 인공 신경망을 사용하는 방식으로(ex - FFNNLM, RNNLM, BiLM)
     * 앞의 모든 단어를 참고하는 것이 아니라 정해진 개수의 단어(window)만을 참고하여 해당 window의 one-hot vector를 생성
@@ -285,14 +271,3 @@ model.fit(X, y, epochs=300)
 
 ## [Recurrent Neural Network; RNN](./Recurrent%20Neural%20Network)
 - RNN : 입력과 출력을 sequence(묶음) 단위로 처리하는 모델
-### RNN Code
-- Deep RNN : 은닉층의 개수(깊이)가 복수인 경우
-
-```python
-model = Sequential()
-# 첫번째 은닉층을 정의할 때, 각 시점의 값을 다음 은닉층으로 값을 전달하기 위해 retrun_sequences 값을 True로 설정
-model.add(SimpleRNN(hidden_units, input_length=10, input_dim=5, return_sequences=True))
-model.add(SimpleRNN(hidden_units, return_sequences=True))
-```
-
-- Bidirectional RNN(양방향 RNN) : 시점 t에서의 출력값을 예측할 때, 이전 시점의 입력뿐만 아니라, 이후 시점의 입력 또한 에측에 기여할 수 있다는 아이디어를 기반으로 기본적으로는 두 개의 메모리 셀을 사용하여 첫번째에서는 Forward States를, 두번째에서는 Backward States를 전달 받아 은닉상태를 계산
