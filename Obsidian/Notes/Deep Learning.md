@@ -283,19 +283,9 @@ model.fit(X, y, epochs=300)
 - Language Modeling : 주어진 문맥으로부터 모르는 단어를 예측하는 것
 - N-gram LM : 바로 앞의 `n-1`개의 단어를 참고하여 `n`번째 단어를 예측하는 모델
 
-## Recurrent Neural Network; RNN
+## [Recurrent Neural Network; RNN](./Recurrent%20Neural%20Network)
 - RNN : 입력과 출력을 sequence(묶음) 단위로 처리하는 모델
-
 ### RNN(순환 신경망)
-- FFNN : 은닉층에서 활성화 함수를 거친 값이 출력층 방향으로만 진행
-- RNN : 은닉층에서 활성화 함수(`tanh`를 주로 사용)를 거친 값이 출력층 혹은 은닉층 노드로 진행
-    * Memory Cell;RNN Cell : 은닉층에서 activation function을 거친 값을 내보내면서 이전 시점의 값을 기억하고 이를 입력으로 사용하는 노드
-    * Hidden State : t시점의 메모리 셀이 t+1 시점으로 보내는 값
-    * RNN Architecture : 각 시점에서 입력과 출력이 동시 혹은 하나만 이루어 지는지에 따라 모델의 종류(구조)가 변함 ![RNN Models](./img/rnn_models.jpg)
-        + One-to-Many : Image Captioning
-        + Many-to-One : Sentiment Classification, Spam Detection
-        + Many-to-Many : Chatbot, Translator, Tagging task
-
 ### RNN with Keras
 
 ```python
@@ -315,8 +305,7 @@ model.add(SimpleRNN(hidden_units, input_shape=(timesteps, input_dim)))
     * batch_size
     * output_dim : 최종 시점의 은닉 상태인 출력 벡터의 차원 수;출력 단어 하나의 길이
     * timesteps : 메모리 셀의 각 시점의 은닉 상태값(hidden states)
-- RNN example
-
+### RNN Code
 ```python
 import numpy as np
 
@@ -346,8 +335,6 @@ for input_t in inputs:
 total_hidden_states = np.stack(total_hidden_states, axis=0)
 print(total_hidden_states)
 ```
-
-- output
 
 ```bash
 Initial : [0. 0. 0. 0. 0. 0. 0. 0.]

@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c6e43d3e7660b5ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Recurrent Neural Network.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Deep Learning.md",
+                "file": "Notes/Recurrent Neural Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Deep Learning.md",
+                "file": "Notes/Recurrent Neural Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Deep Learning.md"
+                "file": "Notes/Recurrent Neural Network.md"
               }
             }
           },
@@ -164,13 +178,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e656aa6c08179c2d",
+  "active": "c6e43d3e7660b5ff",
   "lastOpenFiles": [
-    "Notes/Long Short-Term Memory.md",
+    "Notes/Deep Learning.md",
     "Notes/Recurrent Neural Network.md",
+    "Attatched/Pasted image 20240107170727.png",
+    "Notes/Long Short-Term Memory.md",
     "Notes/Machine Learning.md",
     "Notes/Natural Language Processing.md",
-    "Notes/Deep Learning.md",
     "Attatched/정규_표현식_특수문자.jpg",
     "Attatched/정규_표현식_역슬래쉬.jpg",
     "Attatched/정규_표현식_모듈.jpg",
@@ -180,7 +195,6 @@
     "Attatched/n_probability.jpg",
     "Attatched/PPL.jpg",
     "Attatched/wordrepresentation.png",
-    "Attatched/idf.jpg",
     "Notes/Transformer.md",
     "Notes/Subword Tokenizer.md",
     "Notes/Convolution Neural Network.md",
