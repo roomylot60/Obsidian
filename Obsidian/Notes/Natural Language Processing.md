@@ -80,11 +80,10 @@
 #### Chain Rule
 - 문장(단어 sequence)의 확률은 문맥이라는 관계로 인해 이전 단어의 영향을 받아 다음 단어가 등장
 - 조건부 확률을 통해 일반화하면 이전 단어에 대한 등장 확률의 곱으로 나타남
-#### 반복 등장 횟수 기반 접근
+#### Count Based Approach
 - 기계가 학습한 corpus data에서 특정 단어 다음에 등장한 단어의 횟수를 확률로 사용
-#### Sparsity problem(희소 문제)
 - LM은 실생활에서 사용되는 언어의 확률 분포를 주어진 Corpus data를 이용한 학습을 통해 근사 모델링 실시
-- 충분한 데이터를 관측하지 못하여 정확한 모델링을 할 수 없는 희소 문제가 발생할 수 있어 여러 generalization(일반화) 기법을 사용해 이를 보충
+- **Sparsity problem(희소 문제)** : 충분한 데이터를 관측하지 못하여 정확한 모델링을 할 수 없는 희소 문제가 발생할 수 있어, *n-gram LM*이나 여러 *generalization(일반화)* 기법(ex - smoothing, back-off)을 사용해 이를 보충
 #### N-gram LM
 - 전체 단어에 대해 고려하는 일반 LM과는 달리 *`n`개의 단어에 대한 확률*을 사용
 - 문장이 길수록 corpus 내에서 동일한 문장이 존재하지 않을 확률이 증가하므로, 참고하는 단어의 수를 줄임으로써 이를 근사치로 활용
@@ -95,13 +94,12 @@
 ## Count based word Representation
 - 텍스트를 수치화하여 통계적으로 접근
 - 텍스트 데이터 내에서 특정 단어의 중요도, 문서의 핵심어 추출, 검색 엔진에서 검색 결과의 순위 결정, 문서들 간의 유사도를 구하는 등의 용도로 사용
-
 ### Word Representation(단어의 표현 방법)
 - Local Representation(=Discrete Representation)(국소 표현) : 해당 단어 그 자체만 보고, 특정값을 매핑하여 단어를 표현
 - Distributed Representation(=Continuous Representation)(분산 표현) : 특정 단어를 표현하고자 주변을 참고하여 표현
 ![Word representation](../Attatched/wordrepresentation.png)
 
-### BoW(Bag of Words)
+### **BoW(Bag of Words)**
 - Bag of Words : 단어들의 출현 빈도(frequency)만을 고려하여 수치화, 순서는 고려하지 않음
 ```python
 from konlpy.tag import Okt
@@ -128,8 +126,7 @@ def build_bag_of_words(document):
         bow[index] = bow[index] + 1
 
     return word_to_index, bow
-```
-```python
+    
 # CountVenctorizer in Scikit-learn pakage
 # 영어 기준이기 때문에 띄어쓰기에 따라 토큰화 -> 한국어에서 조사 등의 구분이 되지 않음
 from sklearn.feature_extraction.text import CountVectorizer
@@ -148,13 +145,12 @@ print('vocabulary :',vector.vocabulary_)
 - 다수의 문서에 대해 각 문서의 BoW를 합쳐서 하나의 행렬로 표현
 - 전체 corpus의 크기가 클수록 Sparse representation에 대한 손실(0인 값을 갖는 벡터가 많아짐)이 발생 : 구두점, 낮은 빈도수의 단어, 불용어의 제거 혹은 표제어, 어간 추출을 통해 정규화를 진행하여 보완
 - 단순히 빈도수가 높은 단어가 중요도가 높다는 근거 부족(불용어)
-
 ### TF-IDF; Term Frequency-Inverse Document Frequency
 - DTM 내의 각 단어들마다 중요도에 따른 가중치 부여
 - 문서를 d, 단어를 t, 문서의 총 개수를 n이라고 표현할 때,
-    * tf(d,t) : 특정 문서 d에서의 특정 단어 t의 등장 횟수(tf;token frequency)
-    * df(t) : 특정 단어 t가 등장한 문서의 수(df;document frequency)
-    * idf(t) : df(t)에 반비례하는 수(idf; inverse df)![idf](../Attatched/idf.jpg)
+    * `tf(d,t)` : 특정 문서 d에서의 특정 단어 t의 등장 횟수(tf; token frequency)
+    * `df(t)` : 특정 단어 t가 등장한 문서의 수(df; document frequency)
+    * `idf(t)` : `df(t)`에 반비례하는 수(idf; inverse df)<br>![idf](../Attatched/idf.jpg)
 - 모든 문서에서 자주 등장하는 단어는 중요도가 낮다고, 특정 문서에서만 자주 등장하는 단어는 중요도가 높다고 판단
 - 문서의 유사도, 검색 시스템에서 검색 결과의 중요도 부여, 문서 내의 특정 단어의 중요도 측정 등에 사용
 ```python
@@ -217,12 +213,11 @@ tfidf_
 ```
 ## Vector Similarity
 - 문장이나 문서의 유사도를 구하는 작업
-    * 어떤 방법으로 수치화하여 표현했는가
-    * 문서 간의 단어들의 차이를 어떤 방법으로 계산했는가
-
+    1. 어떤 방법으로 수치화하여 표현했는가
+    2. 문서 간의 단어들의 차이를 어떤 방법으로 계산했는가
 ### Cosine Similarity
 - BoW 기반 표현방법(DTM, TF-IDF), Word2Vec 등을 통해 문장을 벡터화
-- 두 벡터 간의 cosine 각도를 이용하여 두 벡터의 유사도를 측정
+- 두 벡터 간의 cosine 각도를 이용하여 두 벡터의 유사도를 측정<br>
 ![Cosine Similarity](../Attatched/cosine_similarity.jpg)
 ```python
 import numpy as np
@@ -241,7 +236,7 @@ print('문서 1과 문서3의 유사도 :',cos_sim(doc1, doc3))
 print('문서 2와 문서3의 유사도 :',cos_sim(doc2, doc3))
 ```
 ### Euclidean Distance
-- 공간에 위치한 두 점 p, q사이의 직선거리
+- 공간에 위치한 두 점 p, q사이의 직선거리<br>
 ![Euclidean Distance](../Attatched/euclidean_distance.jpg)
 ```python
 import numpy as np
