@@ -21,7 +21,7 @@
     * Precision(정밀도) : TP/(TP+FP)
     * Recall(재현율) : TP/(TP+FN)
     * Accuracy(정확도) : (TP+TN)/(TP+FN+FP+TN) -> 더 중요한 데이터의 수가 적을 때 부적절
-![Confusion Matrix](../Attatched/Confusion_matrix.jpg)
+		![Confusion Matrix](../Attatched/Confusion_matrix.jpg)
 ---
 ## Classification
 - Classification(분류) : 주어진 선택지(이산적인 범위)에 대한 답을 결정하는 알고리즘
@@ -37,8 +37,8 @@
     - Simple LR
     - Multiple LR
     - Hypothesis : weight(가중치)와 bias(편향)을 통해 x와 y간의 관계를 식으로 나타내는 것
-    - Cost Function : `w`와 `b`를 찾기 위해서 세운 실제값과 예측값의 오차를 계산하는 식
-    - Mean Squared Error(평균 제곱 오차) : 오차의 제곱합에 대한 평균 ![MSE](../Attatched/MSE.jpg)
+    - Cost Function(비용 함수) : `w`와 `b`를 찾기 위해서 세운 실제값과 예측값의 오차를 계산하는 식
+    - Mean Squared Error; MSE(평균 제곱 오차) : 오차의 제곱합에 대한 평균 ![MSE](../Attatched/MSE.jpg)
     - Optimizer(최적화 알고리즘) : 비용 함수를 최소화 하는 매개 변수 w, b를 찾을 때 사용하는 알고리즘 (ex - Gradient Descent)
 ### Logistic Regression
 * Logistic Regression : BCF에 사용하는 알고리즘으로, 연속적인 범위의 입력에 대해 결과를 2가지로 출력
