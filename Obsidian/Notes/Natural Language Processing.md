@@ -61,27 +61,36 @@
 - PyKoSpacing : 띄어쓰기가 되어있지 않은 문장을 띄어쓰기한 문장으로 변환
 - Py-Hansapell : 네이버 한글 맞춤법 검사기를 바탕으로 만들어진 패키지로 띄어쓰기 및 맞춤법을 수정
 - SOYNLP : 품사 태깅, 단어 토큰화 등을 지원하는 tokenizer로, 비지도 학습을 통해 데이터의 자주 등장하는 단어들을 단어로 분석
-    * `Cohesion probability(응집 확률)` <br> Substring(내부 문자열)이 얼마나 응집하여 자주 등장하는지를 판단하는 척도 ![수식](../Attatched/Cohesion_probability.png)
+    * `Cohesion probability(응집 확률)` <br> Substring(내부 문자열)이 얼마나 응집하여 자주 등장하는 지를 판단하는 척도 ![수식](../Attatched/Cohesion_probability.png)
     * `Branching entropy` <br> 확률 분포의 엔트로피 값을 사용하여, 주어진 문자열에서 얼마나 다음 문자가 등장할 수 있는지를 판단하는 척도로 활용
     * `L Tokenizer` <br> 한국어는 띄어쓰기 단위로 나눈 어절 토큰이 L토큰 + R토큰의 형식을 가질 때가 많은데, 점수가 가장 높은 L토큰을 찾아내는 원리로 분리
-    * `MaxScoreTokenizer` <br> 띄어쓰기가 되지 않은 문장에서 점수가 높은 글자 시퀀스를 순차적으로 찾아 분리
+    * `MaxScoreTokenizer` <br> 띄어쓰기가 되지 않은 문장에서 점수가 높은 글자 sequence를 순차적으로 찾아 분리
     * `normalizer` <br> 채팅 데이터나 이모티콘 등에서 반복되는 문자를 정제하여 하나로 정규화
 - CKoNLPy(Customized Konlpy) : add_dictionary()를 사용하여 단어와 품사를 추가해줌으로써 토큰 분류를 조정
 ---
 ## Language Model(언어 모델)
-- **Language Model** : 단어 시퀀스(문장)에 문장의 적절성에 대한 확률(단어에 대한 예측을 통해)을 할당(assign)하는 모델
-- Statistical(통계적)
-- Artifitial Neural Network(인공 신경망)
-
-1. 단어 시퀀스의 확률 : 하나의 단어를 `w`, 단어 시퀀스를 `W`라고 한다면, `n`개의 단어가 등장하는 단어 시퀀스 `W`의 확률은 ![n개의 단어](../Attatched/n_probability.jpg)
-2. 다음 단어 등장 확률 : `n-1`개의 단어가 나열된 상태에서 `n`번째 단어의 확률은 조건부 확률 ![조건부 확률](../Attatched/n_conditional_probability.jpg)이고, <br><br> 전체 단어 시퀀스 `W`의 확률은 모든 단어가 예측되고 나서야 알 수 있으므로 ![W의 확률](../Attatched/LM_conditional_probability.jpg)
-
+- **Language Model** : 단어 sequence(문장)에 문장의 적절성에 대한 확률(단어에 대한 예측을 통해)을 할당(assign)하는 모델
+	1. Statistical(통계적) 방법
+	2. Artifitial Neural Network(인공 신경망)을 사용한 방법
+- Language Modeling : 주어진 단어들로 부터 아직 모르는 단어를 예측하는 작업
+### 단어 예측
+1. 단어 sequence의 확률 : 하나의 단어를 `w`, 단어 sequence를 `W`라고 한다면, `n`개의 단어가 등장하는 단어 sequence `W`의 확률은<br> ![n개의 단어](../Attatched/n_probability.jpg)
+2. 다음 단어 등장 확률 : `n-1`개의 단어가 나열된 상태에서 `n`번째 단어의 확률은 *조건부 확률* ![조건부 확률](../Attatched/n_conditional_probability.jpg)이고, <br> 전체 단어 sequence `W`의 확률은 모든 단어가 예측되고 나서야 알 수 있으므로 <br>![W의 확률](../Attatched/LM_conditional_probability.jpg)
 ### Statistical Language Model, SLM
-- `Chain Rule` <br> 문장(단어 시퀀스)의 확률은 문맥이라는 관계로 인해 이전 단어의 영향을 받아 다음 단어가 등장. 조건부 확률을 통해 일반화하면 이전 단어에 대한 등장확률의 곱으로 나타남
-- 반복 등장 횟수 기반 접근 : 기계가 학습한 copus data에서 특정 단어 다음에 등장한 단어의 횟수를 확률로 사용
-- `Sparsity problem` <br> LM은 실생활에서 사용되는 언어의 확률 분포를 주어진 Corpus data를 이용한 학습을 통해 근사 모델링하는데, 충분한 데이터를 관측하지 못하여 정확한 모델링을 할 수 없는 희소 문제가 발생할 수 있어 여러 generalization(일반화) 기법을 사용해 이를 보충
-- `N-gram LM` <br> 전체 단어에 대해 고려하는 일반 LM과는 달리 `n`개의 단어에 대한 확률을 사용. 문장이 길수록 corpus 내에서 동일한 문장이 존재하지 않을 확률이 증가하므로, 참고하는 단어의 수를 줄임으로써 이를 근사치로 활용.<br> 참고 단어의 수에 따라 의도와는 다른 결과를 예측하거나, n이 클수록 모델 사이즈가 커지는 문제가 발생
-- `Perplexity, PPL` <br> LM의 성능 비교에서 time cost를 줄이기 위해 사용하는 평가 지표로,  Branching Factor(선택할 수 있는 가능한 경우의 수)를 의미 ![PPL](../Attatched/PPL.jpg)
+#### Chain Rule
+- 문장(단어 sequence)의 확률은 문맥이라는 관계로 인해 이전 단어의 영향을 받아 다음 단어가 등장
+- 조건부 확률을 통해 일반화하면 이전 단어에 대한 등장 확률의 곱으로 나타남
+#### 반복 등장 횟수 기반 접근
+- 기계가 학습한 corpus data에서 특정 단어 다음에 등장한 단어의 횟수를 확률로 사용
+#### Sparsity problem(희소 문제)
+- LM은 실생활에서 사용되는 언어의 확률 분포를 주어진 Corpus data를 이용한 학습을 통해 근사 모델링 실시
+- 충분한 데이터를 관측하지 못하여 정확한 모델링을 할 수 없는 희소 문제가 발생할 수 있어 여러 generalization(일반화) 기법을 사용해 이를 보충
+#### N-gram LM
+- 전체 단어에 대해 고려하는 일반 LM과는 달리 *`n`개의 단어에 대한 확률*을 사용
+- 문장이 길수록 corpus 내에서 동일한 문장이 존재하지 않을 확률이 증가하므로, 참고하는 단어의 수를 줄임으로써 이를 근사치로 활용
+- 참고 단어의 수에 따라 의도와는 다른 결과를 예측하거나, n이 클수록 모델 사이즈가 커지는 문제가 발생
+#### Perplexity; PPL
+- LM의 성능 비교에서 time cost를 줄이기 위해 사용하는 평가 지표로,  Branching Factor(선택할 수 있는 가능한 경우의 수)를 의미 ![PPL](../Attatched/PPL.jpg)
 ---
 ## Count based word Representation
 - 텍스트를 수치화하여 통계적으로 접근
