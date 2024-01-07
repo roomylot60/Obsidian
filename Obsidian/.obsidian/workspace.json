@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Recurrent Neural Network.md",
+                "file": "Notes/Deep Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Recurrent Neural Network.md",
+                "file": "Notes/Deep Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Recurrent Neural Network.md",
+                "file": "Notes/Deep Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Recurrent Neural Network.md"
+                "file": "Notes/Deep Learning.md"
               }
             }
           },
@@ -166,9 +166,11 @@
   },
   "active": "e656aa6c08179c2d",
   "lastOpenFiles": [
+    "Notes/Long Short-Term Memory.md",
+    "Notes/Recurrent Neural Network.md",
+    "Notes/Machine Learning.md",
     "Notes/Natural Language Processing.md",
     "Notes/Deep Learning.md",
-    "Notes/Machine Learning.md",
     "Attatched/정규_표현식_특수문자.jpg",
     "Attatched/정규_표현식_역슬래쉬.jpg",
     "Attatched/정규_표현식_모듈.jpg",
@@ -187,8 +189,6 @@
     "Notes/Todoist.md",
     "1.Daily/2024-01-02.md",
     "1.Daily/2024-01-04.md",
-    "Notes/Recurrent Neural Network.md",
-    "Notes/Long Short-Term Memory.md",
     "Notes/Sequence-to-Sequence.md",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
