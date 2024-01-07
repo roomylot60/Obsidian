@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Notes/Natural Language Processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Notes/Natural Language Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Notes/Natural Language Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Transformer.md"
+                "file": "Notes/Natural Language Processing.md"
               }
             }
           },
@@ -164,8 +164,21 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "1b490d8e4ddcae85",
+  "active": "837145ae825b8a1e",
   "lastOpenFiles": [
+    "Attatched/정규_표현식_특수문자.jpg",
+    "Attatched/정규_표현식_역슬래쉬.jpg",
+    "Attatched/정규_표현식_모듈.jpg",
+    "Attatched/Cohesion_probability.png",
+    "Attatched/LM_conditional_probability.jpg",
+    "Attatched/n_conditional_probability.jpg",
+    "Attatched/n_probability.jpg",
+    "Attatched/PPL.jpg",
+    "Attatched/wordrepresentation.png",
+    "Attatched/idf.jpg",
+    "Attatched/cosine_similarity.jpg",
+    "Notes/Machine Learning.md",
+    "Notes/Transformer.md",
     "Notes/Subword Tokenizer.md",
     "Notes/Natural Language Processing.md",
     "Notes/Deep Learning.md",
@@ -177,23 +190,11 @@
     "1.Daily/2024-01-04.md",
     "Notes/Recurrent Neural Network.md",
     "Notes/Long Short-Term Memory.md",
-    "Notes/Transformer.md",
     "Notes/Sequence-to-Sequence.md",
     "무제 파일.canvas",
-    "Notes/Machine Learning.md",
     "Attatched/chatbot_transformer.ipynb",
-    "Attatched/Pasted image 20240105144425.png",
-    "Attatched/Pasted image 20240104180133.png",
-    "Attatched/Pasted image 20240104180009.png",
-    "Attatched/Pasted image 20240104175125.png",
-    "Attatched/Pasted image 20240104175031.png",
-    "Attatched/Pasted image 20240103142101.png",
     "Notes/2024-01-04.md",
-    "Attatched/Pasted image 20240104162143.png",
-    "Attatched/Pasted image 20240104161019.png",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
-    "Attatched/Pasted image 20240103150221.png",
-    "Attatched/Pasted image 20240103145326.png",
     "Notes/Obsidian Setting.md",
     "Attatched",
     "Notes",
