@@ -148,99 +148,95 @@ model.add(SimpleRNN(hidden_units, input_shape=(timesteps, input_dim)))
 ```
 ### Tagging Task using Keras
 - 지도 학습을 통해 이루어지는 분류 작업
-    * Named Entity Recognition(개체명 인식) : 이름(의미)을 갖는 개체를 보고 해당 단어(개체)의 유형 파악
-        + Named Entity Recognition using NTLK example
-        
-        ```python
-        from nltk import word_tokenize, pos_tag, ne_chunk
+#### Named Entity Recognition(개체명 인식)
+- 이름(의미)을 갖는 개체를 보고 해당 단어(개체)의 유형 파악 
+```python
+from nltk import word_tokenize, pos_tag, ne_chunk
 
-        sentence = "James is working at Disney in London"
-        
-        # Tokenize the sentence and tag
-        tokenized_sentence = pos_tag(word_tokenize(sentence))
-        print(tokenized_sentence)
+sentence = "James is working at Disney in London"
 
-        # 개체명 인식
-        ner_sentence = ne_chunk(tokenized_sentence)
-        print(ner_sentence)
-        ```
+# Tokenize the sentence and tag
+tokenized_sentence = pos_tag(word_tokenize(sentence))
+print(tokenized_sentence)
 
-    * Part-of-Speech Tagging(품사 태깅) : 단어의 품사 파악
-        + Part-of-speech Tagging using Bi-LSTM example
-        
-        ```python
-        # Preprocessing
-        import nltk
-        import numpy as np
-        import matplotlib.pyplot as plt
-        from tensorflow.keras.preprocessing.text import Tokenizer
-        from tensorflow.keras.preprocessing.sequence import pad_sequences
-        from tensorflow.keras.utils import to_categorical
-        from sklearn.model_selection import train_test_split
+# 개체명 인식
+ner_sentence = ne_chunk(tokenized_sentence)
+print(ner_sentence)
+```
 
-        # Tokenized and Tagged Data
-        tagged_sentences = nltk.corpus.treebank.tagged_sents()
-        print("품사 태깅이 된 문장 개수: ", len(tagged_sentences)) # 3914
+#### Part-of-Speech Tagging(품사 태깅) 
+- 단어의 품사 파악      
+```python
+# Preprocessing
+import nltk
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.utils import to_categorical
+from sklearn.model_selection import train_test_split
 
-        # Diverse data into words and tags
-        sentences, pos_tags = [], [] 
-        for tagged_sentence in tagged_sentences:
-            sentence, tag_info = zip(*tagged_sentence) # as the tagged_sentence shows tuple of word and tag of each sample, so use zip() to seperate them
-            sentences.append(list(sentence))
-            pos_tags.append(list(tag_info))
+# Tokenized and Tagged Data
+tagged_sentences = nltk.corpus.treebank.tagged_sents()
+print("품사 태깅이 된 문장 개수: ", len(tagged_sentences)) # 3914
 
-        def tokenize(samples):
-        tokenizer = Tokenizer()
-        tokenizer.fit_on_texts(samples)
-        return tokenizer
+# Diverse data into words and tags
+sentences, pos_tags = [], [] 
+for tagged_sentence in tagged_sentences:
+	sentence, tag_info = zip(*tagged_sentence) # as the tagged_sentence shows tuple of word and tag of each sample, so use zip() to seperate them
+	sentences.append(list(sentence))
+	pos_tags.append(list(tag_info))
 
-        src_tokenizer = tokenize(sentences)
-        tar_tokenizer = tokenize(pos_tags)
+def tokenize(samples):
+	tokenizer = Tokenizer()
+	tokenizer.fit_on_texts(samples)
+	return tokenizer
 
-        vocab_size = len(src_tokenizer.word_index) + 1
-        tag_size = len(tar_tokenizer.word_index) + 1
-        print('단어 집합의 크기 : {}'.format(vocab_size))
-        print('태깅 정보 집합의 크기 : {}'.format(tag_size))
+src_tokenizer = tokenize(sentences)
+tar_tokenizer = tokenize(pos_tags)
 
-        # Encoding
-        X_train = src_tokenizer.texts_to_sequences(sentences)
-        y_train = tar_tokenizer.texts_to_sequences(pos_tags)
+vocab_size = len(src_tokenizer.word_index) + 1
+tag_size = len(tar_tokenizer.word_index) + 1
+print('단어 집합의 크기 : {}'.format(vocab_size))
+print('태깅 정보 집합의 크기 : {}'.format(tag_size))
 
-        # padding into max length of encoded samples
-        max_len = 150
-        X_train = pad_sequences(X_train, padding='post', maxlen=max_len)
-        y_train = pad_sequences(y_train, padding='post', maxlen=max_len)
-        ```
+# Encoding
+X_train = src_tokenizer.texts_to_sequences(sentences)
+y_train = tar_tokenizer.texts_to_sequences(pos_tags)
 
-        ```python
-        # Generate POS Tagger
-        from tensorflow.keras.models import Sequential
-        from tensorflow.keras.layers import Dense, LSTM, InputLayer, Bidirectional, TimeDistributed, Embedding
-        from tensorflow.keras.optimizers import Adam
+# padding into max length of encoded samples
+max_len = 150
+X_train = pad_sequences(X_train, padding='post', maxlen=max_len)
+y_train = pad_sequences(y_train, padding='post', maxlen=max_len)
 
-        embedding_dim = 128
-        hidden_units = 128
+# Generate POS Tagger
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, LSTM, InputLayer, Bidirectional, TimeDistributed, Embedding
+from tensorflow.keras.optimizers import Adam
 
-        model = Sequential()
-        model.add(Embedding(vocab_size, embedding_dim, mask_zero=True)) # Zero padding
-        model.add(Bidirectional(LSTM(hidden_units, return_sequences=True))) # Many-to-many
-        model.add(TimeDistributed(Dense(tag_size, activation=('softmax'))))
+embedding_dim = 128
+hidden_units = 128
 
-        model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(0.001), metrics=['accuracy'])
-        model.fit(X_train, y_train, batch_size=128, epochs=7, validation_data=(X_test, y_test))
+model = Sequential()
+model.add(Embedding(vocab_size, embedding_dim, mask_zero=True)) # Zero padding
+model.add(Bidirectional(LSTM(hidden_units, return_sequences=True))) # Many-to-many
+model.add(TimeDistributed(Dense(tag_size, activation=('softmax'))))
 
-        # Testing 
-        index_to_word = src_tokenizer.index_word
-        index_to_tag = tar_tokenizer.index_word
+model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(0.001), metrics=['accuracy'])
+model.fit(X_train, y_train, batch_size=128, epochs=7, validation_data=(X_test, y_test))
 
-        i = 10 # 확인하고 싶은 테스트용 샘플의 인덱스.
-        y_predicted = model.predict(np.array([X_test[i]])) # 입력한 테스트용 샘플에 대해서 예측값 y를 리턴
-        y_predicted = np.argmax(y_predicted, axis=-1) # 확률 벡터를 정수 레이블로 변환.
+# Testing 
+index_to_word = src_tokenizer.index_word
+index_to_tag = tar_tokenizer.index_word
 
-        print("{:15}|{:5}|{}".format("단어", "실제값", "예측값"))
-        print(35 * "-")
+i = 10 # 확인하고 싶은 테스트용 샘플의 인덱스.
+y_predicted = model.predict(np.array([X_test[i]])) # 입력한 테스트용 샘플에 대해서 예측값 y를 리턴
+y_predicted = np.argmax(y_predicted, axis=-1) # 확률 벡터를 정수 레이블로 변환.
 
-        for word, tag, pred in zip(X_test[i], y_test[i], y_predicted[0]):
-            if word != 0: # PAD값은 제외함.
-                print("{:17}: {:7} {}".format(index_to_word[word], index_to_tag[tag].upper(), index_to_tag[pred].upper()))
-        ```
+print("{:15}|{:5}|{}".format("단어", "실제값", "예측값"))
+print(35 * "-")
+
+for word, tag, pred in zip(X_test[i], y_test[i], y_predicted[0]):
+	if word != 0: # PAD값은 제외함.
+		print("{:17}: {:7} {}".format(index_to_word[word], index_to_tag[tag].upper(), index_to_tag[pred].upper()))
+```
