@@ -146,7 +146,7 @@ print('vocabulary :',vector.vocabulary_)
 - 문서를 d, 단어를 t, 문서의 총 개수를 n이라고 표현할 때,
     * tf(d,t) : 특정 문서 d에서의 특정 단어 t의 등장 횟수(tf;token frequency)
     * df(t) : 특정 단어 t가 등장한 문서의 수(df;document frequency)
-    * idf(t) : df(t)에 반비례하는 수(idf;inverse df)![idf](../Attatched/idf.jpg)
+    * idf(t) : df(t)에 반비례하는 수(idf; inverse df)![idf](../Attatched/idf.jpg)
 - 모든 문서에서 자주 등장하는 단어는 중요도가 낮다고, 특정 문서에서만 자주 등장하는 단어는 중요도가 높다고 판단
 - 문서의 유사도, 검색 시스템에서 검색 결과의 중요도 부여, 문서 내의 특정 단어의 중요도 측정 등에 사용
 ```python
@@ -215,7 +215,7 @@ tfidf_
 ### Cosine Similarity
 - BoW 기반 표현방법(DTM, TF-IDF), Word2Vec 등을 통해 문장을 벡터화
 - 두 벡터 간의 cosine 각도를 이용하여 두 벡터의 유사도를 측정
-![Cosine Similarity](./img/cosine_similarity.jpg)
+![Cosine Similarity](../Attatched/cosine_similarity.jpg)
 ```python
 import numpy as np
 from numpy import dot
@@ -234,7 +234,7 @@ print('문서 2와 문서3의 유사도 :',cos_sim(doc2, doc3))
 ```
 ### Euclidean Distance
 - 공간에 위치한 두 점 p, q사이의 직선거리
-![Euclidean Distance](./img/euclidean_distance.jpg)
+![Euclidean Distance](../Attatched/euclidean_distance.jpg)
 ```python
 import numpy as np
 
@@ -253,4 +253,4 @@ print('문서3과 문서Q의 거리 :',dist(doc3,docQ))
 
 ### Jaccard Similarity
 - 교집합을 갖는 서로 다른 집합 A, B에서 합집합에 대한 교집합의 비율
-![Jaccard Similarity](./img/jaccard_similarity.jpg)
+![Jaccard Similarity](../Attatched/jaccard_similarity.jpg)

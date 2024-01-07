@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -164,7 +165,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "837145ae825b8a1e",
+  "active": "1b490d8e4ddcae85",
   "lastOpenFiles": [
     "Attatched/정규_표현식_특수문자.jpg",
     "Attatched/정규_표현식_역슬래쉬.jpg",
