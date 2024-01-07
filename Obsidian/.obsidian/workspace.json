@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Deep Learning.md",
+                "file": "Notes/Natural Language Processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Deep Learning.md",
+                "file": "Notes/Natural Language Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Deep Learning.md",
+                "file": "Notes/Natural Language Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Deep Learning.md"
+                "file": "Notes/Natural Language Processing.md"
               }
             }
           },
@@ -166,9 +167,9 @@
   },
   "active": "e656aa6c08179c2d",
   "lastOpenFiles": [
+    "Notes/Deep Learning.md",
     "Notes/Machine Learning.md",
     "Notes/Natural Language Processing.md",
-    "Notes/Deep Learning.md",
     "Attatched/정규_표현식_특수문자.jpg",
     "Attatched/정규_표현식_역슬래쉬.jpg",
     "Attatched/정규_표현식_모듈.jpg",

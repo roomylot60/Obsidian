@@ -69,12 +69,11 @@
 - CKoNLPy(Customized Konlpy) : add_dictionary()를 사용하여 단어와 품사를 추가해줌으로써 토큰 분류를 조정
 ---
 ## Language Model(언어 모델)
-`Language Model` : 단어 시퀀스(문장)에 문장의 적절성에 대한 확률(단어에 대한 예측을 통해)을 할당(assign)하는 모델
+- **Language Model** : 단어 시퀀스(문장)에 문장의 적절성에 대한 확률(단어에 대한 예측을 통해)을 할당(assign)하는 모델
 - Statistical(통계적)
 - Artifitial Neural Network(인공 신경망)
 
 1. 단어 시퀀스의 확률 : 하나의 단어를 `w`, 단어 시퀀스를 `W`라고 한다면, `n`개의 단어가 등장하는 단어 시퀀스 `W`의 확률은 ![n개의 단어](../Attatched/n_probability.jpg)
-<br><br>
 2. 다음 단어 등장 확률 : `n-1`개의 단어가 나열된 상태에서 `n`번째 단어의 확률은 조건부 확률 ![조건부 확률](../Attatched/n_conditional_probability.jpg)이고, <br><br> 전체 단어 시퀀스 `W`의 확률은 모든 단어가 예측되고 나서야 알 수 있으므로 ![W의 확률](../Attatched/LM_conditional_probability.jpg)
 
 ### Statistical Language Model, SLM
@@ -136,12 +135,12 @@ print('bag of words vector :', vector.fit_transform(corpus).toarray())
 print('vocabulary :',vector.vocabulary_)
 ```
 
-### DTM;Document Term Matrix(문서 단어 행렬)
+### DTM; Document Term Matrix(문서 단어 행렬)
 - 다수의 문서에 대해 각 문서의 BoW를 합쳐서 하나의 행렬로 표현
 - 전체 corpus의 크기가 클수록 Sparse representation에 대한 손실(0인 값을 갖는 벡터가 많아짐)이 발생 : 구두점, 낮은 빈도수의 단어, 불용어의 제거 혹은 표제어, 어간 추출을 통해 정규화를 진행하여 보완
 - 단순히 빈도수가 높은 단어가 중요도가 높다는 근거 부족(불용어)
 
-### TF-IDF;Term Frequency-Inverse Document Frequency
+### TF-IDF; Term Frequency-Inverse Document Frequency
 - DTM 내의 각 단어들마다 중요도에 따른 가중치 부여
 - 문서를 d, 단어를 t, 문서의 총 개수를 n이라고 표현할 때,
     * tf(d,t) : 특정 문서 d에서의 특정 단어 t의 등장 횟수(tf;token frequency)
