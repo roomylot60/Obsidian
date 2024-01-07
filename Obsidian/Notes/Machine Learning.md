@@ -24,7 +24,7 @@
 ![Confusion Matrix](../Attatched/Confusion_matrix.jpg)
 ---
 ## Classification
-- Classification(분류) : 주어진 선택지(이산적인 범위)에 대한 답을 결정
+- Classification(분류) : 주어진 선택지(이산적인 범위)에 대한 답을 결정하는 알고리즘
 ### Binary Classification
 - Binary Classification(이진 분류) : 입력에 따라 Model이 분류한 Category가 2가지인 분류 알고리즘으로, 주로 참, 거짓 분류에 사용
 ### Multi-class Classification
