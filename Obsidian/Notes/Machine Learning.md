@@ -24,11 +24,11 @@
 ![Confusion Matrix](../Attatched/Confusion_matrix.jpg)
 ---
 ## Classification
-- Classification(분류) : 주어진 선택지(불 연속적인 범위)에 대한 답을 결정
+- Classification(분류) : 주어진 선택지(이산적인 범위)에 대한 답을 결정
 ### Binary Classification
-- Binary Classification(이진 분류) : 입력에 따라 Model이 분류한 Category가 2 가지인 분류 알고리즘으로, 주로 참, 거짓 분류에 사용
+- Binary Classification(이진 분류) : 입력에 따라 Model이 분류한 Category가 2가지인 분류 알고리즘으로, 주로 참, 거짓 분류에 사용
 ### Multi-class Classification
-- Multi-class Calssification(다중 분류) : 입력에 따라 분류된 Category가 3 가지 이상인 분류 알고리즘
+- Multi-class Calssification(다중 분류) : 입력에 따라 분류된 Category가 3가지 이상인 분류 알고리즘
 ---
 ## Regression
 - Regression(회귀) : 연속적인 값의 범위 내에서 예측값이 나오는 경우
@@ -41,7 +41,7 @@
     - Mean Squared Error(평균 제곱 오차) : 오차의 제곱합에 대한 평균 ![MSE](../Attatched/MSE.jpg)
     - Optimizer(최적화 알고리즘) : 비용 함수를 최소화 하는 매개 변수 w, b를 찾을 때 사용하는 알고리즘 (ex - Gradient Descent)
 ### Logistic Regression
-* Logistic Regression : BCF에 사용하는 알고리즘
+* Logistic Regression : BCF에 사용하는 알고리즘으로, 연속적인 범위의 입력에 대해 결과를 2가지로 출력
     - Sigmoid Function : x, y간의 관계에서 y값이 0과 1사이의 값을 가지면서 S자 형태로 그려지는 함수 ![Sigmoid Function](../Attatched/sigmoid.jpg)
     - Cross Entropy : 가중치 `w`를 최소로하는 비용함수를 만들 때, y값이 0일 때와 1일 때에 대한 값을 고려하여 생성한 Objective Function ![Cross Entropy](../Attatched/Cross_Entropy.jpg)
     
