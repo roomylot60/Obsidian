@@ -4,7 +4,7 @@
 	- FFNN : 은닉층에서 활성화 함수를 거친 값이 출력층 방향으로만 진행
 	- RNN : 은닉층에서 활성화 함수(`tanh`를 주로 사용)를 거친 값이 출력층 혹은 은닉층 노드로 진행<br>![RNN 기본구조](../Attatched/Pasted%20image%2020240107170727.png)
 - Memory Cell; RNN Cell : 은닉층에서 activation function을 거친 값을 내보내면서 이전 시점의 값을 기억하고 이를 입력으로 사용하는 노드
-    * Hidden State : t시점의 메모리 셀이 t+1 시점으로 보내는 값
+    * Hidden State : t시점의 메모리 셀이 t+1 시점으로 보내는 값<br>![time step에 따른 구분](../Attatched/Pasted%20image%2020240107171339.png)
     * RNN Architecture : 각 시점에서 입력과 출력이 동시 혹은 하나만 이루어지는 지에 따라 모델의 종류(구조)가 변함 ![RNN Models](../Attatched/rnn_models.jpg)
         + One-to-Many : Image Captioning
         + Many-to-One : Sentiment Classification, Spam Detection
