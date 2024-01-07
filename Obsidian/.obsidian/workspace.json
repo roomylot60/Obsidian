@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Natural Language Processing.md",
+                "file": "Notes/Machine Learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e656aa6c08179c2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Deep Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Natural Language Processing.md",
+                "file": "Notes/Machine Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Natural Language Processing.md",
+                "file": "Notes/Machine Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Natural Language Processing.md"
+                "file": "Notes/Machine Learning.md"
               }
             }
           },
@@ -167,6 +179,9 @@
   },
   "active": "1b490d8e4ddcae85",
   "lastOpenFiles": [
+    "Notes/Natural Language Processing.md",
+    "Notes/Deep Learning.md",
+    "Notes/Machine Learning.md",
     "Attatched/정규_표현식_특수문자.jpg",
     "Attatched/정규_표현식_역슬래쉬.jpg",
     "Attatched/정규_표현식_모듈.jpg",
@@ -177,12 +192,8 @@
     "Attatched/PPL.jpg",
     "Attatched/wordrepresentation.png",
     "Attatched/idf.jpg",
-    "Attatched/cosine_similarity.jpg",
-    "Notes/Machine Learning.md",
     "Notes/Transformer.md",
     "Notes/Subword Tokenizer.md",
-    "Notes/Natural Language Processing.md",
-    "Notes/Deep Learning.md",
     "Notes/Convolution Neural Network.md",
     "Notes/Attention Machanism.md",
     "Notes/Plug-in.md",

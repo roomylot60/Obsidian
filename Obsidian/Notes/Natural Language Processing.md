@@ -1,6 +1,6 @@
 ## Natural Language Processing; NLP
 - Natural Language(자연어) : 일상 생활에서 사용하는 언어
-- Natural Language Processing(자연어 처리) : 자연어의 의미를 분석하여 컴퓨터가 처리할 수 있도록 하는 일(ex - 음성 인식, 내용 요약, 번역, 감정 분석, 텍스트 분류, 질의 응답, 챗봇)
+- Natural Language Processing(자연어 처리) : 자연어의 의미를 분석하여 컴퓨터가 처리할 수 있도록 하는 일 (ex - 음성 인식, 내용 요약, 번역, 감정 분석, 텍스트 분류, 질의 응답, 챗봇)
 ### 사용 Tools
 - Anaconda : Python과 관련된 여러 패키지(Numpy, Pandas, JupyterNB, IPython, Scikit-learn, matplotlib, seaborn, etc)를 모아놓은 파일
 - [Google-Colab](https://colab.research.google.com/) : Google에서 지원하는 Online IDE로, Tensorflow는 기본적으로 64-bit platform만을 지원하고, DL에서는 GPU를 이용하는 경우가 많기에, 개인 PC환경이 이를 지원하지 않을 경우 이용하는 것이 용이
@@ -254,3 +254,6 @@ print('문서3과 문서Q의 거리 :',dist(doc3,docQ))
 ### Jaccard Similarity
 - 교집합을 갖는 서로 다른 집합 A, B에서 합집합에 대한 교집합의 비율
 ![Jaccard Similarity](../Attatched/jaccard_similarity.jpg)
+
+## [Machine Learning](./Machine%20Learning.md)
+## [Deep Learning](./Deep%20Learning)
