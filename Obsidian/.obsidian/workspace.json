@@ -81,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -178,6 +179,7 @@
   },
   "active": "e656aa6c08179c2d",
   "lastOpenFiles": [
+    "Attatched/Pasted image 20240112174854.png",
     "Notes/Transformer.md",
     "1.Daily/2024-01-11.md",
     "Notes/Sequence-to-Sequence.md",
