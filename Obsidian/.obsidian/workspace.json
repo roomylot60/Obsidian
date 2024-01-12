@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "1.Daily/2024-01-11.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "1.Daily/2024-01-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "1.Daily/2024-01-11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md"
+                "file": "1.Daily/2024-01-11.md"
               }
             }
           },
@@ -178,12 +178,14 @@
   },
   "active": "e656aa6c08179c2d",
   "lastOpenFiles": [
+    "Notes/Transformer.md",
+    "1.Daily/2024-01-11.md",
+    "Notes/Sequence-to-Sequence.md",
     "Notes/Recurrent Neural Network.md",
     "Notes/Long Short-Term Memory.md",
     "Notes/Subword Tokenizer.md",
     "Notes/Natural Language Processing.md",
     "Notes/Plug-in.md",
-    "Notes/Sequence-to-Sequence.md",
     "Notes/Convolution Neural Network.md",
     "Notes/Deep Learning.md",
     "Notes/Attention Machanism.md",
@@ -198,7 +200,6 @@
     "Attatched/LM_conditional_probability.jpg",
     "Attatched/n_conditional_probability.jpg",
     "Attatched/n_probability.jpg",
-    "Notes/Transformer.md",
     "Notes/Todoist.md",
     "1.Daily/2024-01-02.md",
     "1.Daily/2024-01-04.md",
