@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Notes/Convolution Neural Network.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cfb6cff33882316c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "1.Daily/2024-01-19.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -165,11 +178,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e656aa6c08179c2d",
+  "active": "cfb6cff33882316c",
   "lastOpenFiles": [
-    "Attatched/Pasted image 20240119163040.png",
     "Notes/Convolution Neural Network.md",
     "1.Daily/2024-01-19.md",
+    "Attatched/Pasted image 20240119163040.png",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-01-11.md",
     "1.Daily/2024-01-15.md",
@@ -191,7 +204,6 @@
     "Attatched/정규_표현식_역슬래쉬.jpg",
     "Attatched/정규_표현식_모듈.jpg",
     "Attatched/Cohesion_probability.png",
-    "Attatched/LM_conditional_probability.jpg",
     "Notes/Todoist.md",
     "1.Daily/2024-01-02.md",
     "1.Daily/2024-01-04.md",
