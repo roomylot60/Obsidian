@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -167,6 +166,7 @@
   },
   "active": "e656aa6c08179c2d",
   "lastOpenFiles": [
+    "1.Daily/2024-01-15.md",
     "Attatched/Pasted image 20240112175914.png",
     "Attatched/Pasted image 20240112174854.png",
     "Notes/Transformer.md",
@@ -189,7 +189,6 @@
     "Attatched/정규_표현식_모듈.jpg",
     "Attatched/Cohesion_probability.png",
     "Attatched/LM_conditional_probability.jpg",
-    "Attatched/n_conditional_probability.jpg",
     "Notes/Todoist.md",
     "1.Daily/2024-01-02.md",
     "1.Daily/2024-01-04.md",
