@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-01-19.md",
+                "file": "Notes/Convolution Neural Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-01-19.md",
+                "file": "Notes/Convolution Neural Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-01-19.md"
+                "file": "Notes/Convolution Neural Network.md"
               }
             }
           },
@@ -178,10 +177,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "cfb6cff33882316c",
+  "active": "e656aa6c08179c2d",
   "lastOpenFiles": [
-    "Notes/Convolution Neural Network.md",
     "1.Daily/2024-01-19.md",
+    "Notes/Convolution Neural Network.md",
     "Attatched/Pasted image 20240119163040.png",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-01-11.md",
