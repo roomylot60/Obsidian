@@ -13,7 +13,7 @@
         + `K_{w}` : 커널의 너비
         + `S` : 스트라이드
         + `O_{h}` : 특성 맵의 높이 ![feature map height](../Attatched/feature_map_h.jpg)
-        + `O_{w}` : 특성 맵의 너비 ![feature map width](../Attatched/feature_map_w.jpg)
+	        + `O_{w}` : 특성 맵의 너비 ![feature map width](../Attatched/feature_map_w.jpg)
 - Padding : 합성곱 연산의 결과로 얻은 특성 맵이 입력보다 크기가 작아지기 때문에, 입력 크기와 동일하게 유지하기 위해 입력의 가장자리에 지정된 개수의 폭 만큼의 행과 열을 추가하는 것으로 주로 zero padding을 사용 ![feature map padding](../Attatched/feature_map_padding.jpg)
 - Convolution layer : 합성곱 연산과 그 결과에 비선형성을 추가하기 위한 활성화 함수 ReLU를 지나는 층으로 특성 맵을 통해 **추출한 이미지의 특징을 표현**
 - Pooling layer : 특성 맵을 다운 샘플링하여 특성 맵의 크기를 줄이는 pooling 연산을 진행하는 층으로, 다운 샘플링 과정에서 커널과 스트라이드를 사용하나 합성곱 층과는 달리 학습할 가중치 값을 가지지 않음
