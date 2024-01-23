@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1.Daily/2024-01-22.md",
+                "file": "1.Daily/2024-01-19.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-01-22.md",
+                "file": "Notes/Convolution Neural Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-01-22.md",
+                "file": "Notes/Convolution Neural Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-01-22.md"
+                "file": "Notes/Convolution Neural Network.md"
               }
             }
           },
@@ -178,16 +177,17 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "cfb6cff33882316c",
+  "active": "e656aa6c08179c2d",
   "lastOpenFiles": [
     "1.Daily/2024-01-19.md",
     "1.Daily/2024-01-22.md",
+    "1.Daily/2024-01-15.md",
+    "Attatched/Pasted image 20240123115915.png",
     "Attatched/Pasted image 20240119165019.png",
     "Notes/Convolution Neural Network.md",
     "Attatched/Pasted image 20240119163040.png",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-01-11.md",
-    "1.Daily/2024-01-15.md",
     "Attatched/Pasted image 20240112175914.png",
     "Attatched/Pasted image 20240112174854.png",
     "Notes/Transformer.md",
@@ -204,7 +204,6 @@
     "Notes/Machine Learning.md",
     "Attatched/정규_표현식_특수문자.jpg",
     "Attatched/정규_표현식_역슬래쉬.jpg",
-    "Attatched/정규_표현식_모듈.jpg",
     "Notes/Todoist.md",
     "1.Daily/2024-01-02.md",
     "1.Daily/2024-01-04.md",
