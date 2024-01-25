@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Convolution Neural Network.md",
+                "file": "1.Daily/2024-01-22.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Convolution Neural Network.md",
+                "file": "1.Daily/2024-01-22.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Convolution Neural Network.md",
+                "file": "1.Daily/2024-01-22.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Convolution Neural Network.md"
+                "file": "1.Daily/2024-01-22.md"
               }
             }
           },
@@ -179,12 +178,14 @@
   },
   "active": "e656aa6c08179c2d",
   "lastOpenFiles": [
+    "1.Daily/2024-01-24.md",
+    "1.Daily/2024-01-23.md",
+    "Notes/Convolution Neural Network.md",
     "1.Daily/2024-01-19.md",
     "1.Daily/2024-01-22.md",
     "1.Daily/2024-01-15.md",
     "Attatched/Pasted image 20240123115915.png",
     "Attatched/Pasted image 20240119165019.png",
-    "Notes/Convolution Neural Network.md",
     "Attatched/Pasted image 20240119163040.png",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-01-11.md",
