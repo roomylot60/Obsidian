@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c5227a89a0c3e3d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Connectionist Temporal Classification.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-01-15.md",
+                "file": "Notes/Connectionist Temporal Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-01-15.md",
+                "file": "Notes/Connectionist Temporal Classification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-01-15.md"
+                "file": "Notes/Connectionist Temporal Classification.md"
               }
             }
           },
@@ -165,15 +177,16 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "ec54a583afa225a3",
+  "active": "c5227a89a0c3e3d4",
   "lastOpenFiles": [
+    "1.Daily/2024-01-15.md",
+    "Notes/Connectionist Temporal Classification.md",
     "1.Daily/2024-01-19.md",
     "1.Daily/2024-01-22.md",
     "Notes/Interpolation(보간법).md",
     "Attatched/Pasted image 20240128171548.png",
     "Attatched/Pasted image 20240128171525.png",
     "Attatched/Pasted image 20240128171519.png",
-    "1.Daily/2024-01-15.md",
     "1.Daily/2024-01-26.md",
     "1.Daily/2024-01-25.md",
     "1.Daily/2024-01-24.md",
