@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e656aa6c08179c2d",
+            "id": "ec54a583afa225a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "ec54a583afa225a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Interpolation(보간법).md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Interpolation(보간법).md",
+                "file": "1.Daily/2024-01-15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Interpolation(보간법).md",
+                "file": "1.Daily/2024-01-15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Interpolation(보간법).md"
+                "file": "1.Daily/2024-01-15.md"
               }
             }
           },
@@ -180,10 +167,13 @@
   },
   "active": "ec54a583afa225a3",
   "lastOpenFiles": [
-    "1.Daily/2024-01-15.md",
-    "Notes/Interpolation(보간법).md",
     "1.Daily/2024-01-19.md",
     "1.Daily/2024-01-22.md",
+    "Notes/Interpolation(보간법).md",
+    "Attatched/Pasted image 20240128171548.png",
+    "Attatched/Pasted image 20240128171525.png",
+    "Attatched/Pasted image 20240128171519.png",
+    "1.Daily/2024-01-15.md",
     "1.Daily/2024-01-26.md",
     "1.Daily/2024-01-25.md",
     "1.Daily/2024-01-24.md",
@@ -206,10 +196,7 @@
     "Notes/Deep Learning.md",
     "Notes/Attention Machanism.md",
     "Attatched/Pasted image 20240107171654.png",
-    "Attatched/Pasted image 20240107171339.png",
-    "Attatched/Pasted image 20240107170727.png",
     "Notes/Machine Learning.md",
-    "Attatched/정규_표현식_특수문자.jpg",
     "Notes/Todoist.md",
     "1.Daily/2024-01-02.md",
     "1.Daily/2024-01-04.md",
@@ -224,7 +211,6 @@
     "3.Monthly",
     "2.Weekly",
     "1.Daily",
-    "무제 파일.md",
     "banner.png.crdownload"
   ]
 }
