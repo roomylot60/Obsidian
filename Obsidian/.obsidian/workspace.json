@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ec54a583afa225a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Interpolation(보간법).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-01-15.md",
+                "file": "Notes/Interpolation(보간법).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-01-15.md",
+                "file": "Notes/Interpolation(보간법).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-01-15.md"
+                "file": "Notes/Interpolation(보간법).md"
               }
             }
           },
@@ -165,15 +178,16 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e656aa6c08179c2d",
+  "active": "ec54a583afa225a3",
   "lastOpenFiles": [
+    "1.Daily/2024-01-15.md",
+    "Notes/Interpolation(보간법).md",
     "1.Daily/2024-01-19.md",
     "1.Daily/2024-01-22.md",
     "1.Daily/2024-01-26.md",
     "1.Daily/2024-01-25.md",
     "1.Daily/2024-01-24.md",
     "1.Daily/2024-01-23.md",
-    "1.Daily/2024-01-15.md",
     "Attatched/Pasted image 20240125173611.png",
     "Notes/Convolution Neural Network.md",
     "Attatched/Pasted image 20240123115915.png",
@@ -211,7 +225,6 @@
     "2.Weekly",
     "1.Daily",
     "무제 파일.md",
-    "2024-01-02.md",
     "banner.png.crdownload"
   ]
 }
