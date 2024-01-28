@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -169,11 +168,11 @@
   "lastOpenFiles": [
     "1.Daily/2024-01-19.md",
     "1.Daily/2024-01-22.md",
+    "1.Daily/2024-01-26.md",
+    "1.Daily/2024-01-25.md",
     "1.Daily/2024-01-24.md",
     "1.Daily/2024-01-23.md",
-    "1.Daily/2024-01-26.md",
     "1.Daily/2024-01-15.md",
-    "1.Daily/2024-01-25.md",
     "Attatched/Pasted image 20240125173611.png",
     "Notes/Convolution Neural Network.md",
     "Attatched/Pasted image 20240123115915.png",
