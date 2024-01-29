@@ -5,3 +5,5 @@
 - Bounding box들을 작고 Random하게 많이 생성
 - Hierarchical grouping Algorithm을 사용해 조금씩 Merging
 - Regions Of Interest; ROI 라는 영역을 제안
+	- Dif(C1, C2) = C1과 C2간의 차이를 나타내는 값, 그리고
+	- MInt(C1, C2) = C1 내부에서의 어떤 값과 C2 내부에서의 값을 계산한 어떤 값

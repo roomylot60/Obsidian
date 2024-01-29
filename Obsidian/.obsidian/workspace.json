@@ -37,14 +37,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1.Daily/2024-01-29.md",
+                "file": "Notes/Selective Search.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -189,7 +189,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d5563fdd6404bcea",
+  "active": "c5227a89a0c3e3d4",
   "lastOpenFiles": [
     "Notes/Selective Search.md",
     "1.Daily/2024-01-29.md",
