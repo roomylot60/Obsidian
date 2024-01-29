@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d5563fdd6404bcea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1.Daily/2024-01-29.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -177,10 +189,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c5227a89a0c3e3d4",
+  "active": "d5563fdd6404bcea",
   "lastOpenFiles": [
-    "1.Daily/2024-01-26.md",
+    "Notes/Selective Search.md",
     "1.Daily/2024-01-29.md",
+    "Attatched/Pasted image 20240129155018.png",
+    "1.Daily/2024-01-26.md",
     "Notes/Connectionist Temporal Classification.md",
     "1.Daily/2024-01-15.md",
     "1.Daily/2024-01-19.md",
@@ -209,14 +223,11 @@
     "Notes/Plug-in.md",
     "Notes/Deep Learning.md",
     "Notes/Attention Machanism.md",
-    "Attatched/Pasted image 20240107171654.png",
     "Notes/Machine Learning.md",
     "Notes/Todoist.md",
     "1.Daily/2024-01-02.md",
-    "1.Daily/2024-01-04.md",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
-    "Notes/2024-01-04.md",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
     "Attatched",
     "Notes",
