@@ -3,7 +3,7 @@
 - CNN : 주로 이미지 처리; 비전 분야에서 사용되는 알고리즘. Convolution layer와 Pooling layer로 구성. 같은 대상에 대한 이미지임에도 다양한 변형이 존재해 이미지의 픽셀마다 가진 값이 상이해(1차원으로 변환하는 과정에서 spatial structure 정보가 유실되어 픽셀간의 연관 정보를 취하기 어려움) 다층 퍼셉트론을 통해 예측값을 얻는 데에는 민감도가 높음
 - Channel : 이미지를 `[높이(세로 픽셀 수), 너비(가로 픽셀 수), 채널(색 성분)]` 이라는 3차원 텐서로 분석할 때, RGB 값을 통해 색 성분을 나타내는데 이를 채널이라고 함. 이미지가 흑백일 경우의 채널 값을 1, 유색일 경우의 채널 값은 R, G, B에 대해 나타나므로 3을 가짐
 - Convolution operation : 커널로 `높이 x 너비` 크기의 이미지를 stride 기준으로 훑으면서 겹치는 부분의 이미지와 커널의 원소의 값을 곱해서 모두 더한 값을 출력 ![Convolution](../Attatched/convolution.jpg)
-    * Kernel;Filter : 라는 `nXm`크기의 행렬로 주로 3X3, 5X5을 사용
+    * Kernel;Filter : 라는 $n$x$m$크기의 행렬로 주로 3x3, 5x5을 사용
     * Stride : 커널이 한번에 이동하는 범위
     * Weight, Bias : 다층 퍼셉트론을 사용할 때에 비해 합성곱 인공 신경망으로 표현할 때의 가중치 수가 줄고, 공간적 구조 정보를 보존<br> ![Multi Perceptron](../Attatched/img_multi_perceptron.jpg) <br>![Conv. NN](../Attatched/img_conv.jpg)
     * Feature map(특성 맵) : 합성곱 과정을 통해 얻은 값들로 구성된 matrix에 편향(값은 1가지)을 더한 결과물. 3차원 텐서(유색 이미지)에 대한 최종 특성 맵은 RGB에 대한 각각의 특성 맵의 합으로, 채널에 대한 정보를 포함하지 않음
