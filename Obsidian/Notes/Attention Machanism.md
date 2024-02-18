@@ -21,7 +21,7 @@ V = Values # 모든 시점의 encoder cell의 hidden states
 - Attention Score : 현재 decoder의 $t$시점에서의 단어를 예측하기 위해 encoder의 모든 hidden state의 값($h_{i}$)이 decoder의 현재 hidden state($s_{t}$)와 얼마나 유사한지를 판단하는 값으로, $s_{t}^{T}$와 $h_{i}$의 dot product(내적) 결과로 모두 Scalar 값; $score(s_{t}, h_{i}) =  s_{t}^{T}h_{i}$ $e^{t} = [s_{t}^{T}h_{1},...,s_{t}^{T}h_{N}]$($e^{t}$는 모든 score의 모음값)
 - Attention Distribution : $e^{t}$에 softmax를 적용하여 얻어낸 확률 분포(총 합은 1)
 - Attention Weight : Attention Distribution의 각각의 값   $\alpha^{t} = softmax(e^{t})$
-- Attention Value : 각 encoder의 hidden state, attention weight의 곱들을 합한 Weighted Sum; Context Vector$a_{t} = \sum\alpha_{i}^{t}h_{i}$![Attention Values](../Attatched/Pasted%20image%2020240103144422.png)
+- Attention Value : 각 encoder의 hidden state, attention weight의 곱들을 합한 Weighted Sum; Context Vector$$a_{t} = \sum_{i=1}^{N} \alpha_{i}^{t}h_{i}$$
 - Concatenate Vector : Attention Function의 결과로 얻은 Attention Value; `a_{t}`와 decoder의 hidden state; `s_{t}`를 concatenate(결합)하여 얻은 벡터![Concatenate Vector](../Attatched/Pasted%20image%2020240103145013.png)
 - 결합 벡터와 가중치 행렬의 곱을 hyperbolic tangent에 입력하여 얻은 값을 출력층의 입력으로 사용하여 예측 벡터를 출력![출력층의 입력](../Attatched/Pasted%20image%2020240103145252.png)![예측값](../Attatched/Pasted%20image%2020240103145326.png)
 ---
