@@ -1,11 +1,11 @@
 ## Long Short-Term Memory; LSTM
 - The problem of long-term dependencies : Vanila RNN(기본형 RNN)은   비교적 짧은 시퀀스에 대해서만 효과를 보임(시점이 길어질 수록 앞의 정보가 뒤로 충분히 전달되지 못하는 현상 발생)
 - `LSTM` : 은닉층의 메모리 셀에 입력 게이트, 망각 게이트, 출력 게이트를 추가하여 불필요한 기억은 지우고, 기억해야할 것들을 선정 ![LSTM](../Attatched/LSTM_architecture.jpg)
-    * Cell state : 이전 시점의 셀 상태가 다음 시점의 셀 상태를 구하기 위한 입력으로 사용, 삭제 게이트의 값이 0에 가까울 수록 이전 시점의 셀 상태값의 영향력이 작아지고, 입력 게이트의 값이 현 시점의 셀 상태에 영향을 미침(`$$C_{t} = f_{t}ｏC_{t-1} + i_{t}ｏg_{t}$$`) 
+    * Cell state : 이전 시점의 셀 상태가 다음 시점의 셀 상태를 구하기 위한 입력으로 사용, 삭제 게이트의 값이 0에 가까울 수록 이전 시점의 셀 상태값의 영향력이 작아지고, 입력 게이트의 값이 현 시점의 셀 상태에 영향을 미침($$C_{t} = f_{t}ｏC_{t-1} + i_{t}ｏg_{t}$$) 
         + Entrywise product : 두 행렬에서 같은 위치의 성분끼리의 곱을 통해 얻어지는 행렬
-    * 입력 게이트 : 현재 정보를 기억하기 위한 게이트(`i_t = sigmoid(x_t*W_(xi) + h_(t-1)*W_(hi)), g_t = tanh(x_t*W_(xg)+h_(t-1)*W_(hg))`)
-    * 삭제 게이트(망각 게이트) : 이전 시점의 입력을 얼마나 반영할 지를 결정, 기억을 삭제하기 위한 게이트로 0에 가까울 수록 많이 제거된 상태(`f_t = sigmoid(x_t*W_(xf) + h_(t-1)*W_(hf))`)
-    * 출력 게이트 : 현재 시점의 x값과 이전 시점의 은닉 상태가 시그모이드 함수를 지난 값으로 현재 시점의 은닉 상태를 결정(`o_t = sigmoid(x_t*W_(xo)+h_(t-1)*W_(ho)), h_t = o_tㅇtanh(c_t)`)
+    * 입력 게이트 : 현재 정보를 기억하기 위한 게이트($i_{t} = sigmoid(x_{t}W_{xi}+ h_{t-1}W_(hi)), g_t = tanh(x_{t}W_{xg}+h_{t-1}W_{hg})$)
+    * 삭제 게이트(망각 게이트) : 이전 시점의 입력을 얼마나 반영할 지를 결정, 기억을 삭제하기 위한 게이트로 0에 가까울 수록 많이 제거된 상태($f_{t} = sigmoid(x_{t}*W_{xf} + h_{t-1}*W_{hf})$)
+    * 출력 게이트 : 현재 시점의 x값과 이전 시점의 은닉 상태가 시그모이드 함수를 지난 값으로 현재 시점의 은닉 상태를 결정($o_{t} = sigmoid(x_{t}W_{xo})+h_{t-1}W_{ho}), h_{t} = o_{t}ㅇtanh(c_{t})$)
 ### Gated Recurrent Unit; GRU
 - GRU : LSTM에서 3개의 게이트(출력, 입력, 삭제)를 사용했던 반면, GRU에서는 업데이트 게이트, 리셋 게이트 2개를 사용하여 LSTM의 구조를 간략화 ![GRU](../Attatched/GRU.jpg)
 ### [RNN Language Model](./Recurrent%20Neural%20Network)
