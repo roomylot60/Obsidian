@@ -22,8 +22,8 @@ V = Values # 모든 시점의 encoder cell의 hidden states
 - Attention Distribution : $e^{t}$에 softmax를 적용하여 얻어낸 확률 분포(총 합은 1)
 - Attention Weight : Attention Distribution의 각각의 값   $\alpha^{t} = softmax(e^{t})$
 - Attention Value : 각 encoder의 hidden state, attention weight의 곱들을 합한 Weighted Sum; Context Vector$$a_{t} = \sum_{i=1}^{N} \alpha_{i}^{t}h_{i}$$
-- Concatenate Vector : Attention Function의 결과로 얻은 Attention Value; `a_{t}`와 decoder의 hidden state; `s_{t}`를 concatenate(결합)하여 얻은 벡터![Concatenate Vector](../Attatched/Pasted%20image%2020240103145013.png)
-- 결합 벡터와 가중치 행렬의 곱을 hyperbolic tangent에 입력하여 얻은 값을 출력층의 입력으로 사용하여 예측 벡터를 출력![출력층의 입력](../Attatched/Pasted%20image%2020240103145252.png)![예측값](../Attatched/Pasted%20image%2020240103145326.png)
+- Concatenate Vector : Attention Function의 결과로 얻은 Attention Value; $a_{t}$와 decoder의 hidden state; $s_{t}$를 concatenate(결합)하여 얻은 벡터![Concatenate Vector](../Attatched/Pasted%20image%2020240103145013.png)
+- 결합 벡터와 가중치 행렬의 곱을 hyperbolic tangent에 입력하여 얻은 값을 출력층의 입력으로 사용하여 예측 벡터를 출력       $\hat y_{t} = softmax(W_{y}\tilde s_{t} + b_{y})$![출력층의 입력](../Attatched/Pasted%20image%2020240103145252.png)$
 ---
 ## Bahdanau Attention
 ```python
@@ -33,7 +33,7 @@ Q = Query # t-1 시점의 디코더 셀에서의 은닉 상태
 K = Keys # 모든 시점의 인코더 셀의 은닉 상태들
 V = Values # 모든 시점의 인코더 셀의 은닉 상태들
 ```
-1. Attention Score :  Decoder의 t 시점이 아닌, **t-1 시점**의 hidden state; `s_{t-1}`을 사용하여 score를 출력![바다나우 Attention score](../Attatched/Pasted%20image%2020240103150221.png)
-2. Attention Distribution : Score의 모음인 `e^{t}`에 softmax를 적용
+1. Attention Score :  Decoder의 $t$시점이 아닌, **$t-1$ 시점**의 hidden state; $s_{t-1}$을 사용하여 score를 출력       $e^{t} = W_{a}^{T} tanh(W_{b}s_{t-s} + W_{c}H)$
+2. Attention Distribution : Score의 모음인 $e^{t}$에 softmax를 적용
 3. Attention Value : Attention Weight와 Encoder의 hidden state을 가중 합하여 Context vector를 출력
-4. Context Vector와 입력 단어의 embedding vector를 concatenate하고 입력으로 사용하여, Decoder의 t 시점의 hidden state; `s_{t}`를 출력
+4. Context Vector와 입력 단어의 embedding vector를 concatenate하고 입력으로 사용하여, Decoder의 $t$ 시점의 hidden state; $s_{t}$를 출력
