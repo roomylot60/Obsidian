@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Long Short-Term Memory.md",
+                "file": "1.Daily/2024-02-20.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Long Short-Term Memory.md",
+                "file": "1.Daily/2024-02-20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Long Short-Term Memory.md",
+                "file": "1.Daily/2024-02-20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Long Short-Term Memory.md"
+                "file": "1.Daily/2024-02-20.md"
               }
             }
           },
@@ -166,6 +166,9 @@
   },
   "active": "41a33f8371bed055",
   "lastOpenFiles": [
+    "Notes/Long Short-Term Memory.md",
+    "1.Daily/2024-02-20.md",
+    "1.Daily/2024-02-19.md",
     "Notes/Attention Machanism.md",
     "1.Daily/2024-01-15.md",
     "1.Daily/2024-01-11.md",
@@ -197,11 +200,8 @@
     "Attatched/Pasted image 20240119163040.png",
     "Attatched/Pasted image 20240112175914.png",
     "Notes/Recurrent Neural Network.md",
-    "Notes/Long Short-Term Memory.md",
     "Notes/Subword Tokenizer.md",
     "Notes/Natural Language Processing.md",
-    "Notes/Machine Learning.md",
-    "Notes/Todoist.md",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
