@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "0224304f897f52ef",
+        "id": "93f38c5b3be7d495",
         "type": "tabs",
         "children": [
           {
-            "id": "41a33f8371bed055",
+            "id": "d37893ed4ee7ea26",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1.Daily/2024-02-26.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-02-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-02-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "1.Daily/2024-02-26.md"
-              }
+              "state": {}
             }
           },
           {
@@ -165,10 +156,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "41a33f8371bed055",
+  "active": "d37893ed4ee7ea26",
   "lastOpenFiles": [
-    "1.Daily/2024-02-20.md",
     "1.Daily/2024-02-26.md",
+    "1.Daily/Attatched/Pasted image 20240306053848.png",
+    "1.Daily/Attatched",
+    "1.Daily/2024-03-11.md",
+    "1.Daily/2024-03-06.md",
+    "1.Daily/2024-03-02.md",
+    "1.Daily/2024-02-20.md",
     "Notes/Long Short-Term Memory.md",
     "1.Daily/2024-02-19.md",
     "Notes/Attention Machanism.md",
@@ -189,9 +185,7 @@
     "1.Daily/2024-01-24.md",
     "1.Daily/2024-01-22.md",
     "1.Daily/2024-01-23.md",
-    "1.Daily/2024-01-19.md",
     "Attatched/Pasted image 20240130202300.png",
-    "Notes/Selective Search.md",
     "Attatched/Pasted image 20240129155018.png",
     "Attatched/Pasted image 20240128171548.png",
     "Attatched/Pasted image 20240128171525.png",
@@ -200,9 +194,6 @@
     "Attatched/Pasted image 20240123115915.png",
     "Attatched/Pasted image 20240119165019.png",
     "Attatched/Pasted image 20240119163040.png",
-    "Attatched/Pasted image 20240112175914.png",
-    "Notes/Recurrent Neural Network.md",
-    "Notes/Subword Tokenizer.md",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
