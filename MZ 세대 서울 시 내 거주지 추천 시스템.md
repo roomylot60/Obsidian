@@ -1,13 +1,48 @@
 ## 1. 모델링
 
+- 여러 모델에 대한 성능을 확인하기 위해 팀원 별 분류 모델 작성
+	- 담당한 모델 : GaussianMixture Model
+
 ```python
 # GMM 적용
 from sklearn.mixture import GaussianMixture
+data = df.values.tolist()
 # n_components로 미리 군집 개수 설정
 gmm = GaussianMixture(n_components=10, n_init=3, random_state=0).fit(data)
 # n_init : 모델 반복 횟수 -> 파라미터를 무작위로 선정하여 수렴할 때까지 학습
 gmm_labels = gmm.predict(data)
+# GMM 후 클러스터링 레이블을 따로 설정
+df['gmm_cluster'] = gmm_labels
 ```
+
+```powershell
+2    80
+9    54
+7    53
+4    50
+1    39
+3    35
+8    33
+6    32
+0    27
+5    23
+Name: gmm_cluster, dtype: int64
+```
+
+- 모델 성능 지표로 실루엣 계수를 활용
+
+```python
+from sklearn.metrics import silhouette_score, silhouette_samples
+score_samples = silhouette_samples(data, df['gmm_cluster'])
+df['silhouette_coeff']=score_samples
+average_score = silhouette_score(data, df['gmm_cluster'])
+print('Silhouette Analysis Score:{0:.3f}'.format(average_score))
+```
+
+```powershell
+Silhouette Analysis Score:0.133
+```
+
 
 ## 2. 내부 함수 작성
 ### 추천 시스템 구조
