@@ -154,7 +154,7 @@ def preprocessing_df():
 - 2차 분류 가중치에 대한 근거로 크롤링 데이터를 활용
 ![](Attatched/Pasted%20image%2020240318035011.png)
 
-#### 가중치 적용 함수
+#### 가중치 함수 : 사용자 입력값과 내부 가중치 결합
 
 ```python
 def weighting(user_df, df, select, user_name):
@@ -178,4 +178,9 @@ def weighting(user_df, df, select, user_name):
     weighted_user_df = pd.DataFrame(weighted_user_data,index=df.columns,columns=['user']).T
     return weighted_user_df
 ```
+
+- `.xlsx` 파일로 작성한 가중치를 데이터 프레임 형태로 입력 받아 재구성
+- `user_df` : 사용자가 입력한 수치
+- `weight_df` : 내부 가중치
+- `weighted_user_df` : 추천 시스템에서 사용할 최종 가중치
 
