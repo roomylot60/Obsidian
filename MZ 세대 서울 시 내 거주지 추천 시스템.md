@@ -34,6 +34,6 @@
 ![](Attatched/Pasted%20image%2020240318034056.png)
 - 1차 분류에 사용되는 feature들과  2차 분류에 사용되는 feature 간의 연관성을 고려하여 가중치를 부여
 ![](Attatched/Pasted%20image%2020240318033158.png)
-
-
+- 2차 분류 가중치에 대한 근거로 크롤링 데이터를 활용
+![](Attatched/Pasted%20image%2020240318035011.png)
 
