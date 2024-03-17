@@ -1,4 +1,15 @@
-## 1. 내부 함수 작성
+## 1. 모델링
+
+```python
+# GMM 적용
+from sklearn.mixture import GaussianMixture
+# n_components로 미리 군집 개수 설정
+gmm = GaussianMixture(n_components=10, n_init=3, random_state=0).fit(data)
+# n_init : 모델 반복 횟수 -> 파라미터를 무작위로 선정하여 수렴할 때까지 학습
+gmm_labels = gmm.predict(data)
+```
+
+## 2. 내부 함수 작성
 ### 추천 시스템 구조
 1. 거주 선택과 관련된 요소 6가지에 대해 1차 k-means cluster를 사용하여 분류
 2. 주 타켓층(MZ 세대)들이 거주지 선택에 있어서 선호하는 요소들을 사용하여 2차 분류
@@ -28,7 +39,7 @@
 - 적용한 수치의 이상치 및 의미가 없는 값을 제거하기 위해 quantile을 적용
 - 최종 사용할 데이터를 DF 형식으로 리턴
 
-## 2. 가중치 로직 개발
+## 3. 가중치 로직 개발
 
 - 시스템 구조 상 2차에 걸쳐 군집화를 실시하므로, 각 군집화에서 사용되는 feature들에 대해 가중치 부여를 분리
 ![](Attatched/Pasted%20image%2020240318034056.png)
