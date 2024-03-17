@@ -63,7 +63,44 @@ Silhouette Analysis Score:0.133
 
 - 1차 분류를 위한 features를 다루는 함수
 - '교통', '교육', '육아', '치안', '건강', '편의' 6가지 요소를 활용하였으며, 각 요소에 속하는 feature에 대해 가중치를 부여하고 통합
-![](Attatched/assemble_features.png)
+
+```python
+def assembling_features(df):
+    global tmp_df
+    # 피쳐합
+    tmp_df = df.copy()
+    # 교통
+    tmp_df['교통'] = tmp_df['SUBWAY_NUM'] + 0.93 * tmp_df['BUS_CNT'] + 0.06 * tmp_df['BIKE_NUM']
+    tmp_df = tmp_df.drop(['SUBWAY_NUM', 'BUS_CNT', 'BIKE_NUM'], axis=1)
+
+    # 교육
+    tmp_df['교육'] = (0.07) * tmp_df['MID_SCH_NUM'] + (0.03) * tmp_df['HIGH_SCH_NUM'] + tmp_df['ACADEMY_NUM'] * (0.7) + (
+        0.9) * tmp_df['ELE_SCH_NUM']
+    tmp_df = tmp_df.drop(['MID_SCH_NUM', 'HIGH_SCH_NUM', 'ACADEMY_NUM', 'ELE_SCH_NUM'], axis=1)
+
+    # 육아
+    tmp_df['육아'] = tmp_df['CHILD_MED_NUM'] + tmp_df['KINDER_NUM']
+    tmp_df = tmp_df.drop(['CHILD_MED_NUM', 'KINDER_NUM'], axis=1)
+
+    # 치안
+    tmp_df['치안'] = tmp_df['POLICE_NUM'] + tmp_df['CCTV_NUM'] + tmp_df['FIRE_NUM']
+    tmp_df = tmp_df.drop(['POLICE_NUM', 'CCTV_NUM', 'FIRE_NUM'], axis=1)
+
+    # 건강
+    tmp_df['건강'] = (0.94) * tmp_df['HOSPITAL_NUM'] + tmp_df['PHARM_NUM']
+    tmp_df = tmp_df.drop(['HOSPITAL_NUM', 'PHARM_NUM'], axis=1)
+
+    # 편의시설
+    tmp_df['편의시설'] = 0.04 * tmp_df['DPTM_NUM'] + 0.44 * tmp_df['CON_NUM'] + 0.25 * tmp_df['CAFE_NUM'] + 0.27 * tmp_df[
+        'RETAIL_NUM']
+    tmp_df = tmp_df.drop(['DPTM_NUM', 'CON_NUM', 'CAFE_NUM', 'RETAIL_NUM'], axis=1)
+
+    tmp_df.set_index('DONG_CODE', inplace=True)
+
+    return tmp_df
+
+```
+
 1. 교통 : 지하철, 버스, 자전거(따릉이) 정거장 수와 관련된 가중치를 계산하여 적용 및 통합하여 하나의 feature로 재구성
 2. 교육 : 초등학교, 중학교, 고등학교, 학원의 수에 대한 가중치를 부여
 	- 타겟층인 MZ 세대는 신혼 부부에 속하는 연령층도 포함되기에 학군에 대한 부분이 고려됨
@@ -72,7 +109,36 @@ Silhouette Analysis Score:0.133
 5. 건강 : 병원, 약국의 수
 6. 편의 시설 : 백화점, 편의점, 카페, 시장 수 대해 각각의 가중치를 부여
 
-![](Attatched/processing_df.png)
+```python
+def preprocessing_df():
+    area_df = merge_area_data()
+    assem_df = assembling_features(area_df)
+
+    tmp_data = assem_df.iloc[:, 3:]
+    df = tmp_data.div(assem_df['AREA'], axis=0)
+
+    max_lim_log_list = ["교통", "치안", "교육", "COLIVING_NUM", "STARBUCKS_NUM", "MC_NUM", "NOISE_VIBRATION_NUM", "VEGAN_CNT"]
+
+    for f in max_lim_log_list:
+        quan = df[f].quantile(0.95)
+        df[f] = np.where(df[f] > quan, quan, df[f])
+        df[f] = np.log1p(df[f])
+
+    max_lim_list = ["LEISURE_NUM", "GOLF_NUM", "건강", "편의시설"]
+    for f in max_lim_list:
+        quan = df[f].quantile(0.95)
+        df[f] = np.where(df[f] > quan, quan, df[f])
+
+    ro_df = robust_scaling(df)
+    ro_df = ro_df[['교통', '치안', '건강', '편의시설', '교육',
+             '육아', 'MZ_POP_CNT', 'COLIVING_NUM', 'VEGAN_CNT', 'KIDS_NUM',
+             'PARK_NUM', 'STARBUCKS_NUM', 'MC_NUM', 'NOISE_VIBRATION_NUM',
+             'SAFE_DLVR_NUM', 'LEISURE_NUM', 'GYM_NUM', 'GOLF_NUM', 'CAR_SHR_NUM',
+             'ANI_HSPT_NUM']]
+
+    return ro_df
+```
+
 - 서울시 행정구 별 면적에 대한 데이터를 화룡
 - 면적 대비 시설의 개수를 사용할 feature를 선정
 - 개별 수치가 매우 큰 데이터에는 log scale을 적용
@@ -87,4 +153,29 @@ Silhouette Analysis Score:0.133
 ![](Attatched/Pasted%20image%2020240318033158.png)
 - 2차 분류 가중치에 대한 근거로 크롤링 데이터를 활용
 ![](Attatched/Pasted%20image%2020240318035011.png)
+
+#### 가중치 적용 함수
+
+```python
+def weighting(user_df, df, select, user_name):
+    weight_df = pd.read_excel('recommend_app/data/1107_가중치.xlsx')
+    weight_df.rename(columns={'Unnamed: 0': '분류'}, inplace=True)
+    weight_df.fillna(0, inplace=True)
+    weight_df.set_index('분류', inplace=True)
+
+    values = user_df.loc[user_name].values
+    weight = weight_df[weight_df.columns].values
+    w = [1] * len(weight)
+    for i in range(len(weight)):
+        if(select[i] == 1):
+            for k in range(len(weight[i])):
+                w[i] += weight[i][k]
+
+    weighted_user_data = []
+    for i in range(len(values)):
+        weighted_data = values[i] * w[i]
+        weighted_user_data.append(weighted_data)
+    weighted_user_df = pd.DataFrame(weighted_user_data,index=df.columns,columns=['user']).T
+    return weighted_user_df
+```
 
