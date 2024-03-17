@@ -1,7 +1,12 @@
 ## 1. 모델링
-
+### 조사한 모델
 - 여러 모델에 대한 성능을 확인하기 위해 팀원 별 분류 모델 작성
-	- 담당한 모델 : GaussianMixture Model
+- 기본 모델 : K-means 클러스터링
+- 추가 모델 조사
+	- 정림 :  Affinity Propagation
+	- **홍기 : Gaussian Mixture Model**
+	- 서연 : Mean Shift
+	- 대환 : Agglomerative Clustering
 
 ```python
 # GMM 적용
