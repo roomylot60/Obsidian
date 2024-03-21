@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "1.Daily/2024-03-21.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b541c8478412d00a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Notes/Sequence-to-Sequence.md",
                 "mode": "source",
                 "source": false
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "1.Daily/2024-03-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "1.Daily/2024-03-21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md"
+                "file": "1.Daily/2024-03-21.md"
               }
             }
           },
@@ -167,6 +179,7 @@
   },
   "active": "d37893ed4ee7ea26",
   "lastOpenFiles": [
+    "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-21.md",
     "1.Daily/2024-02-19.md",
     "1.Daily/2024-02-20.md",
@@ -186,7 +199,6 @@
     "1.Daily/2024-02-03.md",
     "Notes/Plug-in.md",
     "Notes/Convolution Neural Network.md",
-    "Notes/Sequence-to-Sequence.md",
     "Notes/Transformer.md",
     "Notes/Deep Learning.md",
     "Notes/Connectionist Temporal Classification.md",
