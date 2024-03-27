@@ -22,23 +22,21 @@ from torch import optim
 import torch.nn.functional as F
 
 class EncoderRNN(nn.Module):
-	def __init__(self, input_size, hidden_size):
-		super(EncoderRNN, self).__init__()
-		self.hidden_size = hidden_size
-
-		# embedding: 입력된 문장을 숫자로 변경하는 word2vec
-		self.embedding = nn.Embedding(input_size, hidden_size)
-		# gru: encoder에서 사용할 RNN
-		self.gru = nn.GRU(hidden_size, hidden_size)
-
-	def forward(self, input, hidden):
-		embedded = self.embedding(input).view(1,1,-1) # reshape(), veiw() 모두 tensor의 모양을 변경: (1x1x?) 형태로 변경
-		output = embedded
-		ouptut, hidden = self.gru(output, hidden)
-		return output, hidden
-
-	def initHidden(self): # 최초의 hidden state를 생성하는 함수
-		return torch.zeros(1, 1, self.hidden_size, device=device)
+	def __init__(self, input_dim, emb_dim, hid_dim, n_layers, dropout):
+		super().__init__()
+		self.hid_dim = hid_dim
+		self.n_layers = n_layers
+		# embedding: 입력값을 emb_dim 크기의 vector로 변경
+		self.embedding = nn.Embedding(input_dim, emb_dim)
+		# rnn: LSTM 혹은 GRU로 embedding을 받아 hid_dim 크기의 hidden state; cell을 출력
+		self.rnn = nn.LSTM(emb_dim, hid_dim, n_layers, dropout=dropout)
+		self.dropout = nn.Dropout(dropout)
+	def forward(self, src):
+		# sre: [src_len, batch_size]
+		# embedded: embedding을 통해 word2vec된 vector 값
+		# 해당 vector값에 dropout을 사용하여 Overfitting(과적합)을 방지
+		embedded = self.dropout(self.embedding(src))
+	
 ```
 
 #### Decoder
