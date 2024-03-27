@@ -67,7 +67,7 @@ class Seq2Seq(nn.Module):
 
 
 ```python
-class EncoderRNN(nn.Module):
+class Encoder(nn.Module):
 	def __init__(self, input_dim, emb_dim, hid_dim, n_layers, dropout):
 		super().__init__()
 		self.hid_dim = hid_dim
