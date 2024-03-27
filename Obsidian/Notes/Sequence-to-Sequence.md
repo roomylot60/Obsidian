@@ -10,6 +10,56 @@
 	1. Encoder는 입력 문장의 모든 단어들을 순차적으로 입력
 	2. 마지막에 이 모든 단어 정보를 압축해서 하나의 벡터를 생성(Context Vector)
 	3. 이를 Decoder에서 번역된 단어를 순차적으로 출력
+
+```python
+class Seq2Seq(nn.Module): 
+	def __init__(self, encoder, decoder, device): 
+		super().__init__() 
+		self.encoder = encoder 
+		self.decoder = decoder 
+		self.device = device 
+		
+		# encoder와 decoder의 hid_dim이 일치하지 않는 경우 에러메세지 
+		assert encoder.hid_dim == decoder.hid_dim, \ 
+			'Hidden dimensions of encoder decoder must be equal' 
+		# encoder와 decoder의 hid_dim이 일치하지 않는 경우 에러메세지 
+		assert encoder.n_layers == decoder.n_layers, \ 
+			'Encoder and decoder must have equal number of layers' 
+			
+	def forward(self, src, trg, teacher_forcing_ratio=0.5): 
+		# src: [src len, batch size] 
+		# trg: [trg len, batch size] 
+		
+		batch_size = trg.shape[1] trg_len = trg.shape[0] # 타겟 토큰 길이 얻기 
+		trg_vocab_size = self.decoder.output_dim # context vector의 차원 
+		
+		# decoder의 output을 저장하기 위한 tensor 
+		outputs = torch.zeros(trg_len, batch_size, trg_vocab_size).to(self.device) 
+		
+		# initial hidden state 
+		hidden, cell = self.encoder(src) 
+		
+		# 첫 번째 입력값 <sos> 토큰 
+		input = trg[0,:] 
+		
+		for t in range(1,trg_len): # <eos> 제외하고 trg_len-1 만큼 반복 
+			output, hidden, cell = self.decoder(input, hidden, cell) 
+			
+			# prediction 저장 
+			outputs[t] = output 
+			
+			# teacher forcing을 사용할지, 말지 결정 
+			teacher_force = random.random() < teacher_forcing_ratio 
+			
+			# 가장 높은 확률을 갖은 값 얻기 
+			top1 = output.argmax(1) 
+			
+			# teacher forcing의 경우에 다음 lstm에 target token 입력 
+			input = trg[t] if teacher_force else top1 
+		
+		return outputs
+```
+
 #### Encoder
 ![](../Attatched/Pasted%20image%2020240327204349.png)
 - LSTM 혹은 GRU로 구성되어 각 시점마다 입력 벡터와 이전 시점의 은닉 상태 값을 입력 받아 현 시점의 은닉 상태값을 출력
@@ -17,10 +67,6 @@
 
 
 ```python
-import torch.nn as nn
-from torch import optim
-import torch.nn.functional as F
-
 class EncoderRNN(nn.Module):
 	def __init__(self, input_dim, emb_dim, hid_dim, n_layers, dropout):
 		super().__init__()
@@ -47,6 +93,39 @@ class EncoderRNN(nn.Module):
 - Context vector를 최초의 은닉 상태값으로 사용하여 입력 벡터에 대한 예측값을 출력
 - 예측값을 다음 시점의 은닉 상태값으로 사용
 - 출력 벡터를 Softmax 함수를 통해 각 출력값에 대한 확률값을 반환
+
+```python
+class Decoder(nn.Module): 
+	def __init__(self, output_dim, emb_dim, hid_dim, n_layers, dropout): 
+		super().__init__() 
+		self.output_dim = output_dim 
+		self.hid_dim = hid_dim 
+		self.n_layers = n_layers 
+		
+		# content vector를 입력받아 emb_dim 출력 
+		self.embedding = nn.Embedding(output_dim, emb_dim) 
+		
+		# embedding을 입력받아 hid_dim 크기의 hidden state, cell 출력 
+		self.rnn = nn.LSTM(emb_dim, hid_dim, n_layers, dropout=dropout)
+		
+		self.fc_out = nn.Linear(hid_dim, output_dim) 
+		
+		self.dropout = nn.Dropout(dropout) 
+	
+	def forward(self, input, hidden, cell): 
+		# input: [batch_size] 
+		# hidden: [n layers * n directions, batch_size, hid dim] 
+		# cell: [n layers * n directions, batch_size, hid dim] 
+		input = input.unsqueeze(0) # input: [1, batch_size], 첫번째 input은 <SOS> 
+		embedded = self.dropout(self.embedding(input)) # [1, batch_size, emd dim] 
+		output, (hidden, cell) = self.rnn(embedded, (hidden, cell)) 
+		# output: [seq len, batch_size, hid dim * n directions] 
+		# hidden: [n layers * n directions, batch size, hid dim] 
+		# cell: [n layers * n directions, batch size, hid dim] 
+		
+		prediction = self.fc_out(output.squeeze(0)) # [batch size, output dim] 
+		return prediction, hidden, cell
+```
 ### Bilingual Evaluation Understudy Score; BLEU Score
 - 자연어 처리 태스크를 기계적으로 평가할 수 있는 방법
 - 기계 번역과 사람이 직접 번역한 결과의 유사도를 통해 성능을 n-gram에 기반해 측정하여 언어에 구애받지 않고 빠른 결과를 도출
