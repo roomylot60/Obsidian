@@ -1,15 +1,21 @@
-## Sequence-to-Sequence; Seq2seq
+## Sequence-to-Sequence; [Seq2seq](https://wikidocs.net/24996)
 ### Seq2seq
 - 입력된 Sequence로부터 다른 도메인의 Sequence를 출력하는 모델(ex - chatBoT, 기계 번역, STT, 내용 요약)
 - [RNN](./Recurrent%20Neural%20Network)을 조립하는 방식(하나의 RNN을 Encoder, 다른 하나를 Decoder로 구현하여 이를 연결)에 따라 구조를 생성
-- Encoder와 Decoder 두 개의 모듈로 구성
-	- Encoder : RNN 아키텍처로 바닐라 RNN이 아니라 LSTM 혹은 GRU Cell들로 구성되어 Tokenized words를 각각의 시점에 RNN 셀에서 입력으로 받아 마지막 시점의 Hidden State를 출력
+- Encoder와 Decoder 두 개의 모듈로 구성![](../Attatched/Pasted%20image%2020240327203735.png)
+	- Encoder : 입력 문장의 모든 단어들을 순차적으로 입력받아 마지막에 이 모든 단어 정보들을 압축한 Context vector를 생성
     * Context Vector : Encoder에서 출력하는 마지막 시점의 은닉 상태로 Decoder의 첫번째 은닉 상태에 사용
     * Decoder : 기본적 구조는 RNNLM으로 초기 입력으로 문장의 시작을 의미하는 `<sos>`가 입력되면 다음 단어를 예측하고 예측 단어를 다음 시점의 RNN 셀의 입력으로 사용하여 문장의 끝을 의미하는 심볼 `<eos>`가 예측될 때까지 반복
 - 훈련 과정에서는 교사 강요를 사용하여 학습
 	1. Encoder는 입력 문장의 모든 단어들을 순차적으로 입력
 	2. 마지막에 이 모든 단어 정보를 압축해서 하나의 벡터를 생성(Context Vector)
 	3. 이를 Decoder에서 번역된 단어를 순차적으로 출력
+#### Encoder
+![](../Attatched/Pasted%20image%2020240327204349.png)
+- LSTM 혹은 GRU로 구성되어 각 시점마다 입력 벡터와 이전 시점의 은닉 상태 값을 입력 받아 현 시점의 은닉 상태값을 출력
+- 위의 과정을 순차적으로 진행하여 하나의 Sequence가 입력되었을 때 마지막에 출력 되는 은닉 상태값은 모든 시점의 영향을 받은 값이고, 해당 값을 Context vector라고 함 
+
+#### Decoder
 ### Bilingual Evaluation Understudy Score; BLEU Score
 - 자연어 처리 태스크를 기계적으로 평가할 수 있는 방법
 - 기계 번역과 사람이 직접 번역한 결과의 유사도를 통해 성능을 n-gram에 기반해 측정하여 언어에 구애받지 않고 빠른 결과를 도출

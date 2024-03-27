@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Long Short-Term Memory.md",
+                "file": "Notes/Sequence-to-Sequence.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Long Short-Term Memory.md",
+                "file": "Notes/Sequence-to-Sequence.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Long Short-Term Memory.md",
+                "file": "Notes/Sequence-to-Sequence.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Long Short-Term Memory.md"
+                "file": "Notes/Sequence-to-Sequence.md"
               }
             }
           },
@@ -166,6 +167,11 @@
   },
   "active": "b541c8478412d00a",
   "lastOpenFiles": [
+    "Attatched/Pasted image 20240327204349.png",
+    "Attatched/Pasted image 20240327203735.png",
+    "Attatched/Pasted image 20240327203733.png",
+    "Attatched/Pasted image 20240327203638.png",
+    "Notes/Long Short-Term Memory.md",
     "Notes/Natural Language Processing.md",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-21.md",
@@ -183,7 +189,6 @@
     "1.Daily/2024-03-11.md",
     "1.Daily/Attatched/Pasted image 20240306053848.png",
     "1.Daily/Attatched",
-    "Notes/Long Short-Term Memory.md",
     "Notes/Attention Machanism.md",
     "1.Daily/2024-01-15.md",
     "1.Daily/2024-01-11.md",
@@ -198,11 +203,7 @@
     "Notes/Connectionist Temporal Classification.md",
     "Notes/Interpolation(보간법).md",
     "1.Daily/2024-01-25.md",
-    "1.Daily/2024-01-24.md",
     "Attatched/Pasted image 20240130202300.png",
-    "Attatched/Pasted image 20240129155018.png",
-    "Attatched/Pasted image 20240128171548.png",
-    "Attatched/Pasted image 20240128171525.png",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
