@@ -37,7 +37,7 @@ class EncoderRNN(nn.Module):
 		ouptut, hidden = self.gru(output, hidden)
 		return output, hidden
 
-	def initHidden(self):
+	def initHidden(self): # 최초의 hidden state를 생성하는 함수
 		return torch.zeros(1, 1, self.hidden_size, device=device)
 ```
 
