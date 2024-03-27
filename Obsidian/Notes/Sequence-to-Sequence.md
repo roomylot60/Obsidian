@@ -13,12 +13,39 @@
 #### Encoder
 ![](../Attatched/Pasted%20image%2020240327204349.png)
 - LSTM 혹은 GRU로 구성되어 각 시점마다 입력 벡터와 이전 시점의 은닉 상태 값을 입력 받아 현 시점의 은닉 상태값을 출력
-- 위의 과정을 순차적으로 진행하여 하나의 Sequence가 입력되었을 때 마지막에 출력 되는 은닉 상태값은 모든 시점의 영향을 받은 값이고, 해당 값을 Context vector라고 함 
+- 위의 과정을 순차적으로 진행하여 하나의 Sequence가 입력되었을 때 마지막에 출력 되는 은닉 상태값은 모든 시점의 영향을 받은 값이고, 해당 값을 Context vector라고 함
+
+
+```python
+import torch.nn as nn
+from torch import optim
+import torch.nn.functional as F
+
+class EncoderRNN(nn.Module):
+	def __init__(self, input_size, hidden_size):
+		super(EncoderRNN, self).__init__()
+		self.hidden_size = hidden_size
+
+		# embedding: 입력된 문장을 숫자로 변경하는 word2vec
+		self.embedding = nn.Embedding(input_size, hidden_size)
+		# gru: encoder에서 사용할 RNN
+		self.gru = nn.GRU(hidden_size, hidden_size)
+
+	def forward(self, input, hidden):
+		embedded = self.embedding(input).view(1,1,-1)
+		output = embedded
+		ouptut, hidden = self.gru(output, hidden)
+		return output, hidden
+
+	def initHidden(self):
+		return torch.zeros(1, 1, self.hidden_size, device=device)
+```
 
 #### Decoder
 ![](../Attatched/Pasted%20image%2020240327204753.png)
 - Context vector를 최초의 은닉 상태값으로 사용하여 입력 벡터에 대한 예측값을 출력
 - 예측값을 다음 시점의 은닉 상태값으로 사용
+- 출력 벡터를 Softmax 함수를 통해 각 출력값에 대한 확률값을 반환
 ### Bilingual Evaluation Understudy Score; BLEU Score
 - 자연어 처리 태스크를 기계적으로 평가할 수 있는 방법
 - 기계 번역과 사람이 직접 번역한 결과의 유사도를 통해 성능을 n-gram에 기반해 측정하여 언어에 구애받지 않고 빠른 결과를 도출
