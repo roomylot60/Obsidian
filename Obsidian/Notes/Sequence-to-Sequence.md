@@ -37,7 +37,9 @@ class EncoderRNN(nn.Module):
 		# 해당 vector값에 dropout을 사용하여 Overfitting(과적합)을 방지
 		embedded = self.dropout(self.embedding(src))
 		outputs, (hidden, cell) = self.rnn(embedded) # LSTM의 경우 hidden state, cell state 값을 출력하나, GRU의 경우 hidden state값만을 출력
-	
+		# output: [src_len, batch_size, hid_dim*n directions]
+		# hidden: [n layers * n directions, batch_size, hid dim]
+		# cell: [n layers * n directions, batch_size, hid dim]	
 ```
 
 #### Decoder
