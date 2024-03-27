@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-03-21.md",
+                "file": "Notes/Sequence-to-Sequence.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-03-21.md",
+                "file": "Notes/Sequence-to-Sequence.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-03-21.md"
+                "file": "Notes/Sequence-to-Sequence.md"
               }
             }
           },
@@ -177,10 +178,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d37893ed4ee7ea26",
+  "active": "b541c8478412d00a",
   "lastOpenFiles": [
-    "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-21.md",
+    "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-02-19.md",
     "1.Daily/2024-02-20.md",
     "1.Daily/2024-02-26.md",
