@@ -28,7 +28,7 @@ class EncoderRNN(nn.Module):
 		self.n_layers = n_layers
 		# embedding: 입력값을 emb_dim 크기의 vector로 변경
 		self.embedding = nn.Embedding(input_dim, emb_dim)
-		# rnn: LSTM 혹은 GRU로 embedding을 받아 hid_dim 크기의 hidden state; cell을 출력
+		# rnn: LSTM 혹은 GRU로 embedding을 받아 hid_dim 크기의 hidden state, cell state을 출력
 		self.rnn = nn.LSTM(emb_dim, hid_dim, n_layers, dropout=dropout)
 		self.dropout = nn.Dropout(dropout)
 	def forward(self, src):
@@ -36,6 +36,7 @@ class EncoderRNN(nn.Module):
 		# embedded: embedding을 통해 word2vec된 vector 값
 		# 해당 vector값에 dropout을 사용하여 Overfitting(과적합)을 방지
 		embedded = self.dropout(self.embedding(src))
+		outputs, (hidden, cell) = self.rnn(embedded) # LSTM의 경우 hidden state, cell state 값을 출력하나, GRU의 경우 hidden state값만을 출력
 	
 ```
 
