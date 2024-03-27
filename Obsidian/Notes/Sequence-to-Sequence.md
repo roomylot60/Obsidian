@@ -32,7 +32,7 @@ class EncoderRNN(nn.Module):
 		self.gru = nn.GRU(hidden_size, hidden_size)
 
 	def forward(self, input, hidden):
-		embedded = self.embedding(input).view(1,1,-1)
+		embedded = self.embedding(input).view(1,1,-1) # reshape(), veiw() 모두 tensor의 모양을 변경: (1x1x?) 형태로 변경
 		output = embedded
 		ouptut, hidden = self.gru(output, hidden)
 		return output, hidden
