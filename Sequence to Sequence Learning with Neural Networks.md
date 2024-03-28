@@ -1,4 +1,4 @@
-Ref. https://arxiv.org/pdf/1409.3215.pdf
+[Original Paper Link](https://arxiv.org/abs/1409.3215)
 https://brunch.co.kr/@jean/5
 
 ---
