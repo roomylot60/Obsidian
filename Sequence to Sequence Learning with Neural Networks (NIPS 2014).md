@@ -3,7 +3,7 @@ https://brunch.co.kr/@jean/5
 
 ---
 ![](Attatched/Pasted%20image%2020240328004006.png)
-
+(출처) https://github.com/ndb796/Deep-Learning-Paper-Review-and-Practice
 ### Abstract
 - DNN 모델들은 어려운 학습 과제들에 대해 훌륭한 성능을 보여주는 강력한 모델들이다. 
 - 하지만 DNN이 대량의 레이블 학습 데이터에 대해서는 잘 작동하는 반면, 시퀀스 학습에 대한 매핑에는 사용되고 있지 않다. 
