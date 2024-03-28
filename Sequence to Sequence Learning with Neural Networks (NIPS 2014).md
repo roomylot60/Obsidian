@@ -42,3 +42,5 @@ https://brunch.co.kr/@jean/5
 - 우리의 접근 방식은 처음으로 전체 입력 시퀀스를 벡터로 매핑한 Kalchbrenner와 Blunsom의 방식과, 구문 기반 시스템으로 생성한 가설을 재평가 하는 데에만 사용한 Cho 등의 방식과 밀접한 관련이 있다.
 - Graves는 새로운 신경망이 입력에 대해 서로 다른 부분에 집중하고 차별화 Attention 기법을 제시했고, 이 아이디어의 세련된 변형은 Bahdanau 등에 의한 기계 번역에 성공적으로 적용되었다.
 - Connectionist Sequence Classification은 신경망을 사용하여 시퀀스를 시퀀스로 매핑하는 것에 대한 또 다른 유명한 기법이나, 입, 출력 사이의 단조적인 조정을 가정한다.
+![](Attatched/Pasted%20image%2020240329005842.png)
+
