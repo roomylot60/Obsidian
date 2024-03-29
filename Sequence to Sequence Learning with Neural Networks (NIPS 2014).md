@@ -6,7 +6,7 @@ https://brunch.co.kr/@jean/5
 (출처) https://github.com/ndb796/Deep-Learning-Paper-Review-and-Practice
 
 ---
-### Abstract
+### 0. Abstract
 
 - *DNN 모델*들은 어려운 학습 과제들에 대해 훌륭한 성능을 보여주는 강력한 모델들이다. 
 - 하지만 DNN이 대량의 레이블 학습 데이터에 대해서는 잘 작동하는 반면, *시퀀스 학습에 대한 매핑에는 사용되고 있지 않다*. 
@@ -19,7 +19,7 @@ https://brunch.co.kr/@jean/5
 - 마지막으로 타겟 문장을 제외한 모든 문장 데이터의 단어의 순서를 거꾸로 하는 것이 입력 문장과 타겟 문장 사이의 단기 의존성을 도입하여 LSTM의 성능을 확연히 향상시키고 최적화 문제를 줄이는 것을 확인했다.
 
 ---
-### Introduction
+### 1. Introduction
 
 - 심층 신경망은 매우 강력한 ML 모델로, 음성 인식과 시각적 물체 인식과 같은 어려운 문제에서 우수한 성능을 보여준다. 
 - DNNs의 적정한 단계들로도 임의의 병렬 연산을 수행할 수 있기에 좋은 성능을 보여준다. 
@@ -65,3 +65,13 @@ https://brunch.co.kr/@jean/5
 - 질적 평가는 이 주장의 근거로, 우리의 모델이 단어 순서를 인식하고, 능동태와 수동태에 대해 상당히 불변적인 것을 보여준다.
 
 ---
+### 2. The model
+
+- RNN; 순환 신경망은 FFNN의 시퀀스에 대한 일반화된 형태이다.
+- 입력 시퀀스가 주어지면, 일반적인 RNN은 주어진 식의 반복을 통해 출력 시퀀스를 연산한다.
+$$\begin{aligned}
+input\ sequence: (x_{1}, ..., x_{T})\\
+output\ sequence: (y_{1}, ..., y_{T})\\
+h_{t} = sigm(W^{hx}x_{t} + W^{hh}h_{t-1})\\
+y_{t} = W^{yh}h_{t}
+\end{aligned}$$
