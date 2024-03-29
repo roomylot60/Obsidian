@@ -70,8 +70,9 @@ https://brunch.co.kr/@jean/5
 - RNN; 순환 신경망은 FFNN의 시퀀스에 대한 일반화된 형태이다.
 - 입력 시퀀스가 주어지면, 일반적인 RNN은 주어진 식의 반복을 통해 출력 시퀀스를 연산한다.
 $$\begin{aligned}
-input\ sequence: (x_{1}, ..., x_{T})\\
-output\ sequence: (y_{1}, ..., y_{T})\\
-h_{t} = sigm(W^{hx}x_{t} + W^{hh}h_{t-1})\\
-y_{t} = W^{yh}h_{t}
+&input\ sequence: (x_{1}, ..., x_{T})\\
+&output\ sequence: (y_{1}, ..., y_{T})\\
+&h_{t} = sigm(W^{hx}x_{t} + W^{hh}h_{t-1})\\
+&y_{t} = W^{yh}h_{t}
 \end{aligned}$$
+- RNN은 입력과 출력 사이의 정렬에 대해 미리 알고 있을 경우 쉽게 시퀀스에서 시퀀스로 매핑할 수 있다. 
