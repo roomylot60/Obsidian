@@ -6,7 +6,7 @@ https://brunch.co.kr/@jean/5
 (출처) https://github.com/ndb796/Deep-Learning-Paper-Review-and-Practice
 
 ---
-### 0. Abstract
+## Abstract
 
 - *DNN 모델*들은 어려운 학습 과제들에 대해 훌륭한 성능을 보여주는 강력한 모델들이다. 
 - 하지만 DNN이 대량의 레이블 학습 데이터에 대해서는 잘 작동하는 반면, *시퀀스 학습에 대한 매핑에는 사용되고 있지 않다*. 
@@ -19,7 +19,7 @@ https://brunch.co.kr/@jean/5
 - 마지막으로 타겟 문장을 제외한 모든 문장 데이터의 단어의 순서를 거꾸로 하는 것이 입력 문장과 타겟 문장 사이의 단기 의존성을 도입하여 LSTM의 성능을 확연히 향상시키고 최적화 문제를 줄이는 것을 확인했다.
 
 ---
-### 1. Introduction
+## 1. Introduction
 
 - 심층 신경망은 매우 강력한 ML 모델로, 음성 인식과 시각적 물체 인식과 같은 어려운 문제에서 우수한 성능을 보여준다. 
 - DNNs의 적정한 단계들로도 임의의 병렬 연산을 수행할 수 있기에 좋은 성능을 보여준다. 
@@ -65,7 +65,7 @@ https://brunch.co.kr/@jean/5
 - 질적 평가는 이 주장의 근거로, 우리의 모델이 단어 순서를 인식하고, 능동태와 수동태에 대해 상당히 불변적인 것을 보여준다.
 
 ---
-### 2. The model
+## 2. The model
 
 - RNN; 순환 신경망은 FFNN의 시퀀스에 대한 일반화된 형태이다.
 - 입력 시퀀스가 주어지면, 일반적인 RNN은 주어진 식의 반복을 통해 출력 시퀀스를 연산한다.
@@ -96,13 +96,13 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 - 이 방식은 $a$가 $\alpha$에 근접도를 갖고, $b$가 $\beta$에 근접하게 함으로써, 입력과 출력 사이의 "상호교류 수립"을 통해 SGD를 낮춰준다.
 - 이 간단한 데이터 변환이 LSTM의 훌륭한 성능 향상을 이끄는 점을 알아내었다.
 ---
-### 3. Experiments
+## 3. Experiments
 
 - 위의 방법으로 WMT' 14 데이터로 영어에서 프랑스어로 MT(Machine Translation) 작업에 두 가지 방식으로 적용했다.
 - SMT system을 참조하지 않고 입력 시퀀스를 직접적으로 번역하는 것과 SMT 기반으로 n-best 리스트를 재측정하는 데 사용했다.
 - 이러한 번역 방식과 기존의 샘플 번역들의 정확도를 측정하였고, 문장 표현의 결과를 시각화했다.
 
-#### 3.1 Dataset details
+### 3.1 Dataset details
 
 - 우리는 WMT’14 영어에서 프랑스어 데이터 셋을 사용했다. 
 - Holger Schwenk의 논문에서 제시된 "선택된" 하위 집합인 348M 프랑스어 단어와 304M 영어 단어로 구성된 12M 문장으로 모델을 훈련했다.
@@ -110,7 +110,7 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 - 보편적인 신경망 언어 모델은 각 단에의 벡터 표현에 의존하기 때문에 우리는 두 언어에 대해 고정된 vocabulary;사전을 사용했다.
 - 입력 언어에서 가장 많이 사용되는 단어 16만 개와, 타겟 언어에서의 단어 8만 개를 사용했다.
 - 모든 사전 외 단어는 `"UNK"` 토큰으로 대체했다.
-#### 3.2 Decoding and Rescoring
+### 3.2 Decoding and Rescoring
 
 - 해당 연구의 주요 쟁점은 수많은 문장 쌍에 대한 거대 심층 LSTM의 학습을 포함한다.
 - 우리는 주어진 문장 $S$에 대한 올바른 번역 $T$의 log 확률을 최대화하여 학습하였고, 학습 객체는 $S$가 학습 데이터일 때 $1/|S| \sum_{T,S \in S}log\ p(T|S)$ 이다.
@@ -124,7 +124,7 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 
 - 또한 기본 시스템에서 생성된 1000-best 리스트를 재평가하는 데 LSTM을 사용했다. 
 - n-best 리스트를 재평가하기 위해, LSTM으로 모든 가설의 로그 확률을 계산하고 그 점수와 LSTM의 점수로 평균을 구했다.
-#### 3.3 Reversing the Source Sentences
+### 3.3 Reversing the Source Sentences
 
 - LSTM이 장기 의존성 문제를 해결하는 데 사용 가능한 반면, 우리는 LSTM이 Source Sentences가 역전되었을 때 훨씬 더 학습이 잘 이루어 지는 것을 발견했다(Target Sentences는 역전되지 않았다).
 - 그렇게 함으로써, LSTM의 test perplexity가 5.8에서 4.7로 떨어지고, 디코딩된 번역의 test BLEU score는 25.9에서 30.6으로 증가했다.
@@ -139,7 +139,7 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 - 최초에 우리는 입력 문장들을 뒤집는 것이 target sentence의 초기 부분의 예측을 확고히 하고 후반부로 갈수록 예측률이 떨어질 것이라고 예상했다.
 - 그러나 역전된 source sentences로 학습한 LSTMs은 일반 source sentences로 학습한 LSTM 보다 긴 문장들에 대해 훨씬 더 잘 작동하여, 입력 문장의 역전하는 것이 LSTMs이 메모리를 더 잘 이용한다는 것의 근거가 되었다.
 
-#### 3.4 Training details
+### 3.4 Training details
 
 - LSTM의 학습이 상당히 쉽다. 16만 개의 입력 단어와 8만 개의 출력 단어로 각 계층에 1000개의 cell과 1000개의 단어 embedding 차원을 갖는 4계층의 심층 LSTMs를 사용했다.
 - 따라서 심층 LSTM은 8000개의 실수를 문장 표현에 사용한다.
@@ -153,7 +153,7 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 	- LSTM이 vanishing gradient; 경사 소멸 문제는 잘 일어나지 않으나, gradient explosion; 경사 폭발이 일어날 수 있다. 따라서 경사 표준이 설정한 한계점을 넘을 때마다 스케일링을 진행하도록 강제하였다. 각 학습 batch에서 우리는 128로 나눈 gradient $g$일 때, $s= \parallel g\parallel_{2}$ 를 연산했다. 만약 $s>5$ 일 때, $g=\frac {5g}{s}$로 설정했다.
 	- 서로 다른 문장들은 다른 길이를 갖는다. 대부분의 문장들은 (20~30 정도로)짧으나, 몇몇 문장들은 (100을 넘을 정도로)길기에, 랜덤으로 고른 128개의 훈련 문장으로 minibatch에서도 긴 것은 거의 없고 주로 짧아, minibatch에서의 연산의 대부분이 낭비이다. 이러한 문제를 조정하기 위해, 우리는 minibatch의 모든 문장들을 일괄적으로 같은 길이를 갖도록 하여 두 배속으로 수행하였다.
 
-#### 3.5 Parallelization
+### 3.5 Parallelization
 
 - 심층 LSTM의 C++ 실행은 대략 초 당 1700개의 단어의 속도로 진행함으로써 단일 GPU에서의 이전과 비교된다. 
 - 이는 우리의 목적에 비해 너무 느리므로, 우리는 모델에 8개의 GPU를 병렬 적용했다.
@@ -163,11 +163,11 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 - 최종 실행은 크기 128의 minibatch에서 초 당 6300개의 단어(영어, 프랑스어 모두)의 속도를 달성했다.
 - 학습은 해당 실행에서 약 열흘에 걸쳐 수행되었다.
 
-#### 3.6 Experimental Results
+### 3.6 Experimental Results
 ![](Attatched/Pasted%20image%2020240330212619.png)
 
 ![](Attatched/Pasted%20image%2020240330212644.png)
-#### 3.7 Performance on long sentences
+### 3.7 Performance on long sentences
 
 ![](Attatched/Pasted%20image%2020240330212512.png)
 
@@ -175,8 +175,12 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 
 - 위의 그래프에서 수치적으로 볼 수 있듯이, LSTM이 긴 문장에 대해서 잘 동작한다는 놀라운 점을 알게 되었다.
 - 위의 표는 몇몇 장문 예시와 그 번역에 대한 내용이다.
-#### 3.8 Model Analysis
+### 3.8 Model Analysis
 ![](Attatched/Pasted%20image%2020240330212554.png)
-### 4. Related Work
+## 4. Related Work
 
-### 5. Conclusion
+---
+
+## 5. Conclusion
+
+---
