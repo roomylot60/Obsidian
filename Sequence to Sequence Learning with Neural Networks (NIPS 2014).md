@@ -164,13 +164,19 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 - 학습은 해당 실행에서 약 열흘에 걸쳐 수행되었다.
 
 #### 3.6 Experimental Results
+![](Attatched/Pasted%20image%2020240330212619.png)
 
+![](Attatched/Pasted%20image%2020240330212644.png)
 #### 3.7 Performance on long sentences
 
-- LSTM이 긴 문장에 대해서 잘 동작한다는 놀라운 점을 알게 되었다.
+![](Attatched/Pasted%20image%2020240330212512.png)
 
+![](Attatched/Pasted%20image%2020240330212323.png)
+
+- 위의 그래프에서 수치적으로 볼 수 있듯이, LSTM이 긴 문장에 대해서 잘 동작한다는 놀라운 점을 알게 되었다.
+- 위의 표는 몇몇 장문 예시와 그 번역에 대한 내용이다.
 #### 3.8 Model Analysis
-
+![](Attatched/Pasted%20image%2020240330212554.png)
 ### 4. Related Work
 
 ### 5. Conclusion
