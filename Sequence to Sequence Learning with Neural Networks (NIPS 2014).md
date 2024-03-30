@@ -148,4 +148,6 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 - 최종적으로 LSTM은 64백만 개는 순전히 recurrent connection인 (32백만 개는 "encoder", 32백만 개는 "decoder") 총 384백만 개의 parameter를 얻었다. 
 - 최종 학습의 상세는 다음과 같다:
 	- LSTM의 parameter들을 -0.08에서 0.08 사이의 균등 분포로 초기화했다.
-	- 
+	- 학습률은 0.7로 고정하고, momentum; 관성없이 SGD; 확률적 경사하강법을 적용하였다. 5번의 epoch 뒤부터, half epoch 마다 학습률을 절반으로 줄였다. 모델은 총 7.5 epoch만큼 훈련시켰다.
+	- Gradient ;경사에 대해 128개 시퀀스의 batch를 수행하여 batch의 크기로 나누었다.
+	- LSTM이 vanishing gradient; 경사 소멸 문제는 잘 일어나지 않으나, gradient explosion; 경사 폭발이 일어날 수 있다. 따라서 경사 표준이 설정한 한계점을 넘을 때마다 스케일링을 진행하도록 강제하였다. 각 학습 batch에서 우리는 $s=$
