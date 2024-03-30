@@ -127,4 +127,17 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 #### 3.3 Reversing the Source Sentences
 
 - LSTM이 장기 의존성 문제를 해결하는 데 사용 가능한 반면, 우리는 LSTM이 Source Sentences가 역전되었을 때 훨씬 더 학습이 잘 이루어 지는 것을 발견했다(Target Sentences는 역전되지 않았다).
-- 그렇게 함으로써, LSTM의 
+- 그렇게 함으로써, LSTM의 test perplexity가 5.8에서 4.7로 떨어지고, 디코딩된 번역의 test BLEU score는 25.9에서 30.6으로 증가했다.
+
+- 우리가 이러한 현상의 실험을 완전하게 진행하지 못했으나, 우리는 이 현상이 dataset에 대한 수많은 단기 의존성의 도입으로 인한 것이라고 믿는다.
+- 일반적으로, 우리가 source sentence를 target sentence와 병합했을 때, source sentence의 각 단어와 target sentence의 단어들의 연관성이 떨어졌다.
+- 결과적으로 문제에서 많은 "minimal time lag; 최소 시간 지연"을 갖게 되었다.
+- source sentence의 단어들을 뒤집음으로써, source와 target 언어에서 연관 단어들 간의 평균 거리가 변화하지 않았다.
+- 그러나 source language의 최초 몇몇 단어들은 target language의 최초 몇몇 단어들과의 거리가 매우 가까워지고, 문제의 최소 시간 지연은 매우 감소하였다.
+- 따라서, source sentence와 target sentence 간의 "establishing communication; 교류 수립"을 하면서 역전파가 쉬워졌고, 차례로 전반적으로 지속적인 성능 향상의 결과를 얻었다.
+
+- 최초에 우리는 입력 문장들을 뒤집는 것이 target sentence의 초기 부분의 예측을 확고히 하고 후반부로 갈수록 예측률이 떨어질 것이라고 예상했다.
+- 그러나 역전된 source sentences로 학습한 LSTMs은 일반 source sentences로 학습한 LSTM 보다 긴 문장들에 대해 훨씬 더 잘 작동하여, 입력 문장의 역전하는 것이 LSTMs이 메모리를 더 잘 이용한다는 것의 근거가 되었다.
+
+#### 3.4 Training details
+
