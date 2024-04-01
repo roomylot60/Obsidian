@@ -166,7 +166,7 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 ### 3.6 Experimental Results
 - BLEU score를 사용하여 번역을 평가했다.
 - BLEU score를 토큰화 한 예측과 Ground truth; AI 모델 출력값을 훈련 및 테스트하는 데 사용되는 실제 환경의 데이터에 대해 `multi-blue.pl`을 사용해 연산하였다.
-- 이러한 BLEU score 평가 방식은 Bahdanau 33.3점 재생산했다
+- 이러한 BLEU score 평가 방식은 [2](https://arxiv.org/abs/1409.0473) 와 [5](https://arxiv.org/abs/1406.1078)의 내용과 일치하고 33.3점 재생산했다
 ![](Attatched/Pasted%20image%2020240330212619.png)
 
 ![](Attatched/Pasted%20image%2020240330212644.png)
