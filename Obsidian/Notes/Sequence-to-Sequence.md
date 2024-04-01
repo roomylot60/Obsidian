@@ -130,7 +130,7 @@ class Decoder(nn.Module):
 - 자연어 처리 태스크를 기계적으로 평가할 수 있는 방법
 - 기계 번역과 사람이 직접 번역한 결과의 유사도를 통해 성능을 n-gram에 기반해 측정하여 언어에 구애받지 않고 빠른 결과를 도출
 #### Unigram Precision
-- Candidate(후보문)과 Reference(참조문)을 비교할 때, 후보문에서 참조문 중 한 문장에서라도 등장한 단어의 개수의 합을 후보문의 총 Unigram(단어)의 수로 나누어 준 것    
+- Candidate(후보문)과 Reference(참조문)을 비교할 때, 후보문에서 참조문 중 한 문장에서라도 *등장한 단어의 개수의 합을 후보문의 총 Unigram(단어)의 수로 나누어 준 것*    
 ```python
 # Tokens에서의 n-gram의 수
 def simple_count(tokens, n):
@@ -185,7 +185,9 @@ print('Modified Unigram Precision : ', result)
 ```
 #### n-gram precision 
 - Unigram의 경우, 단어의 순서를 고려하지 않으므로, n-gram으로 확장
-* Brevity Penalty : Candidate의 길이에 BLEU의 점수가 과한 영향을 받을 수 있는 문제로, 짧은 문장이 높은 점수를 받는 점에 주목하여 이에 panalty를 부여<br> ![BLEU](../Attatched/BLEU.jpg) <br>![BP](..//Brevity_Penalty.jpg)
+	* Brevity Penalty : Candidate의 길이에 BLEU의 점수가 과한 영향을 받을 수 있는 문제로, 짧은 문장이 높은 점수를 받는 점에 주목하여 이에 panalty를 부여 $$p_{n} =  \frac{\sum_{n\ gram \in Candidate}Count_{clip}(n\ gram)}{\sum_{n\ gram \in Candidate}Count(n\ gram)} \
+	BLEU = BP \times exp(\sum^{N}_{n=1} w_{n}log\ p_{n})$$
+ ![BLEU](../Attatched/BLEU.jpg) <br>![BP](..//Brevity_Penalty.jpg)
 ```python
 # Ca 길이와 가장 근접한 Ref의 길이를 리턴하는 함수
 def closest_ref_length(candidate, reference_list):
