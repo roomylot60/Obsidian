@@ -164,6 +164,8 @@ $$p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T}) = \Pi^{T^{'}}_{t=1}p(y_{t}|v,y_{1},...,
 - 학습은 해당 실행에서 약 열흘에 걸쳐 수행되었다.
 
 ### 3.6 Experimental Results
+- BLEU score를 사용하여 번역을 평가했다.
+- BLEU score를 토큰화 한 예측과 `multi-blue.pl`을 사용해 연산하였다.
 ![](Attatched/Pasted%20image%2020240330212619.png)
 
 ![](Attatched/Pasted%20image%2020240330212644.png)
