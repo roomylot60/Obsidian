@@ -185,11 +185,8 @@ print('Modified Unigram Precision : ', result)
 ```
 #### n-gram precision 
 - Unigram의 경우, 단어의 순서를 고려하지 않으므로, n-gram으로 확장
-	* Brevity Penalty : Candidate의 길이에 BLEU의 점수가 과한 영향을 받을 수 있는 문제로, 짧은 문장이 높은 점수를 받는 점에 주목하여 이에 panalty를 부여 
-$$
-p_{n}=\frac{\sum_{n\ gram\in Candidate}Count_{clip}(n\ gram)}{\sum_{n\ gram\in Candidate}Count(n\ gram)}\\
-BLEU = BP\times exp(\sum^{N}_{n=1}w_{n}log\ p_{n})
-$$
+	* Brevity Penalty : Candidate의 길이에 BLEU의 점수가 과한 영향을 받을 수 있는 문제로, 짧은 문장이 높은 점수를 받는 점에 주목하여 이에 panalty를 부여 $$p_{n} =  \frac{\sum_{n\ gram \in Candidate}Count_{clip}(n\ gram)}{\sum_{n\ gram \in Candidate}Count(n\ gram)} \
+	BLEU = BP \times exp(\sum^{N}_{n=1} w_{n}log\ p_{n})$$
  ![BLEU](../Attatched/BLEU.jpg) <br>![BP](..//Brevity_Penalty.jpg)
 ```python
 # Ca 길이와 가장 근접한 Ref의 길이를 리턴하는 함수
