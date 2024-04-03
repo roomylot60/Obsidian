@@ -23,3 +23,6 @@ y&=h(a)
 	- Rectified Linear Unit : $h(x)=\begin{cases}0\;if\;x<0\\x\;if\;x\geq 0\end{cases}$
 	- Identity Function : $y=x$
 	- Softmax : $y_{k}=\frac{e^{a_{k}}}{\sum^{n}_{i=1}e^{a_{i}}}$
+5. Loss Fucntion
+6. Forward Propagation(순전파)
+7. Backward Propagation(역전파)
