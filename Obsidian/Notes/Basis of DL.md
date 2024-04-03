@@ -13,16 +13,17 @@ y&=h(a)
 	- 편향 : $b$
 	- 활성화 함수:  $h$
 	- 출력 신호 : $y$
-3. 계층 : 신경망을 구성하는 각 층
+2. 계층 : 신경망을 구성하는 각 층
 	- Input layer
 	- Hidden layer
 	- Output layer
-4. Activation Function(활성화 함수) : 입력 신호의 총합을 신호로 변환하는 함수
+3. Activation Function(활성화 함수) : 입력 신호의 총합을 신호로 변환하는 함수
 	- Sigmoid : $h(x)=\frac{1}{1+e^{-x}}$
 	- Step Function : $h(x)=\begin{cases}0\;if\;x<0\\1\;if\;x\geq 0\end{cases}$
 	- Rectified Linear Unit : $h(x)=\begin{cases}0\;if\;x<0\\x\;if\;x\geq 0\end{cases}$
 	- Identity Function : $y=x$
 	- Softmax : $y_{k}=\frac{e^{a_{k}}}{\sum^{n}_{i=1}e^{a_{i}}}$
-5. Loss Fucntion
+4. Loss Fucntion
+5. Optimizer
 6. Forward Propagation(순전파)
 7. Backward Propagation(역전파)
