@@ -26,7 +26,8 @@ $$
 - Identity Function : $y=x$
 - Softmax : $y_{k}=\frac{e^{a_{k}}}{\sum^{n}_{i=1}e^{a_{i}}}$
 #### 4. Loss Fucntion
-- 신경망 학습의 성능을 나타내는 지표로. 성능을 좋게하는 매개변수 값을 탐색
+- 신경망 학습의 성능을 나타내는 지표로, 성능을 좋게하는 매개변수 값을 탐색
+- 손실함수의 값을 작게하는 매개변수를 탐색하
 - Mean Squared Error; MSE(평균 제곱 오차) : $E=\frac{1}{2}\sum_{k}(y_{k}-t_{k})^{2}$
 - Cross Entropy Error(교차 엔트로피 오차) : $E=-\sum_{k}t_{k}log\;y_{k}$
 #### 5. Optimizer
