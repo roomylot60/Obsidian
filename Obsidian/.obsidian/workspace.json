@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c2872c1427e2d98c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "1.Daily/2024-04-14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "1.Daily/2024-04-14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "1.Daily/2024-04-14.md"
               }
             }
           },
@@ -178,10 +165,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c2872c1427e2d98c",
+  "active": "b541c8478412d00a",
   "lastOpenFiles": [
-    "1.Daily/2024-04-14.md",
     "conflict-files-obsidian-git.md",
+    "1.Daily/2024-04-14.md",
     "Notes/Transformer.md",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-28.md",
