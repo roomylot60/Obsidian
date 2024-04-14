@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "1.Daily/2024-04-14.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c2872c1427e2d98c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Transformer.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -164,8 +178,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "b541c8478412d00a",
+  "active": "c2872c1427e2d98c",
   "lastOpenFiles": [
+    "1.Daily/2024-04-14.md",
+    "conflict-files-obsidian-git.md",
+    "Notes/Transformer.md",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-28.md",
     "Attatched/Pasted image 20240327204753.png",
@@ -198,11 +215,8 @@
     "1.Daily/2024-02-03.md",
     "Notes/Plug-in.md",
     "Notes/Convolution Neural Network.md",
-    "Notes/Transformer.md",
     "Notes/Deep Learning.md",
     "Notes/Connectionist Temporal Classification.md",
-    "Notes/Interpolation(보간법).md",
-    "1.Daily/2024-01-25.md",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
