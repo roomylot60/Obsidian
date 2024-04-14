@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "Notes/Transformer.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "Notes/Transformer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md",
+                "file": "Notes/Transformer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Sequence-to-Sequence.md"
+                "file": "Notes/Transformer.md"
               }
             }
           },
@@ -167,6 +166,7 @@
   },
   "active": "b541c8478412d00a",
   "lastOpenFiles": [
+    "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-28.md",
     "Attatched/Pasted image 20240327204753.png",
     "Attatched/Pasted image 20240327204349.png",
@@ -175,7 +175,6 @@
     "Attatched/Pasted image 20240327203638.png",
     "Notes/Long Short-Term Memory.md",
     "Notes/Natural Language Processing.md",
-    "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-21.md",
     "1.Daily/Attatched/Pasted image 20240323051225.png",
     "1.Daily/Attatched/Pasted image 20240323051117.png",
