@@ -1,4 +1,5 @@
 [Original Paper Link](https://arxiv.org/abs/1706.03762)
+[Ref.](https://incredible.ai/nlp/2020/02/29/Transformer/)
 
 ---
 ## Abstract
@@ -32,6 +33,7 @@
 ---
 ## 3. Model Architecture
 
+![](Attatched/Pasted%20image%2020240415092511.png)
 ### 3.1 Encoder and Decoder Stacks
 
 ### 3.2 Attention
