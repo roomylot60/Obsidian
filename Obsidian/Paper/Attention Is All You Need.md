@@ -34,8 +34,14 @@
 ## 3. Model Architecture
 
 ![](Attatched/Pasted%20image%2020240415092511.png)
+
+- self-attention and point-wise, fully connected layers
 ### 3.1 Encoder and Decoder Stacks
 
+- Encoder : Two sub-layers for each layer
+	- Multi-head self-attention mechanism
+	- Position-wise fully connected FFNN
+- Decoder : 
 ### 3.2 Attention
 
 #### 3.2.1 Scaled Dot-product Attention
