@@ -3,30 +3,31 @@
 ---
 ## Abstract
 
-Sequence transduction models : Encoder + Decoder (feat. Multi-layer CNN or RNN)
-Suggestion : **Transformer Architecture with Attention machanism**
-Parallelizable and less time in training
-Machine translation 8 GPUs for 3.5 days of training
-28.4 BLEU score on WMT 2014 English-to-German translation task
-41.8 BLEU score on WMT 2014 English-to-Franch translation task
+- Sequence transduction models : Encoder + Decoder (feat. Multi-layer CNN or RNN)
+- Suggestion : **Transformer Architecture with Attention mechanism**
+	- Parallelizable and less time in training
+	- Machine translation 8 GPUs for 3.5 days of training
+	- 28.4 BLEU score on WMT 2014 English-to-German translation task
+	- 41.8 BLEU score on WMT 2014 English-to-Franch translation task
 
 ---
 ## 1. Introduction
 
-RNN, LSTM, Gated RNN in sequence modeling
-Hidden states to align the positions of the input and output sequences made of input of present time step and previous hidden state
-Efficiency loss : Difficulty of Parallelization caused by inherently sequential nature
-[Factorization trick](https://arxiv.org/abs/1703.10722) and [Conditional computation](https://arxiv.org/abs/1701.06538)
-Attention machanisms just used in conjunction with a RNN in spite of their usability in modeling of dependencies without regard to their distance in the input or ouput sequences
+- RNN, LSTM, Gated RNN in *sequence modeling*
+- *Hidden states* to align the positions of the input and output sequences made of input of present time step and previous hidden state
+- Efficiency loss : *Difficulty of Parallelization* caused by inherently sequential nature
+- [Factorization trick](https://arxiv.org/abs/1703.10722) and [Conditional computation](https://arxiv.org/abs/1701.06538)
+- *Attention mechanisms* just used in conjunction with a RNN in spite of their usability in modeling of dependencies without regard to their distance in the input or ouput sequences
 
 ---
 ## 2. Background
 
-The goal of *reducing sequential computations*
-CNN base models compute hidden representations *in parallel* for all input and output positions
-Learning dependencies between distant positions is difficult cause of the *numerous operations*
-Self-attention; intra-attention relates different positions of a *single sequence* and makes this into a representation
-End-to-end memory networks
+- The goal of *reducing sequential computations*
+- CNN base models compute hidden representations *in parallel* for all input and output positions
+- Learning dependencies between distant positions is difficult cause of the *numerous operations*
+- Self-attention; intra-attention relates different positions of a *single sequence* and makes this into a representation
+- End-to-end memory networks are based on a *recurrent attention mechanism* instead of sequence-aligned recurrence
+- **Transformer** is the first transduction mdel relying entirely on self-attention to compute representations of its input and output without using sequence-aligned RNNs or convolution
 
 ---
 ## 3. Model Architecture
