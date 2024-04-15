@@ -25,6 +25,7 @@ Attention machanisms just used in conjunction with a RNN in spite of their usabi
 The goal of reducing sequential computations
 CNN base models compute hidden representations in parallel for all input and output positions
 Learning dependencies between distant positions is difficult cause of the numerous operations
+Self-attention; intra-attention relates different positions of a single sequence
 
 ---
 ## 3. Model Architecture
