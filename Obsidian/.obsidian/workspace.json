@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "93f38c5b3be7d495",
+        "id": "4e96bc6aba532846",
         "type": "tabs",
         "children": [
           {
-            "id": "b541c8478412d00a",
+            "id": "7501b09cac93cf08",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1.Daily/2024-04-14.md",
+                "file": "Paper/Attention Is All You Need.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-04-14.md",
+                "file": "Paper/Attention Is All You Need.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-04-14.md",
+                "file": "Paper/Attention Is All You Need.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-04-14.md"
+                "file": "Paper/Attention Is All You Need.md"
               }
             }
           },
@@ -165,10 +165,17 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "b541c8478412d00a",
+  "active": "7501b09cac93cf08",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
+    "Paper/Attention Is All You Need.md",
     "1.Daily/2024-04-14.md",
+    "Paper/Sequence to Sequence Learning with Neural Networks (NIPS 2014).md",
+    "Paper/Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015).md",
+    "Paper/Effective Approaches to Attention-based Neural Machine Translation (EMNLP 2015).md",
+    "Paper/Attatched/Pasted image 20240415092511.png",
+    "Paper/Attatched",
+    "Paper",
     "Notes/Transformer.md",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-28.md",
@@ -184,7 +191,6 @@
     "1.Daily/Attatched/Pasted image 20240323051117.png",
     "1.Daily/Attatched/Pasted image 20240323051105.png",
     "1.Daily/Attatched/Pasted image 20240323051049.png",
-    "1.Daily/Attatched/Pasted image 20240323050945.png",
     "1.Daily/2024-03-23.md",
     "1.Daily/2024-02-19.md",
     "1.Daily/2024-02-20.md",
@@ -200,10 +206,6 @@
     "1.Daily/2024-01-29.md",
     "1.Daily/2024-02-01.md",
     "1.Daily/2024-02-03.md",
-    "Notes/Plug-in.md",
-    "Notes/Convolution Neural Network.md",
-    "Notes/Deep Learning.md",
-    "Notes/Connectionist Temporal Classification.md",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
@@ -211,8 +213,6 @@
     "Notes",
     "4.Yearly",
     "3.Monthly",
-    "2.Weekly",
-    "1.Daily",
-    "banner.png.crdownload"
+    "2.Weekly"
   ]
 }
