@@ -47,6 +47,8 @@
 ![](../Attatched/Pasted%20image%2020240415195408.png)
 
 - Attention function : Mapping a query and a set of key-value pairs to an output
+	- Additive attention
+	- Dot-product; multi-plicative attention
 #### 3.2.1 Scaled Dot-Product Attention
 
 - Scaled Dot-Product Attention : $Attention(Q, K, V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}}})V$
