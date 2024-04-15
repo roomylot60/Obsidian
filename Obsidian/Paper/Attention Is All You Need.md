@@ -38,10 +38,10 @@
 - self-attention and point-wise, fully connected layers
 ### 3.1 Encoder and Decoder Stacks
 
-- Encoder : Two sub-layers for each layer
+- Encoder : Two sub-layers for each layer make output $LayerNorm(x+Sublayer(x)), d_{model}=512$
 	- Multi-head self-attention mechanism
 	- Position-wise fully connected FFNN
-- Decoder : 
+- Decoder : Employ residual connections around each of the sub-layers and insert third sub-layer to perform multi-head attention over the output of the encoder stack
 ### 3.2 Attention
 
 #### 3.2.1 Scaled Dot-product Attention
