@@ -23,6 +23,7 @@ Attention machanisms just used in conjunction with a RNN in spite of their usabi
 ## 2. Background
 
 The goal of reducing sequential computations
+CNN base models compute hidden representations in parallel for all input and output positions
 
 ---
 ## 3. Model Architecture
