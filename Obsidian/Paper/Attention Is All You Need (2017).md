@@ -34,13 +34,25 @@
 ## 3. Model Architecture
 
 ![](Attatched/Pasted%20image%2020240415092511.png)
+
+- self-attention and point-wise, fully connected layers
 ### 3.1 Encoder and Decoder Stacks
 
+- Encoder : Two sub-layers for each layer make output $LayerNorm(x+Sublayer(x)), d_{model}=512$
+	- Multi-head self-attention mechanism
+	- Position-wise fully connected FFNN
+- Decoder : Employ residual connections around each of the sub-layers and insert third sub-layer to perform multi-head attention over the output of the encoder stack
 ### 3.2 Attention
 
-#### 3.2.1 Scaled Dot-product Attention
+![](../Attatched/Pasted%20image%2020240415195408.png)
 
-#### 3.2.2 Multi-head Attention
+- Attention function : Mapping a query and a set of key-value pairs to an output
+	- Additive attention
+	- Dot-product; multi-plicative attention
+#### 3.2.1 Scaled Dot-Product Attention
+
+- Scaled Dot-Product Attention : $Attention(Q, K, V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}}})V$
+#### 3.2.2 Multi-Head Attention
 
 #### 3.2.3 Applications of Attention in our Model
 
