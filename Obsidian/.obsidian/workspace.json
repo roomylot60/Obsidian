@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c17f2e5baaffcc39",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper/Effective Approaches to Attention-based Neural Machine Translation (EMNLP 2015).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -167,15 +179,15 @@
   },
   "active": "7501b09cac93cf08",
   "lastOpenFiles": [
+    "Paper/Effective Approaches to Attention-based Neural Machine Translation (EMNLP 2015).md",
+    "Paper/Deep Learning in Spiking Neural Networks.md",
     "Paper/Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015).md",
     "Paper/Sequence to Sequence Learning with Neural Networks (NIPS 2014).md",
-    "Paper/Deep Learning in Spiking Neural Networks.md",
     "Paper/Attention Is All You Need.md",
     "Attatched/Pasted image 20240415195408.png",
     "Attatched/Pasted image 20240415195328.png",
     "conflict-files-obsidian-git.md",
     "1.Daily/2024-04-14.md",
-    "Paper/Effective Approaches to Attention-based Neural Machine Translation (EMNLP 2015).md",
     "Paper/Attatched/Pasted image 20240415092511.png",
     "Paper/Attatched",
     "Paper",
