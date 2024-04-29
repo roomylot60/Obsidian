@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1.Daily/2024-04-29.md",
+                "file": "Paper/Deep Learning in Spiking Neural Networks.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-04-29.md",
+                "file": "Paper/Deep Learning in Spiking Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-04-29.md",
+                "file": "Paper/Deep Learning in Spiking Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-04-29.md"
+                "file": "Paper/Deep Learning in Spiking Neural Networks.md"
               }
             }
           },
@@ -167,14 +167,14 @@
   },
   "active": "7501b09cac93cf08",
   "lastOpenFiles": [
+    "Paper/Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015).md",
+    "Paper/Sequence to Sequence Learning with Neural Networks (NIPS 2014).md",
+    "Paper/Deep Learning in Spiking Neural Networks.md",
     "Paper/Attention Is All You Need.md",
-    "1.Daily/2024-04-29.md",
     "Attatched/Pasted image 20240415195408.png",
     "Attatched/Pasted image 20240415195328.png",
     "conflict-files-obsidian-git.md",
     "1.Daily/2024-04-14.md",
-    "Paper/Sequence to Sequence Learning with Neural Networks (NIPS 2014).md",
-    "Paper/Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015).md",
     "Paper/Effective Approaches to Attention-based Neural Machine Translation (EMNLP 2015).md",
     "Paper/Attatched/Pasted image 20240415092511.png",
     "Paper/Attatched",
