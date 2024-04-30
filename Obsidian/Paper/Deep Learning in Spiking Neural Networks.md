@@ -5,6 +5,11 @@ https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%E
 
 ## 1. INTRODUCTION
 
+ANNs는 활성화 값, 가중치가 부과된 입력값의 집합을 연속적으로 연산하는 단위체로 고안되었다.
+생물체로부터 영감을 얻어 해당 유닛을 뉴런이라 칭한다.
+해당 뉴런들은 미분가능한 비 선형적인 활성화 함수를 사용
+비 선형 활성화 함들은 하나 이상의 계층의 누적을 통해 의미있는 표현을 생성하고 학습을 통해 기울기 기반의 최적화 수단을 사용하여 
+
 ---
 
 ## 2. Spiking Neural Network : A biologically inspired approach to information precessing
