@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4e96bc6aba532846",
+        "id": "83e1670228def696",
         "type": "tabs",
         "children": [
           {
-            "id": "7501b09cac93cf08",
+            "id": "6d9f41c57996097d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1.Daily/2024-04-29.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-04-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-04-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-04-29.md"
+                "file": "1.Daily/2024-04-30.md"
               }
             }
           },
@@ -165,11 +158,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "7501b09cac93cf08",
+  "active": "837145ae825b8a1e",
   "lastOpenFiles": [
+    "1.Daily/2024-04-30.md",
+    "1.Daily/2024-04-29.md",
     "Paper/Attention Is All You Need (2017).md",
     "Paper/Effective Approaches to Attention-based Neural Machine Translation (EMNLP 2015).md",
-    "1.Daily/2024-04-29.md",
     "Paper/Deep Learning in Spiking Neural Networks.md",
     "Paper/Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015).md",
     "Paper/Sequence to Sequence Learning with Neural Networks (NIPS 2014).md",
@@ -205,7 +199,6 @@
     "Notes/Attention Machanism.md",
     "1.Daily/2024-01-15.md",
     "1.Daily/2024-01-11.md",
-    "1.Daily/2024-01-26.md",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
