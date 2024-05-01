@@ -44,6 +44,7 @@ https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%E
 
 ---
 ### SNN
+![](../Attatched/Pasted%20image%2020240501173850.png)
 
 - SNN : 기존 DL Neworks(MLP, RNN, CNN etc..)가 Tensor, Float을 주고받는 것에 비해 특정 뉴런에서 특정 시간에 Spike 발생 여부에 대한 이산적인 정보를 주고 받는 신경망
 - Spike의 누적으로 Action potential(활동 전위)가 임계점을 넘으면 Spike를 출력
