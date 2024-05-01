@@ -19,7 +19,8 @@ https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%E
 
 - 비록 DNNs가 역사적으로 뇌로 부터 비롯되었다고는 하나, 뇌와 구조적, 신경 연산, 학습법 등에서 기본적인 차이를 보임
 - 가장 주요한 차이점은 유닛간의 정보 전파의 방식
-- 
+- 이 부분이 스파이킹 신경망(SNNs)의 고안 배경
+- 뇌에서 뉴런 간의 통신은 활동 포텐셜의 학습의 전파를 통해 이루어지고 이는 뉴런의 하강식 스파이크 학습으로 알려져 있음
 ---
 
 ## 2. Spiking Neural Network : A biologically inspired approach to information precessing
