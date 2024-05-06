@@ -58,9 +58,22 @@
 	2. Dot-product(multiplicative) attention : much faster and more space-efficient
 #### 3.2.2 Multi-Head Attention
 
+- Multihead Attention : $$\begin{aligned}MultiHead(Q, K, V) &= Concat(head_{1}, ..., head_{h})W^{O} \\
+where\ head_{i} &= Attentions(QW_{i}^{Q}, KW_{i}^{K}, VW_{i}^{V})\end{aligned}$$
+
 #### 3.2.3 Applications of Attention in our Model
 
+1. **Encoder-decoder Attention** : Queries come from the previous decoder layer, Memory keys and values come from the output of the encoder
+2. Encoder : Contains self-attention layers
+3. Decoder : Self-attention layers
+
 ### 3.3 Position-wise Feed-Forward Networks
+
+- For attention in sub-layers, each of the layers need fully connected FFN
+- Two linear transformations with a ReLU activation in between
+- $FFN(x) = max(0, xW_{1} + b_{1})W_{2} + b_{2}$
+- Dimensionality of input and output is $d_{model} = 512$ and the inner-layer has dimensionality $d_{f \ f} = 2048$
+- 
 
 ### 3.4 Embeddings and Softmax
 
