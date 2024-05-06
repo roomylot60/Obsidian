@@ -52,7 +52,10 @@
 #### 3.2.1 Scaled Dot-Product Attention
 
 - Scaled Dot-Product Attention : $Attention(Q, K, V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}}})V$
-- $Q$ : queries(dimension $d_{k}$), $K$ : keys(dimension $d_{k}$), $V$ : values(dimension $d_{v}$)
+- $Q$ : matrix of queries(dimension $d_{k}$), $K$ : matrix of keys(dimension $d_{k}$), $V$ : matrix of values(dimension $d_{v}$)
+- Sclaing with $\frac{1}{\sqrt{d_{k}}}$ : solving gradient vanishing problem
+	1. Additive attention : computes the compatitbility function using a FFN with a single hidden layer
+	2. Dot-product(multiplicative) attention : much faster and more space-efficient
 #### 3.2.2 Multi-Head Attention
 
 #### 3.2.3 Applications of Attention in our Model
