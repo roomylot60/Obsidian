@@ -52,6 +52,7 @@
 #### 3.2.1 Scaled Dot-Product Attention
 
 - Scaled Dot-Product Attention : $Attention(Q, K, V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}}})V$
+- 
 #### 3.2.2 Multi-Head Attention
 
 #### 3.2.3 Applications of Attention in our Model
