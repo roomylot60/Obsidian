@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -165,8 +164,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "6d9f41c57996097d",
+  "active": "837145ae825b8a1e",
   "lastOpenFiles": [
+    "1.Daily/2024-05-26.md",
     "Attatched/Pasted image 20240501173850.png",
     "Attatched/Pasted image 20240501173834.png",
     "Attatched/Pasted image 20240501173815.png",
@@ -192,7 +192,6 @@
     "Attatched/Pasted image 20240327204349.png",
     "Attatched/Pasted image 20240327203735.png",
     "Attatched/Pasted image 20240327203733.png",
-    "Attatched/Pasted image 20240327203638.png",
     "Notes/Long Short-Term Memory.md",
     "Notes/Natural Language Processing.md",
     "1.Daily/2024-03-21.md",
