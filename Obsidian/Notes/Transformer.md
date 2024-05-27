@@ -8,7 +8,11 @@
 	- Positional information : RNN은 단어의 위치에 따라 단어를 순차적(Sequential) 처리를 하여 단어의 위치 정보를 보유
 	- Positional Encoding : Transformer는 단어의 위치 정보(sin, cos)를 각 단어의 Embedding vector에 더하여 Model의 입력으로 사용
 	$PE_{(pos, 2i)}=sin(pos/10000^{2i/d_{model}})$
-	$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$ ![Embedding vector + PE](../Attatched/Pasted%20image%2020240104162143.png)
+	$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$
+	$pos$ : position of embedding vector in input sequence
+	$i$ : dimension index of embedding vector
+	
+	![Embedding vector + PE](../Attatched/Pasted%20image%2020240104162143.png)
 
 ```python
 import numpy as np
