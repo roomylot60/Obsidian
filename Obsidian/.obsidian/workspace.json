@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Deep Learning in Spiking Neural Networks.md",
+                "file": "Notes/Transformer.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Deep Learning in Spiking Neural Networks.md",
+                "file": "Notes/Transformer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Deep Learning in Spiking Neural Networks.md",
+                "file": "Notes/Transformer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Deep Learning in Spiking Neural Networks.md"
+                "file": "Notes/Transformer.md"
               }
             }
           },
@@ -164,8 +165,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "837145ae825b8a1e",
+  "active": "6d9f41c57996097d",
   "lastOpenFiles": [
+    "Paper/Deep Learning in Spiking Neural Networks.md",
     "1.Daily/2024-05-26.md",
     "Attatched/Pasted image 20240501173850.png",
     "Attatched/Pasted image 20240501173834.png",
@@ -174,7 +176,6 @@
     "1.Daily/2024-04-29.md",
     "Paper/Attention Is All You Need (2017).md",
     "Paper/Effective Approaches to Attention-based Neural Machine Translation (EMNLP 2015).md",
-    "Paper/Deep Learning in Spiking Neural Networks.md",
     "Paper/Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015).md",
     "Paper/Sequence to Sequence Learning with Neural Networks (NIPS 2014).md",
     "Paper/Attention Is All You Need.md",
