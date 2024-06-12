@@ -51,6 +51,7 @@
 	- Dot-product; multi-plicative attention
 #### 3.2.1 Scaled Dot-Product Attention
 
+- Softmax Function : $\frac{e^{x_{i}}}{\sum_{j=1}^{n}e^{x_{j}}}$
 - Scaled Dot-Product Attention : $Attention(Q, K, V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}}})V$
 - $Q$ : matrix of queries(dimension $d_{k}$), $K$ : matrix of keys(dimension $d_{k}$), $V$ : matrix of values(dimension $d_{v}$)
 - Sclaing with $\frac{1}{\sqrt{d_{k}}}$ : solving gradient vanishing problem
