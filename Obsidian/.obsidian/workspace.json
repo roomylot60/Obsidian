@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Paper/Attention Is All You Need (2017).md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Paper/Attention Is All You Need (2017).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Transformer.md",
+                "file": "Paper/Attention Is All You Need (2017).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Transformer.md"
+                "file": "Paper/Attention Is All You Need (2017).md"
               }
             }
           },
@@ -167,6 +167,7 @@
   },
   "active": "6d9f41c57996097d",
   "lastOpenFiles": [
+    "Notes/Transformer.md",
     "Paper/Deep Learning in Spiking Neural Networks.md",
     "1.Daily/2024-05-26.md",
     "Attatched/Pasted image 20240501173850.png",
@@ -186,7 +187,6 @@
     "Paper/Attatched/Pasted image 20240415092511.png",
     "Paper/Attatched",
     "Paper",
-    "Notes/Transformer.md",
     "Notes/Sequence-to-Sequence.md",
     "1.Daily/2024-03-28.md",
     "Attatched/Pasted image 20240327204753.png",
