@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1.Daily/2024-07-22.md",
+                "file": "Notes/ClipAI.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-07-22.md",
+                "file": "Notes/ClipAI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-07-22.md",
+                "file": "Notes/ClipAI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1.Daily/2024-07-22.md"
+                "file": "Notes/ClipAI.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   "active": "e240be3fb1e2ddb8",
   "lastOpenFiles": [
     "1.Daily/2024-07-22.md",
+    "Notes/ClipAI.md",
     "Paper/Attention Is All You Need (2017).md",
     "Notes/Transformer.md",
     "Paper/Deep Learning in Spiking Neural Networks.md",
@@ -205,7 +206,6 @@
     "1.Daily/2024-03-06.md",
     "1.Daily/2024-03-11.md",
     "1.Daily/Attatched",
-    "Notes/Attention Machanism.md",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
