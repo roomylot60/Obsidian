@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/2024-08-05.md",
+                "file": "Notes/2024-08-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/2024-08-05.md",
+                "file": "Notes/2024-08-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/2024-08-05.md",
+                "file": "Notes/2024-08-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/2024-08-05.md"
+                "file": "Notes/2024-08-08.md"
               }
             }
           },
@@ -166,8 +167,9 @@
   },
   "active": "e240be3fb1e2ddb8",
   "lastOpenFiles": [
-    "1.Daily/2024-08-04.md",
     "Notes/2024-08-05.md",
+    "Notes/2024-08-08.md",
+    "1.Daily/2024-08-04.md",
     "Notes/ClipAI.md",
     "1.Daily/2024-07-22.md",
     "Paper/Attention Is All You Need (2017).md",
@@ -203,7 +205,6 @@
     "1.Daily/2024-02-19.md",
     "1.Daily/2024-02-20.md",
     "1.Daily/2024-02-26.md",
-    "1.Daily/2024-03-02.md",
     "1.Daily/Attatched",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
