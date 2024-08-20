@@ -15,7 +15,7 @@
 ## 1. Introduction
 
 - *Sequence modeling*과 *변환(transduction)* 문제에서 활용도를 넓혀가는 Recurrent 언어 모델과 Encoder-decoder 구조(with RNN, LSTM, Gated RNN)
-- 입출력 시퀀스의  문자 위치에 따라 연산이 이루어지는데, 각 시점마다 연산을 위해 문자 위치를 나열할 때, 이전 시점의 은닉상태와 입력으로 구성된 함수로 은닉상태의 시퀀스를 생성해야 한다
+- 해당 모델은 입출력 시퀀스의 문자 위치를 연산에 활용
 - *Hidden states* to align the positions of the input and output sequences made of input of present time step and previous hidden state
 - Efficiency loss : *Difficulty of Parallelization* caused by inherently sequential nature
 - [Factorization trick](https://arxiv.org/abs/1703.10722) and [Conditional computation](https://arxiv.org/abs/1701.06538)
