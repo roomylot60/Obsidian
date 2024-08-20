@@ -19,7 +19,8 @@
 - *Hidden states* to align the positions of the input and output sequences made of input of present time step and previous hidden state
 - *Difficulty of Parallelization* caused by inherently sequential nature : memory contraints at longer sequence lengths
 - [Factorization trick](https://arxiv.org/abs/1703.10722) and [Conditional computation](https://arxiv.org/abs/1701.06538) have improved somewhat but remain fundamental contraint
-- *Attention mechanisms* have become a compelling algorithm just used in conjunction with a RNN in spite of their usability in modeling of dependencies without regard to their distance in the input or ouput sequences
+- *Attention mechanisms* have become a compelling algorithm but just used in conjunction with a RNN in spite of their usability in modeling of dependencies without regard to their distance in the input or ouput sequences
+- Recurrence를 삼가면서 전체적으로 Attention mechanism에 의존하지 않는 병렬화와 변환의 질을 높여주는 *Transfomer* 구조를 제시
 
 ---
 ## 2. Background
