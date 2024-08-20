@@ -83,15 +83,21 @@ where\ head_{i} &= Attentions(QW_{i}^{Q}, KW_{i}^{K}, VW_{i}^{V})\end{aligned}$$
 - Learned embeddings to convert the input and ouptut tokens to vectors of dimension $d_{model}$ 
 - To convert decoder output to predict next-token probabilties
 - Same weight matrix between the two embeddins layers and the pre-softmax linear transformation
-- In the embedding layers, mutiply those weights by $root{d_{model}}$ 
+- In the embedding layers, mutiply those weights by $\sqrt{d_{model}}$ 
 
 ### 3.5 Positional Encoding
 
 - There's no recurrence and convolution, inject some information about the relative or absolute position of the tokens in the sequence : *Positional encodings*
 - same dimension $d_{model}$ as the embeddings, so that input embeddings at the bottoms of encoder and decoder statcks can be summed
-- Cosine functions of different frequencies : $$PE_{pos,2i}=sin(pos/10000^{2i/d_{model}}) \\ PE_{pos,2i+1}=cos(pos/10000^{2i/d_{model}})$$
+- Cosine functions of different frequencies : $$\begin{aligned} PE_{pos,2i}=sin(pos/10000^{2i/d_{model}}) \\ PE_{pos,2i+1}=cos(pos/10000^{2i/d_{model}})\end{aligned}$$
 ---
 ## 4. Why Self-Attention
+
+- Compaing Recurrent layers and convolution layers to self-attention layers : Mapping variable length sequence which represents symbol to another equal length sequence
+- Three considerata
+	- Total computational complexity per layer
+	- Amount of parallelized computation
+	- The path length between long-range dependencies in the network
 
 ---
 ## 5. Training
