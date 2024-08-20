@@ -25,7 +25,7 @@
 ---
 ## 2. Background
 
-- The goal of *reducing sequential computations*
+- The goal of *reducing sequential computations* and *CNN based model forms*
 - CNN base models compute hidden representations *in parallel* for all input and output positions
 - Learning dependencies between distant positions is difficult cause of the *numerous operations*
 - Self-attention; intra-attention relates different positions of a *single sequence* and makes this into a representation
