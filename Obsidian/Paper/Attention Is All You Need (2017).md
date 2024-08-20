@@ -80,6 +80,10 @@ where\ head_{i} &= Attentions(QW_{i}^{Q}, KW_{i}^{K}, VW_{i}^{V})\end{aligned}$$
 
 ### 3.4 Embeddings and Softmax
 
+- Learned embeddings to convert the input and ouptut tokens to vectors of dimension $d_{model}$ 
+- To convert decoder output to predict next-token probabilties
+- Same weight matrix between the two embeddins layers and the pre-softmax linear transformation
+- In the embedding layers, mutiply those weights by ${d_{model}}$ 
 ---
 ## 4. Why Self-Attention
 
