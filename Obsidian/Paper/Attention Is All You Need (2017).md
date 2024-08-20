@@ -89,7 +89,7 @@ where\ head_{i} &= Attentions(QW_{i}^{Q}, KW_{i}^{K}, VW_{i}^{V})\end{aligned}$$
 
 - There's no recurrence and convolution, inject some information about the relative or absolute position of the tokens in the sequence : *Positional encodings*
 - same dimension $d_{model}$ as the embeddings, so that input embeddings at the bottoms of encoder and decoder statcks can be summed
-- Cosine functions of different frequencies : $$PE_{pos,2i}=sin(pos/10000^{2i/d_{model}}) PE_{pos,2i+1}=$$
+- Cosine functions of different frequencies : $$PE_{pos,2i}=sin(pos/10000^{2i/d_{model}}) \\ PE_{pos,2i+1}=cos(pos/10000^{2i/d_{model}})$$
 ---
 ## 4. Why Self-Attention
 
