@@ -19,7 +19,7 @@
 - *Hidden states* to align the positions of the input and output sequences made of input of present time step and previous hidden state
 - *Difficulty of Parallelization* caused by inherently sequential nature : memory contraints at longer sequence lengths
 - [Factorization trick](https://arxiv.org/abs/1703.10722) and [Conditional computation](https://arxiv.org/abs/1701.06538) have improved somewhat but remain fundamental contraint
-- *Attention mechanisms* just used in conjunction with a RNN in spite of their usability in modeling of dependencies without regard to their distance in the input or ouput sequences
+- *Attention mechanisms* have become a compelling algorithm just used in conjunction with a RNN in spite of their usability in modeling of dependencies without regard to their distance in the input or ouput sequences
 
 ---
 ## 2. Background
