@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/2024-08-08.md",
+                "file": "Paper/Attention Is All You Need (2017).md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/2024-08-08.md",
+                "file": "Paper/Attention Is All You Need (2017).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/2024-08-08.md",
+                "file": "Paper/Attention Is All You Need (2017).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/2024-08-08.md"
+                "file": "Paper/Attention Is All You Need (2017).md"
               }
             }
           },
@@ -167,8 +167,10 @@
   },
   "active": "e240be3fb1e2ddb8",
   "lastOpenFiles": [
-    "Notes/2024-08-05.md",
     "Notes/2024-08-08.md",
+    "Error/WinError 126.md",
+    "Error",
+    "Notes/2024-08-05.md",
     "1.Daily/2024-08-04.md",
     "Notes/ClipAI.md",
     "1.Daily/2024-07-22.md",
@@ -204,7 +206,6 @@
     "1.Daily/2024-03-23.md",
     "1.Daily/2024-02-19.md",
     "1.Daily/2024-02-20.md",
-    "1.Daily/2024-02-26.md",
     "1.Daily/Attatched",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
@@ -212,7 +213,6 @@
     "Attatched",
     "Notes",
     "4.Yearly",
-    "3.Monthly",
-    "2.Weekly"
+    "3.Monthly"
   ]
 }

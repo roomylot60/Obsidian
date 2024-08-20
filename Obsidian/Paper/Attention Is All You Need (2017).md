@@ -14,7 +14,7 @@
 ---
 ## 1. Introduction
 
-- RNN, LSTM, Gated RNN in *sequence modeling*
+- *Sequence modeling*과 *변환(transduction)* 문제에서 활용도를 넓혀가는 Recurrent 언어 모델과 Encoder-decoder 구조(with RNN, LSTM, Gated RNN)
 - *Hidden states* to align the positions of the input and output sequences made of input of present time step and previous hidden state
 - Efficiency loss : *Difficulty of Parallelization* caused by inherently sequential nature
 - [Factorization trick](https://arxiv.org/abs/1703.10722) and [Conditional computation](https://arxiv.org/abs/1701.06538)
