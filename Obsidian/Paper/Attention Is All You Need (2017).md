@@ -17,8 +17,8 @@
 - *Sequence modeling*과 *변환(transduction)* 문제에서 활용도를 넓혀가는 Recurrent 언어 모델과 Encoder-decoder 구조(with RNN, LSTM, Gated RNN)
 - 해당 모델은 입출력 시퀀스의 문자 위치를 연산에 활용
 - *Hidden states* to align the positions of the input and output sequences made of input of present time step and previous hidden state
-- *Difficulty of Parallelization* caused by inherently sequential nature : 
-- [Factorization trick](https://arxiv.org/abs/1703.10722) and [Conditional computation](https://arxiv.org/abs/1701.06538)
+- *Difficulty of Parallelization* caused by inherently sequential nature : memory contraints at longer sequence lengths
+- [Factorization trick](https://arxiv.org/abs/1703.10722) and [Conditional computation](https://arxiv.org/abs/1701.06538) have improved somewhat but remain fundamental contraint
 - *Attention mechanisms* just used in conjunction with a RNN in spite of their usability in modeling of dependencies without regard to their distance in the input or ouput sequences
 
 ---
