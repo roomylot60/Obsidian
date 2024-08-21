@@ -104,11 +104,23 @@ where\ head_{i} &= Attentions(QW_{i}^{Q}, KW_{i}^{K}, VW_{i}^{V})\end{aligned}$$
 
 ### 5.1 Training Data and Batching
 
+- WMT 2014 En-Ge dataset; 4.5 milion sentence pairs encoded using BPE, which has a shared source-target vocabulary of about 37000 tokens
+- WMT 2014 En-Fr dataset; 36 milion sentences and split tokens into a 32,000 word-piece vocabulary
+- Sentence pairs batching : 25,000 source-target tokens(with sequence length)
+
 ### 5.2 Hardware and Schedule
+
+- 8 NVIDIA P100 GPUs
+- 100,000 steps : 0.4 sec per training step
 
 ### 5.3 Optimizer
 
+- Adam optimizer : $\beta_{1} = 0.9, \beta_{2}=0.98, \epsilon=10^{-9}, warmup\_steps=4000$
+- $learning\_rate = d_{model}^{-0.5} \cdot min(step\_num^{-0.5}, step\_num \cdot warmup\_steps^{-1.5})$
 ### 5.4 Regularization
+
+- Residual Dropout
+- Label Smoothing
 
 ---
 ## 6. Results
