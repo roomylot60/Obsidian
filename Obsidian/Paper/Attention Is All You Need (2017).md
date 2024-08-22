@@ -83,27 +83,53 @@ where\ head_{i} &= Attentions(QW_{i}^{Q}, KW_{i}^{K}, VW_{i}^{V})\end{aligned}$$
 - Learned embeddings to convert the input and ouptut tokens to vectors of dimension $d_{model}$ 
 - To convert decoder output to predict next-token probabilties
 - Same weight matrix between the two embeddins layers and the pre-softmax linear transformation
+<<<<<<< HEAD
 - In the embedding layers, mutiply those weights by ${root}{d_{model}}$ 
+=======
+- In the embedding layers, mutiply those weights by $\sqrt{d_{model}}$ 
+>>>>>>> origin/main
 
 ### 3.5 Positional Encoding
 
 - There's no recurrence and convolution, inject some information about the relative or absolute position of the tokens in the sequence : *Positional encodings*
 - same dimension $d_{model}$ as the embeddings, so that input embeddings at the bottoms of encoder and decoder statcks can be summed
+<<<<<<< HEAD
 - Cosine functions of different frequencies : $$PE_{pos,2i}=sin(pos/10000^{2i/d_{model}}) PE_{pos,2i+1}=cos(pos/10000^{2i/d_{model}})$$
 - $pos$ is the position and $i$ is the dimension
+=======
+- Cosine functions of different frequencies : $$\begin{aligned} PE_{pos,2i}=sin(pos/10000^{2i/d_{model}}) \\ PE_{pos,2i+1}=cos(pos/10000^{2i/d_{model}})\end{aligned}$$
+>>>>>>> origin/main
 ---
 ## 4. Why Self-Attention
+
+- Compaing Recurrent layers and convolution layers to self-attention layers : Mapping variable length sequence which represents symbol to another equal length sequence
+- Three considerata
+	- Total computational complexity per layer
+	- Amount of parallelized computation
+	- The path length between long-range dependencies in the network
 
 ---
 ## 5. Training
 
 ### 5.1 Training Data and Batching
 
+- WMT 2014 En-Ge dataset; 4.5 milion sentence pairs encoded using BPE, which has a shared source-target vocabulary of about 37000 tokens
+- WMT 2014 En-Fr dataset; 36 milion sentences and split tokens into a 32,000 word-piece vocabulary
+- Sentence pairs batching : 25,000 source-target tokens(with sequence length)
+
 ### 5.2 Hardware and Schedule
+
+- 8 NVIDIA P100 GPUs
+- 100,000 steps : 0.4 sec per training step
 
 ### 5.3 Optimizer
 
+- Adam optimizer : $\beta_{1} = 0.9, \beta_{2}=0.98, \epsilon=10^{-9}, warmup\_steps=4000$
+- $learning\_rate = d_{model}^{-0.5} \cdot min(step\_num^{-0.5}, step\_num \cdot warmup\_steps^{-1.5})$
 ### 5.4 Regularization
+
+- Residual Dropout
+- Label Smoothing
 
 ---
 ## 6. Results
