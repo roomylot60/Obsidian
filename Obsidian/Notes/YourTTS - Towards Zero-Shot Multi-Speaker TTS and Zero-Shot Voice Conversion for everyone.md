@@ -19,6 +19,11 @@
 - LDE embeddings to improve similarity and naturalness of speech for unseen speakers
 - Gender-dependent model improves the similarity for unseen speakers
 - **Attentron** proposed a finegrained encoder with a attention mechanism for extracting detailed styles from various reference samples and a coarsegrained encoder
+- Contributions of YourTTS approach
+	- State-of-the-art results in the English Language; 
+	- The first work proposing a multilingual approach in the zero-shot multi-speaker TTS scope;
+	- Ability to do zero-shot multi-speaker TTS and zero-shot Voice Conversion with promising quality and similarity in a target language using only one speaker in the target language during model training;
+	- Require less than 1 minute of speech to fine-tune the model for speakers who have voice/recording characteristics very different from those seen in model training, and still achieve good similarity and quality results.
 
 ## 2. YourTTS Model
 
