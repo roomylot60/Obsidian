@@ -8,7 +8,7 @@
 - VITS model
 - VCTK dataset
 - Promise the *possibilities* for zero-shot multi-speaker TTS and zero-shot voice conversion systems *in low-resource languages*
-- 
+- very different voice or record characteristics
 
 ## 1. Introduction
 
