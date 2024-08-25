@@ -32,6 +32,12 @@
 ---
 ## 2. YourTTS Model
 
+- YourTTS : VITS + several modifications for zero-shot multi-speaker and multilingual training
+	1. Raw Text input instead of phonemes : Realistic results for languages without good open-source grapheme-to-phoneme converters available
+	2. Encoder : Concatenate 4-dimensional trainable language embeddings into the embeddings of each input character and increased the number of transformer blocks to 10 and the number of hidden channels to 196
+	3. Vocoder : Hifi-GAN version 1
+
+---
 ## 3. Experiments
 
 ### 3.1. Speaker Encoder
