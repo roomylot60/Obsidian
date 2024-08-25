@@ -12,6 +12,14 @@
 
 ## 1. Introduction
 
+- Test-To-Speech; TTS system 
+- Most TTS sys. were tailored from a *single speaker's voice*
+- Recently ZS-TTS(Zero-shot multi-speaker TTS) was proposed
+- **Tacotron2** was adapted using external speaker embeddings extracted from a trained speaker encoder using a generalized end-to-end loss; GE2E
+- LDE embeddings to improve similarity and naturalness of speech for unseen speakers
+- Gender-dependent model improves the similarity for unseen speakers
+- **Attentron** proposed a finegrained encoder with a attention mechanism for extracting detailed styles from various reference samples and a coarsegrained encoder
+
 ## 2. YourTTS Model
 
 ## 3. Experiments
