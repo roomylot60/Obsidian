@@ -21,12 +21,41 @@
 review previous work
 
 ---
-## 3
-outline of the detailed analysis of vanishing errors
+## 3 CONSTANT ERROR BACKPROP
+detailed analysis of vanishing errors in backprop for didactic purposes
+
+### 3.1 EXPONENTIALLY DECAYING ERROR
+
+### 3.2 CONSTANT ERROR FLOW : NAIVE APPROACH
 
 ---
-## 4
-
+## 4 LONG SHORT-TERM MEMORY
+introduce LSTM
 
 ---
-## 5
+## 5 EXPERIMENTS
+present numerous experiments and comparisons with competing methods
+
+### 5.1 EXPERIMENT 1 : EMBEDDED REBER GR AMMAR
+
+### 5.2 EXPERIMENT 2 : NOISE-FREE AND NOISY SEQUENCES
+
+### 5.3 EXPERIMENT 3 : NOISE AND SIGNAL ON SAME CHANNEL
+
+### 5.4 EXPERIMENT 4 : ADDING PROBLEM
+
+### 5.5 EXPERIMENT 5 : MULTIPLICATION PROBLEM
+
+### 5.6 EXPERIMENT 6 : TEMPORAL ORDER
+
+### 5.7 EXPERIMENT 7 : SUMMARY OF EXPERIMENTAL CONDITIONS
+
+---
+## 6 DISCUSSION
+discuss LSTM's limitations and advantages
+
+---
+## 7 CONCLUSION
+
+---
+## 8 ACKNOWLEDMENTS
