@@ -28,7 +28,7 @@ review previous work
 - Kalman filters : To improve recurrent net performance
 - **Second order nets** : When using multiplictive units(MUs) to protect error flow from unwanted perturbations
 - Simple weight guessing : Faster way to solve many problems of random iniitalizing for all network weights to avoid long time lag problems of gradient-based approaches
-- Adaptive sequence chunkers
+- Adaptive sequence chunkers : Holding a capability to bridge arbitrary time lags
 ---
 ## 3 CONSTANT ERROR BACKPROP
 detailed analysis of vanishing errors in backprop for didactic purposes
