@@ -26,8 +26,8 @@ review previous work
 - Rings' approach : Whenever receive conflicting error signals, add a higher order unit
 - Bengio et al.'s approaches
 - Kalman filters : To improve recurrent net performance
-- Second order nets : When using multiplictive units(MUs)
-- Simple weight guessing
+- **Second order nets** : When using multiplictive units(MUs) to protect error flow from unwanted perturbations
+- Simple weight guessing : Randomly iniitalize all network weights to avoid long time lag problems of gradient-based approaches
 - Adaptive sequence chunkers
 ---
 ## 3 CONSTANT ERROR BACKPROP
