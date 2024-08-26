@@ -21,10 +21,10 @@
 review previous work
 
 - **Gradient-descent variants** : *Back-Propagation Through Time* and *Real-Time Recurrent Learning*'s  problems
-- **Time-delays** : 
-- Time constants
-- Rings' approach
-- Bengio et al.'s approaches
+- **Time-delays** : Practical for short time lags; Updates unit activations based on a weighted sum of old activations
+- **Time constants** : To deal with long time lags
+- Rings' approach : Whenever receive conflicting error signals, add a higher order unit
+- Bengio et al.'s approaches : 
 - Kalman filters
 - Second order nets
 - Simple weight guessing
