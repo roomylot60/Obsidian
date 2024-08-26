@@ -20,6 +20,15 @@
 ## 2 PREVIOUS WORK
 review previous work
 
+- **Gradient-descent variants** : *Back-Propagation Through Time* and *Real-Time Recurrent Learning*'s  problems
+- **Time-delays** : 
+- Time constants
+- Rings' approach
+- Bengio et al.'s approaches
+- Kalman filters
+- Second order nets
+- Simple weight guessing
+- Adaptive sequence chunkers
 ---
 ## 3 CONSTANT ERROR BACKPROP
 detailed analysis of vanishing errors in backprop for didactic purposes
