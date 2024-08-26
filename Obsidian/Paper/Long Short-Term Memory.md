@@ -27,7 +27,7 @@ review previous work
 - Bengio et al.'s approaches
 - Kalman filters : To improve recurrent net performance
 - **Second order nets** : When using multiplictive units(MUs) to protect error flow from unwanted perturbations
-- Simple weight guessing : Randomly iniitalize all network weights to avoid long time lag problems of gradient-based approaches
+- Simple weight guessing : Faster way to solve many problems of random iniitalizing for all network weights to avoid long time lag problems of gradient-based approaches
 - Adaptive sequence chunkers
 ---
 ## 3 CONSTANT ERROR BACKPROP
