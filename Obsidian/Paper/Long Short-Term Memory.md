@@ -2,11 +2,9 @@
 [Ref.]()
 
 ---
-
 ## Abstract
 
 ---
-
 ## 1 INTRODUCTION
 
 - Recurrent network : Feedback connetcions to store representations of recent input events in form of activations
@@ -18,3 +16,17 @@
 	- **Long Short-Term Memory; LSTM** : Recurrent Network architecture in conjunction with an appropriate gradient-based learning algorithm
 
 ---
+
+## 2 PREVIOUS WORK
+review previous work
+
+---
+## 3
+outline of the detailed analysis of vanishing errors
+
+---
+## 4
+
+
+---
+## 5
