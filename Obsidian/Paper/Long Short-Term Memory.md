@@ -24,9 +24,9 @@ review previous work
 - **Time-delays** : Practical for short time lags; Updates unit activations based on a weighted sum of old activations
 - **Time constants** : To deal with long time lags
 - Rings' approach : Whenever receive conflicting error signals, add a higher order unit
-- Bengio et al.'s approaches : 
-- Kalman filters
-- Second order nets
+- Bengio et al.'s approaches
+- Kalman filters : To improve recurrent net performance
+- Second order nets : When using multiplictive units(MUs)
 - Simple weight guessing
 - Adaptive sequence chunkers
 ---
