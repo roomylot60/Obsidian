@@ -1,5 +1,6 @@
 ## [Seq2seq](./Sequence-to-Sequence) based on RNN
-**seq2seq** Model : RNN에 기반하여 **Encoder**에서 입력 시퀀스를 **context vector**라는 하나의 고정된 크기의 벡터 표현으로 압축하고, **Decoder**에서 출력 시퀀스를 생성
+
+**Seq2seq Model** : RNN에 기반하여 **Encoder**에서 입력 시퀀스를 **context vector**라는 하나의 고정된 크기의 벡터 표현으로 압축하고, **Decoder**에서 출력 시퀀스를 생성
 *문제점*
 1. 하나의 고정된 크기의 벡터에 모든 정보를 압축; 정보 손실이 발생
 2. RNN의 문제점 중 하나인 Vanishing gradient(기울기 소실) 발생
