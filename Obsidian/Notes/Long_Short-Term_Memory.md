@@ -11,6 +11,7 @@
 	- Time lags(시점)이 길어질 수록 앞의 정보가 뒤로 충분히 전달되지 못하는 현상 발생
 
 ### LSTM의 구조
+
 ![LSTM](../Attatched/LSTM_architecture.jpg)
 
 - Hidden layer(은닉층)의 메모리 셀에 입력 게이트, 망각 게이트, 출력 게이트를 추가하여 불필요한 기억은 지우고, 기억해야 할 것들을 선정
@@ -20,7 +21,10 @@
     * Forget gate(망각 게이트) : 이전 시점의 입력을 얼마나 반영할 지를 0~1 사이 값으로 결정하는 게이트로 0에 가까울 수록 많이 제거된 상태 $$f_{t} = \sigma (x_{t}\cdot W_{xf} + h_{t-1}\cdot W_{hf})$$
     * 출력 게이트 : $x_{t}$ 값과 $h_{t-1}$이 sigmoid 함수를 통과한 값으로 $h_{t}$를 결정 $$o_{t} = \sigma(x_{t}\cdot W_{xo}+h_{t-1}\cdot W_{ho}),\ \ h_{t} = o_{t}\circ tanh(C_{t})$$
 ### Gated Recurrent Unit; GRU
-- GRU : LSTM에서 3개의 게이트(출력, 입력, 삭제)를 사용했던 반면, GRU에서는 업데이트 게이트, 리셋 게이트 2개를 사용하여 LSTM의 구조를 간략화 ![GRU](../Attatched/GRU.jpg)
+
+![GRU](../Attatched/GRU.jpg)
+
+- GRU : LSTM에서 3개의 게이트(출력, 입력, 삭제)를 사용했던 반면, GRU에서는 업데이트 게이트, 리셋 게이트 2개를 사용하여 LSTM의 구조를 간략화 
 ### [RNN Language Model](Recurrent_Neural_Network.md)
 - Teacher Forcing(교사 강요) : 테스트 과정에서 t시점의 출력값이 t+1시점의 입력값으로 들어가도록 하는 RNN model에서, 훈련 과정 중에는 입력에 대한 예측값을 입력으로 하지 않고, 이미 정답을 알고 있는 레이블을 기반으로 훈련하여 훈련 과정을 단축하는 기법, 활성화 함수로는 softmax, 손실 함수로는 cross entropy를 사용
 - Input layer : 특정 시점에서의 입력 단어에 대한 one-hot vector로 입력 받아 입력층의 가중치 행렬을 거쳐 embedding vector를 출력, NNLM과의 차이로는 window로 입력받아 한번에 처리된 lookup table과는 달리, 단어 입력 시점에 따라 입력층의 가중칠 행렬의 변화가 발생하기에 같은 단어에 대한 embedding vector 값이 다를 수 있음
