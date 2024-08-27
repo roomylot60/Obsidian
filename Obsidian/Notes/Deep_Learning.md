@@ -269,5 +269,5 @@ model.fit(X, y, epochs=300)
 - Language Modeling : 주어진 문맥으로부터 모르는 단어를 예측하는 것
 - N-gram LM : 바로 앞의 `n-1`개의 단어를 참고하여 `n`번째 단어를 예측하는 모델
 
-## [Recurrent Neural Network; RNN](./Recurrent%20Neural%20Network)
+## [Recurrent Neural Network; RNN](Recurrent_Neural_Network.md)
 - RNN : 입력과 출력을 sequence(묶음) 단위로 처리하는 모델

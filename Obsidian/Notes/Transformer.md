@@ -1,7 +1,7 @@
 ## 1. Transformer Model
 ![Encoder-Decoder Structure](../Attatched/Pasted%20image%2020240105144425.png)
 - 2017년 Google에서 발표한 "Attention is all you need" 논문에서 제시한 모델
-- [Attention Machanism](Attention%20Machanism.md) 만을 사용하여 seq2seq의 구조인 *encoder-decoder*로 구현
+- [Attention_Machanism](Attention_Machanism.md) 만을 사용하여 seq2seq의 구조인 *encoder-decoder*로 구현
 	- seq2seq : Encoder, Decoder에서 각각 하나의 RNN이 t 개의 시점을 가지는 구조
 	- transformer : Encoder, Decoder 단위(Layer)가 N 개로 구성되는 구조
 - RNN을 사용하지 않았음에도 성능적인 우수성
