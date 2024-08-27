@@ -15,10 +15,10 @@
 
 - Hidden layer(은닉층)의 메모리 셀에 입력 게이트, 망각 게이트, 출력 게이트를 추가하여 불필요한 기억은 지우고, 기억해야 할 것들을 선정
 	- $x_{t}$ : $t$ 시점의 입력 값;  $y_{t}$ : $t$ 시점의 출력 값;  $h_{t}$ : $t$ 시점의 hidden state
-    * Cell state($C_{t}$) : 이전 시점의 셀 상태가 다음 시점의 셀 상태를 구하기 위한 입력으로 사용, 삭제 게이트의 값이 0에 가까울 수록 이전 시점의 셀 상태값의 영향력이 작아지고, 입력 게이트의 값이 현 시점의 셀 상태에 영향을 미침 ($C_{t} = f_{t}\circ C_{t-1} + i_{t}\circ g_{t}$)
-    * 입력 게이트 : 현재 정보를 기억하기 위한 게이트($i_{t} = sigmoid(x_{t}W_{xi}+ h_{t-1}W_(hi)), g_t = tanh(x_{t}W_{xg}+h_{t-1}W_{hg})$)
-    * 삭제 게이트(망각 게이트) : 이전 시점의 입력을 얼마나 반영할 지를 결정, 기억을 삭제하기 위한 게이트로 0에 가까울 수록 많이 제거된 상태($f_{t} = sigmoid(x_{t}*W_{xf} + h_{t-1}*W_{hf})$)
-    * 출력 게이트 : 현재 시점의 x값과 이전 시점의 은닉 상태가 시그모이드 함수를 지난 값으로 현재 시점의 은닉 상태를 결정($o_{t} = sigmoid(x_{t}W_{xo})+h_{t-1}W_{ho}), h_{t} = o_{t}ㅇtanh(c_{t})$)
+    * Cell state($C_{t}$) : 이전 시점의 셀 상태가 다음 시점의 셀 상태를 구하기 위한 입력으로 사용, 삭제 게이트의 값이 0에 가까울 수록 이전 시점의 셀 상태값의 영향력이 작아지고, 입력 게이트의 값이 현 시점의 셀 상태에 영향을 미침 $$C_{t} = f_{t}\circ C_{t-1} + i_{t}\circ g_{t}$$
+    * 입력 게이트 : 현재 정보를 기억하기 위한 게이트$$i_{t} = sigmoid(x_{t}\cdot W_{xi}+ h_{t-1}\cdot W_{hi}), g_t = tanh(x_{t}\cdot W_{xg}+h_{t-1}\cdot W_{hg})$$
+    * 삭제 게이트(망각 게이트) : 이전 시점의 입력을 얼마나 반영할 지를 결정, 기억을 삭제하기 위한 게이트로 0에 가까울 수록 많이 제거된 상태 $$f_{t} = sigmoid(x_{t}\cdot W_{xf} + h_{t-1}\cdot W_{hf})$$
+    * 출력 게이트 : $x_{t}$ 값과 $h_{t-1}$이 sigmoid 함수를 통과한 값으로 $h_{t}$를 결정 $$o_{t} = sigmoid(x_{t}\cdot W_{xo})+h_{t-1}\cdot W_{ho}), h_{t} = o_{t}\cdot tanh(c_{t})$$
 ### Gated Recurrent Unit; GRU
 - GRU : LSTM에서 3개의 게이트(출력, 입력, 삭제)를 사용했던 반면, GRU에서는 업데이트 게이트, 리셋 게이트 2개를 사용하여 LSTM의 구조를 간략화 ![GRU](../Attatched/GRU.jpg)
 ### [RNN Language Model](Recurrent_Neural_Network.md)
