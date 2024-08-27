@@ -7,7 +7,7 @@
 ---
 ## 1 INTRODUCTION
 
-- Recurrent network : Feedback connetcions to store representations of recent input events in form of activations
+- Recurrent network : Feedback connections to store representations of recent input events in form of activations
 - Existing short-term memory takes too much time for learning something and do not work well when minimal time lags getting longer between inputs and teacher signals
 - **The problem**
 	1. Error signals *explosion* in backprop

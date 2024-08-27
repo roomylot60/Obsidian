@@ -1,5 +1,15 @@
 ## Long Short-Term Memory; LSTM
-- The problem of long-term dependencies : Vanila RNN(기본형 RNN)은 비교적 짧은 시퀀스에 대해서만 효과를 보임(시점이 길어질 수록 앞의 정보가 뒤로 충분히 전달되지 못하는 현상 발생)
+
+### [RNN](./Recurrent Neural Network)의 구조
+
+![](Attatched/Pasted%20image%2020240827090127.png)
+
+- Recurrent Network : 현 시점의 예측값을 출력하기 위해 이전 시점의 정보(예측값)들을 참고하는 형태
+### RNN의 한계
+- *Long-term dependencies(장기 의존성)*
+	- Vanila RNN(기본형 RNN)은 비교적 짧은 시퀀스에 대해서만 효과를 보임
+	- 시점이 길어질 수록 앞의 정보가 뒤로 충분히 전달되지 못하는 현상 발생
+
 - **LSTM** : 은닉층의 메모리 셀에 입력 게이트, 망각 게이트, 출력 게이트를 추가하여 불필요한 기억은 지우고, 기억해야할 것들을 선정 ![LSTM](../Attatched/LSTM_architecture.jpg)
     * Cell state : 이전 시점의 셀 상태가 다음 시점의 셀 상태를 구하기 위한 입력으로 사용, 삭제 게이트의 값이 0에 가까울 수록 이전 시점의 셀 상태값의 영향력이 작아지고, 입력 게이트의 값이 현 시점의 셀 상태에 영향을 미침($$C_{t} = f_{t}ｏC_{t-1} + i_{t}ｏg_{t}$$) 
         + Entrywise product : 두 행렬에서 같은 위치의 성분끼리의 곱을 통해 얻어지는 행렬
