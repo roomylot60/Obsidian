@@ -258,5 +258,5 @@ print('문서3과 문서Q의 거리 :',dist(doc3,docQ))
 - 교집합을 갖는 서로 다른 집합 A, B에서 합집합에 대한 교집합의 비율
 ![Jaccard Similarity](../Attatched/jaccard_similarity.jpg)
 
-## [Machine Learning](./Machine%20Learning.md)
-## [Deep Learning](./Deep%20Learning)
+## [Machine_Learning](Machine_Learning.md)
+## [Deep_Learning](Deep_Learning.md)

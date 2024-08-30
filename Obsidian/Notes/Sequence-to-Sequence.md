@@ -1,7 +1,7 @@
 ## Sequence-to-Sequence; [Seq2seq](https://wikidocs.net/24996)
 ### Seq2seq
 - 입력된 Sequence로부터 다른 도메인의 Sequence를 출력하는 모델(ex - chatBoT, 기계 번역, STT, 내용 요약)
-- [RNN](./Recurrent%20Neural%20Network)을 조립하는 방식(하나의 RNN을 Encoder, 다른 하나를 Decoder로 구현하여 이를 연결)에 따라 구조를 생성
+- [RNN](Recurrent_Neural_Network.md)을 조립하는 방식(하나의 RNN을 Encoder, 다른 하나를 Decoder로 구현하여 이를 연결)에 따라 구조를 생성
 - Encoder와 Decoder 두 개의 모듈로 구성![](../Attatched/Pasted%20image%2020240327203735.png)
 	- Encoder : 입력 문장의 모든 단어들을 순차적으로 입력받아 마지막에 이 모든 단어 정보들을 압축한 Context vector를 생성
     * Context Vector : Encoder에서 출력하는 마지막 시점의 은닉 상태로 Decoder의 첫번째 은닉 상태에 사용
