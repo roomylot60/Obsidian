@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e65024974b821685",
+        "id": "b75c649864d44d08",
         "type": "tabs",
         "children": [
           {
-            "id": "0a7154db4820e066",
+            "id": "d441ea086c73181a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Coding Test/아이템_줍기.md",
+                "file": "Coding Test/탐색/아이템_줍기.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Coding Test/아이템_줍기.md",
+                "file": "Coding Test/탐색/아이템_줍기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Coding Test/아이템_줍기.md",
+                "file": "Coding Test/탐색/아이템_줍기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Coding Test/아이템_줍기.md"
+                "file": "Coding Test/탐색/아이템_줍기.md"
               }
             }
           },
@@ -165,12 +164,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0a7154db4820e066",
+  "active": "d441ea086c73181a",
   "lastOpenFiles": [
+    "Coding Test/탐색/아이템_줍기.md",
+    "Coding Test/탐색",
     "Attatched/Pasted image 20240903211216.png",
     "Attatched/Pasted image 20240903211047.png",
     "Notes/Untitled.md",
-    "Coding Test/아이템_줍기.md",
     "Coding Test",
     "Paper/Attention Is All You Need (2017).md",
     "Paper/YourTTS - Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone.md",
@@ -207,12 +207,10 @@
     "Paper/Attatched",
     "Paper",
     "Attatched/Pasted image 20240327204753.png",
-    "Attatched/Pasted image 20240327204349.png",
     "1.Daily/Attatched",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
-    "Attatched",
-    "Notes"
+    "Attatched"
   ]
 }
