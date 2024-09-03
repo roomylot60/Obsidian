@@ -11,8 +11,12 @@
             "id": "0a7154db4820e066",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Coding Test/아이템_줍기.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Coding Test/아이템_줍기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Coding Test/아이템_줍기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Coding Test/아이템_줍기.md"
+              }
             }
           },
           {
@@ -156,14 +165,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "837145ae825b8a1e",
+  "active": "0a7154db4820e066",
   "lastOpenFiles": [
-    "Untitled",
+    "Notes/Untitled.md",
+    "Coding Test/아이템_줍기.md",
+    "Coding Test",
     "Paper/Attention Is All You Need (2017).md",
     "Paper/YourTTS - Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone.md",
     "Paper/Long Short-Term Memory.md",
     "Paper/Connectionist_Temporal_Classification.md",
-    "Notes/Untitled.md",
     "Notes/Subword_Tokenizer.md",
     "Notes/Selective_Search.md",
     "Notes/Recurrent_Neural_Network.md",
@@ -203,7 +213,6 @@
     "Attatched/chatbot_transformer.ipynb",
     "Attatched/Transformer_Korean_Chatbot.ipynb",
     "Attatched",
-    "Notes",
-    "4.Yearly"
+    "Notes"
   ]
 }
