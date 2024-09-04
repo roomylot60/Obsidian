@@ -35,6 +35,8 @@ detailed analysis of vanishing errors in backprop for didactic purposes
 
 ### 3.1 EXPONENTIALLY DECAYING ERROR
 
+- Conventional Back-Propagation Through Time
+
 ### 3.2 CONSTANT ERROR FLOW : NAIVE APPROACH
 
 ---
