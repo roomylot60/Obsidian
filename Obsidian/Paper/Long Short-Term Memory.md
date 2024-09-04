@@ -72,7 +72,7 @@ discuss LSTM's limitations and advantages
 
 - **Limitation of LSTM**
 	- Strongly delayed XOR problems
-	- 
+	- Increasing the number of weights
 
 ---
 ## 7 CONCLUSION
