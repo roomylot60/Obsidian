@@ -1,6 +1,6 @@
 ## Long Short-Term Memory; LSTM
 
-### [RNN](./Recurrent_Neural_Network)의 구조
+### [RNN](Recurrent_Neural_Network.md)의 구조
 
 ![](Attatched/Pasted%20image%2020240827090127.png)
 
@@ -12,7 +12,7 @@
 
 ### LSTM의 구조
 
-![LSTM](../Attatched/LSTM_architecture.jpg)
+![LSTM](../../Attatched/LSTM_architecture.jpg)
 
 - Hidden layer(은닉층)의 메모리 셀에 입력 게이트, 망각 게이트, 출력 게이트를 추가하여 불필요한 기억은 지우고, 기억해야 할 것들을 선정
 	- $x_{t}$ : $t$ 시점의 입력 값;  $y_{t}$ : $t$ 시점의 출력 값;  $h_{t}$ : $t$ 시점의 hidden state
@@ -22,7 +22,7 @@
     * 출력 게이트 : $x_{t}$ 값과 $h_{t-1}$이 sigmoid 함수를 통과한 값으로 $h_{t}$를 결정 $$o_{t} = \sigma(x_{t}\cdot W_{xo}+h_{t-1}\cdot W_{ho}),\ \ h_{t} = o_{t}\circ tanh(C_{t})$$
 ### Gated Recurrent Unit; GRU
 
-![GRU](../Attatched/GRU.jpg)
+![GRU](../../Attatched/GRU.jpg)
 
 - GRU : LSTM에서 3개의 게이트(출력, 입력, 삭제)를 사용했던 반면, GRU에서는 업데이트 게이트, 리셋 게이트 2개를 사용하여 LSTM의 구조를 간략화 
 

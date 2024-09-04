@@ -1,7 +1,7 @@
 ## 1. Transformer Model
-![Encoder-Decoder Structure](../Attatched/Pasted%20image%2020240105144425.png)
+![Encoder-Decoder Structure](../../Attatched/Pasted%20image%2020240105144425.png)
 - 2017년 Google에서 발표한 "Attention is all you need" 논문에서 제시한 모델
-- [Attention_Machanism](Attention_Machanism.md) 만을 사용하여 seq2seq의 구조인 *encoder-decoder*로 구현
+- [Attention_Machanism](ML/Attention_Machanism.md) 만을 사용하여 seq2seq의 구조인 *encoder-decoder*로 구현
 	- seq2seq : Encoder, Decoder에서 각각 하나의 RNN이 t 개의 시점을 가지는 구조
 	- transformer : Encoder, Decoder 단위(Layer)가 N 개로 구성되는 구조
 - RNN을 사용하지 않았음에도 성능적인 우수성
@@ -12,7 +12,7 @@
 	$pos$ : position of embedding vector in input sequence
 	$i$ : dimension index of embedding vector
 	
-	![Embedding vector + PE](../Attatched/Pasted%20image%2020240104162143.png)
+	![Embedding vector + PE](../../Attatched/Pasted%20image%2020240104162143.png)
 
 ```python
 import numpy as np
@@ -76,7 +76,7 @@ V = Values # 모든 시점의 encoder cell의 hidden states = weight과 곱해�
 ```
 - Self-Attention : Q, K, V가 모두 입력 문장의 모든 단어 벡터들을 의미
 	- d_{model}의 차원을 갖는 단어 벡터들을 num_heads로 나눈 값을 Q, K, V의 벡터의 차원으로 결정
-- Scaled dot-product Attention : 내적만을 사용하는 Attention Function에 대해서 특정값 √n으로 나누어 scaling 하여 각 벡터의 모음; 행렬에 대해 연산하여 일괄 계산`score(q, k) = q · k / √n (n = d_{model} / num_heads = 각 Q, K, V의 차원값 d_{k})`![scaled dot-product attention with image](../Attatched/Pasted%20image%2020240104175031.png)![equation of SDA](../Attatched/Pasted%20image%2020240104175125.png)
+- Scaled dot-product Attention : 내적만을 사용하는 Attention Function에 대해서 특정값 √n으로 나누어 scaling 하여 각 벡터의 모음; 행렬에 대해 연산하여 일괄 계산`score(q, k) = q · k / √n (n = d_{model} / num_heads = 각 Q, K, V의 차원값 d_{k})`![scaled dot-product attention with image](../../Attatched/Pasted%20image%2020240104175031.png)![equation of SDA](../../Attatched/Pasted%20image%2020240104175125.png)
 	- Padding Mask : Scaled dot-product attention에서 `<PAD>` token은 실질적인 의미를 갖지 않는 단어이므로, 이를 제외하기 위해 매우 작은 음수를 넣어 유사도에 반영되는 것을 막는 연산
 
 ```python
@@ -109,7 +109,7 @@ def scaled_dot_product_attention(query, key, value, mask):
   return output, attention_weights
 
 ```
-- Multi-head Attention : Self Attention을 병렬적으로 사용하여 각각의 Attention head가 갖는 ![가중치 행렬](../Attatched/Pasted%20image%2020240104180009.png)이 다르게 설정; 여러 시점으로 정보를 수집하여 sequence를 구성하는 단어들간의 연관도를 측정<br>![각 헤드에 따른 attention score](../Attatched/Pasted%20image%2020240104180133.png)
+- Multi-head Attention : Self Attention을 병렬적으로 사용하여 각각의 Attention head가 갖는 ![가중치 행렬](../../Attatched/Pasted%20image%2020240104180009.png)이 다르게 설정; 여러 시점으로 정보를 수집하여 sequence를 구성하는 단어들간의 연관도를 측정<br>![각 헤드에 따른 attention score](../../Attatched/Pasted%20image%2020240104180133.png)
 ```python
 # Multi-head Attention Implementation
 # 각 Q, K, V를 만들기 위한 가중치 행렬과 결합 후에 사용하는 가중치 행렬 생성
@@ -443,4 +443,4 @@ class CustomSchedule(tf.keras.optimizers.schedules.LearningRateSchedule):
     return tf.math.rsqrt(self.d_model) * tf.math.minimum(arg1, arg2)
 ```
 ## Ref. Chatbot Code
-[Transformer_Korean_Chatbot](../Attatched/Transformer_Korean_Chatbot.ipynb)
+[Transformer_Korean_Chatbot](../../Attatched/Transformer_Korean_Chatbot.ipynb)
