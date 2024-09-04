@@ -43,6 +43,11 @@ detailed analysis of vanishing errors in backprop for didactic purposes
 ## 4 LONG SHORT-TERM MEMORY
 introduce LSTM
 
+- **Memory cells and gate units** : Differnt type of units convey useful information about the current state of the net
+	- Input gate unit : To protect the memory contents stored in linear unit $j$ 
+	- Output gate unit : Protects other units from perturbatoin by currently irrelevant memory contents stored in $j$
+	- Memory cell : with a fixed self-connection, memory cell is built around a central linear unit
+
 ---
 ## 5 EXPERIMENTS
 present numerous experiments and comparisons with competing methods
