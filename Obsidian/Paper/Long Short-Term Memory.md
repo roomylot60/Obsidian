@@ -73,6 +73,7 @@ discuss LSTM's limitations and advantages
 - **Limitation of LSTM**
 	- Strongly delayed XOR problems
 	- Increasing the number of weights
+- **Adventage of LSTM**
 	- Outperforming on non-trivial problem solving 
 	- Ability of conveying recent inputs
 
