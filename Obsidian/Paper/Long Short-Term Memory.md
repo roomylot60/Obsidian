@@ -71,6 +71,7 @@ present numerous experiments and comparisons with competing methods
 discuss LSTM's limitations and advantages
 
 - **Limitation of LSTM**
+	- Strongly delayed XOR problems
 	- 
 
 ---
