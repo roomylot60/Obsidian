@@ -70,6 +70,9 @@ present numerous experiments and comparisons with competing methods
 ## 6 DISCUSSION
 discuss LSTM's limitations and advantages
 
+- **Limitation of LSTM**
+	- 
+
 ---
 ## 7 CONCLUSION
 
