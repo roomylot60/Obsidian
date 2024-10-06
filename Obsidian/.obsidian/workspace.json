@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b75c649864d44d08",
+        "id": "d04d55ac864fdff8",
         "type": "tabs",
         "children": [
           {
-            "id": "d441ea086c73181a",
+            "id": "470c2f96daae3e20",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Coding Test/탐색/아이템_줍기.md",
+                "file": "1.Daily/2024-10-06.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Coding Test/탐색/아이템_줍기.md",
+                "file": "1.Daily/2024-10-06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Coding Test/탐색/아이템_줍기.md",
+                "file": "1.Daily/2024-10-06.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Coding Test/탐색/아이템_줍기.md"
+                "file": "1.Daily/2024-10-06.md"
               }
             }
           },
@@ -164,8 +164,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d441ea086c73181a",
+  "active": "470c2f96daae3e20",
   "lastOpenFiles": [
+    "1.Daily/2024-10-06.md",
     "Coding Test/탐색/아이템_줍기.md",
     "Coding Test/탐색",
     "Attatched/Pasted image 20240903211216.png",
