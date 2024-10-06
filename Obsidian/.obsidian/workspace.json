@@ -146,7 +146,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -166,6 +166,19 @@
   },
   "active": "470c2f96daae3e20",
   "lastOpenFiles": [
+    "Notes/ML/Transformer.md",
+    "Notes/ML/Sequence-to-Sequence.md",
+    "Notes/ML/Subword_Tokenizer.md",
+    "Notes/ML/Recurrent_Neural_Network.md",
+    "Notes/ML/Natural_Language_Processing.md",
+    "Notes/ML/Machine_Learning.md",
+    "Notes/ML/Long_Short-Term_Memory.md",
+    "Notes/ML/Deep_Learning.md",
+    "Notes/ML/Convolution_Neural_Network.md",
+    "Notes/ML/Basis_of_DL.md",
+    "Notes/ML/Attention_Machanism.md",
+    "Notes/ML",
+    "Error/2024-01-11.md",
     "1.Daily/2024-10-06.md",
     "Coding Test/탐색/아이템_줍기.md",
     "Coding Test/탐색",
@@ -184,21 +197,9 @@
     "Notes/Machine_Learning.md",
     "Notes/Long_Short-Term_Memory.md",
     "Notes/Deep_Learning.md",
-    "Notes/Convolution_Neural_Network.md",
-    "Notes/Basis_of_DL.md",
-    "Notes/YourTTS - Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone.md",
-    "Notes/Attention_Machanism.md",
     "Notes/Attatched/Pasted image 20240827090127.png",
     "Notes/Attatched",
-    "1.Daily/2024-08-08.md",
-    "1.Daily/2024-08-05.md",
-    "conflict-files-obsidian-git.md",
-    "Notes/2024-08-08.md",
-    "Error/WinError 126.md",
     "Error",
-    "Notes/2024-08-05.md",
-    "1.Daily/2024-08-04.md",
-    "Notes/ClipAI.md",
     "Attatched/Pasted image 20240501173850.png",
     "Attatched/Pasted image 20240501173834.png",
     "Attatched/Pasted image 20240501173815.png",
@@ -211,7 +212,6 @@
     "1.Daily/Attatched",
     "무제 파일.canvas",
     "Attatched/chatbot_transformer.ipynb",
-    "Attatched/Transformer_Korean_Chatbot.ipynb",
-    "Attatched"
+    "Attatched/Transformer_Korean_Chatbot.ipynb"
   ]
 }
