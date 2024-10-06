@@ -35,11 +35,18 @@ detailed analysis of vanishing errors in backprop for didactic purposes
 
 ### 3.1 EXPONENTIALLY DECAYING ERROR
 
+- Conventional Back-Propagation Through Time
+
 ### 3.2 CONSTANT ERROR FLOW : NAIVE APPROACH
 
 ---
 ## 4 LONG SHORT-TERM MEMORY
 introduce LSTM
+
+- **Memory cells and gate units** : Differnt type of units convey useful information about the current state of the net
+	- Input gate unit : To protect the memory contents stored in linear unit $j$ 
+	- Output gate unit : Protects other units from perturbatoin by currently irrelevant memory contents stored in $j$
+	- Memory cell : As more complex unit with a fixed self-connection, memory cell is built around a central linear unit
 
 ---
 ## 5 EXPERIMENTS
@@ -62,6 +69,13 @@ present numerous experiments and comparisons with competing methods
 ---
 ## 6 DISCUSSION
 discuss LSTM's limitations and advantages
+
+- **Limitation of LSTM**
+	- Strongly delayed XOR problems
+	- Increasing the number of weights
+- **Adventage of LSTM**
+	- Outperforming on non-trivial problem solving 
+	- Ability of conveying recent inputs
 
 ---
 ## 7 CONCLUSION

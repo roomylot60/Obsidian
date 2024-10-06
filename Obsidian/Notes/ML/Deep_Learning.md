@@ -42,8 +42,8 @@
 - Gradient Exploding : 기울기가 점차 커져서 가중치들의 값이 발산
     * Gradient Clipping : 기울기 폭주를 막기 위해 임계값을 넘지 않도록 값을 제한
     * Weight initialization
-        + Xavier Initialization : 이전 층과 다음 층의 뉴런의 개수를 고려하여, 여러 층의 기울기 분산 사이에 균형을 맞춰서 특정 층이 너무 주목을 받거나 다른 층이 뒤쳐지는 것을 방지(S자 형태의 activation function에서 좋은 성능) <br>![Xavier initialization_uniform](../Attatched/Xavier_uniform.jpg) <br>![Xavier initialization_normal](../Attatched/Xavier_normal.jpg)
-        + He Initialization : 이전 층의 뉴런의 개수를 반영하여 초기화(ReLU 계열 함수에 효율적)<br>![He initialization_uniform](../Attatched/He_uniform.jpg) <br>![He initialization_normal](../Attatched/He_normal.jpg)
+        + Xavier Initialization : 이전 층과 다음 층의 뉴런의 개수를 고려하여, 여러 층의 기울기 분산 사이에 균형을 맞춰서 특정 층이 너무 주목을 받거나 다른 층이 뒤쳐지는 것을 방지(S자 형태의 activation function에서 좋은 성능) <br>![Xavier initialization_uniform](../../Attatched/Xavier_uniform.jpg) <br>![Xavier initialization_normal](../../Attatched/Xavier_normal.jpg)
+        + He Initialization : 이전 층의 뉴런의 개수를 반영하여 초기화(ReLU 계열 함수에 효율적)<br>![He initialization_uniform](../../Attatched/He_uniform.jpg) <br>![He initialization_normal](../../Attatched/He_normal.jpg)
     * Batch Normalization(배치 정규화) : 인공 신경망에 들어가는 각 입력을 평균과 분산으로 정규화
         + Internal Covariate Shift(내부 공변량 변화) : 학습에 의해 가중치가 변화하면, 입력 시점에 따라 입력 데이터의 분포가 변화하는 것
     * Layer Normalization(층 정규화)
@@ -101,7 +101,7 @@
     [0 7 8]]
     ```
 
-- Word Embedding : 텍스트 내의 단어들을 dense vector로 변환하는 것으로, 학습을 통해 값이 변화 ![One-hot VS Embedding](../Attatched/one_hot_vs_w_embedding.jpg)
+- Word Embedding : 텍스트 내의 단어들을 dense vector로 변환하는 것으로, 학습을 통해 값이 변화 ![One-hot VS Embedding](../../Attatched/one_hot_vs_w_embedding.jpg)
     * Embedding(vocab_size, embedding_dim, input_length) : 단어를 밀집 벡터로 변환(embedding layer 생성)
 
 - Modeling

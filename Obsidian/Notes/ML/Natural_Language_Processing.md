@@ -42,8 +42,8 @@
 - 등장 빈도가 적은 단어 제거 : 텍스트 데이터에 너무 적게 등장해서 자연어 처리에 도움이 되지 않는 단어들을 제거
 - 길이가 짧은 단어 제거 : 영어권에서 짧은 단어의 경우 대부분 자연어 처리에서 크게 의미가 없는 단어로 불용어에 해당하여 이를 제거(ex - a, I, it, at, on, in, by, etc)
 - 정규 표현식(Regular Expression) : 얻어낸 corpus에서 Noise Data의 특징을 잡을 수 있을 때 사용
-    * 정규 표현식 문법 ![특수문자](../Attatched/정규_표현식_특수문자.jpg)![역슬래쉬](../Attatched/정규_표현식_역슬래쉬.jpg)
-    * Python 자체의 re모듈 ![모듈](../Attatched/정규_표현식_모듈.jpg)
+    * 정규 표현식 문법 ![특수문자](../../Attatched/정규_표현식_특수문자.jpg)![역슬래쉬](../../Attatched/정규_표현식_역슬래쉬.jpg)
+    * Python 자체의 re모듈 ![모듈](../../Attatched/정규_표현식_모듈.jpg)
 3. Normalization(정규화) : 표현 방법이 다른 단어들을 통합시켜서 같은 단어로 변환 - BoW(Bag of Words) 기반 자연어 처리에서 주로 사용
 - Lemmatization(표제어 추출) : 형태학(Morphology) 기반 어간(Stem), 접사(Affix)로 구성되는 형태소에 따라 parsing을 진행하여 표제어를 추출
     * `NLTK`의 `WordNetLemmatizer` <br> 단어의 형태가 보존하지만, 본래 단어의 품사 정보를 알아야 정확한 결과를 얻을 수 있음
@@ -61,7 +61,7 @@
 - PyKoSpacing : 띄어쓰기가 되어있지 않은 문장을 띄어쓰기한 문장으로 변환
 - Py-Hansapell : 네이버 한글 맞춤법 검사기를 바탕으로 만들어진 패키지로 띄어쓰기 및 맞춤법을 수정
 - SOYNLP : 품사 태깅, 단어 토큰화 등을 지원하는 tokenizer로, 비지도 학습을 통해 데이터의 자주 등장하는 단어들을 단어로 분석
-    * `Cohesion probability(응집 확률)` <br> Substring(내부 문자열)이 얼마나 응집하여 자주 등장하는 지를 판단하는 척도 ![수식](../Attatched/Cohesion_probability.png)
+    * `Cohesion probability(응집 확률)` <br> Substring(내부 문자열)이 얼마나 응집하여 자주 등장하는 지를 판단하는 척도 ![수식](../../Attatched/Cohesion_probability.png)
     * `Branching entropy` <br> 확률 분포의 엔트로피 값을 사용하여, 주어진 문자열에서 얼마나 다음 문자가 등장할 수 있는지를 판단하는 척도로 활용
     * `L Tokenizer` <br> 한국어는 띄어쓰기 단위로 나눈 어절 토큰이 L토큰 + R토큰의 형식을 가질 때가 많은데, 점수가 가장 높은 L토큰을 찾아내는 원리로 분리
     * `MaxScoreTokenizer` <br> 띄어쓰기가 되지 않은 문장에서 점수가 높은 글자 sequence를 순차적으로 찾아 분리
@@ -74,8 +74,8 @@
 	2. Artifitial Neural Network(인공 신경망)을 사용한 방법
 - Language Modeling : 주어진 단어들로 부터 아직 모르는 단어를 예측하는 작업
 ### 단어 예측
-1. 단어 sequence의 확률 : 하나의 단어를 `w`, 단어 sequence를 `W`라고 한다면, `n`개의 단어가 등장하는 단어 sequence `W`의 확률은<br> ![n개의 단어](../Attatched/n_probability.jpg)
-2. 다음 단어 등장 확률 : `n-1`개의 단어가 나열된 상태에서 `n`번째 단어의 확률은 *조건부 확률* ![조건부 확률](../Attatched/n_conditional_probability.jpg)이고, <br> 전체 단어 sequence `W`의 확률은 모든 단어가 예측되고 나서야 알 수 있으므로 <br>![W의 확률](../Attatched/LM_conditional_probability.jpg)
+1. 단어 sequence의 확률 : 하나의 단어를 `w`, 단어 sequence를 `W`라고 한다면, `n`개의 단어가 등장하는 단어 sequence `W`의 확률은<br> ![n개의 단어](../../Attatched/n_probability.jpg)
+2. 다음 단어 등장 확률 : `n-1`개의 단어가 나열된 상태에서 `n`번째 단어의 확률은 *조건부 확률* ![조건부 확률](../../Attatched/n_conditional_probability.jpg)이고, <br> 전체 단어 sequence `W`의 확률은 모든 단어가 예측되고 나서야 알 수 있으므로 <br>![W의 확률](../../Attatched/LM_conditional_probability.jpg)
 ### Statistical Language Model, SLM
 #### Chain Rule
 - 문장(단어 sequence)의 확률은 문맥이라는 관계로 인해 이전 단어의 영향을 받아 다음 단어가 등장
@@ -89,7 +89,7 @@
 - 문장이 길수록 corpus 내에서 동일한 문장이 존재하지 않을 확률이 증가하므로, 참고하는 단어의 수를 줄임으로써 이를 근사치로 활용
 - 참고 단어의 수에 따라 의도와는 다른 결과를 예측하거나, n이 클수록 모델 사이즈가 커지는 문제가 발생
 #### Perplexity; PPL
-- LM의 성능 비교에서 time cost를 줄이기 위해 사용하는 평가 지표로,  Branching Factor(선택할 수 있는 가능한 경우의 수)를 의미 ![PPL](../Attatched/PPL.jpg)
+- LM의 성능 비교에서 time cost를 줄이기 위해 사용하는 평가 지표로,  Branching Factor(선택할 수 있는 가능한 경우의 수)를 의미 ![PPL](../../Attatched/PPL.jpg)
 ---
 ## Count based word Representation
 - 텍스트를 수치화하여 통계적으로 접근
@@ -97,7 +97,7 @@
 ### Word Representation(단어의 표현 방법)
 - Local Representation(=Discrete Representation)(국소 표현) : 해당 단어 그 자체만 보고, 특정값을 매핑하여 단어를 표현
 - Distributed Representation(=Continuous Representation)(분산 표현) : 특정 단어를 표현하고자 주변을 참고하여 표현
-![Word representation](../Attatched/wordrepresentation.png)
+![Word representation](../../Attatched/wordrepresentation.png)
 
 ### **BoW(Bag of Words)**
 - Bag of Words : 단어들의 출현 빈도(frequency)만을 고려하여 수치화, 순서는 고려하지 않음
@@ -150,7 +150,7 @@ print('vocabulary :',vector.vocabulary_)
 - 문서를 d, 단어를 t, 문서의 총 개수를 n이라고 표현할 때,
     * `tf(d,t)` : 특정 문서 d에서의 특정 단어 t의 등장 횟수(tf; token frequency)
     * `df(t)` : 특정 단어 t가 등장한 문서의 수(df; document frequency)
-    * `idf(t)` : `df(t)`에 반비례하는 수(idf; inverse df)<br>![idf](../Attatched/idf.jpg)
+    * `idf(t)` : `df(t)`에 반비례하는 수(idf; inverse df)<br>![idf](../../Attatched/idf.jpg)
 - 모든 문서에서 자주 등장하는 단어는 중요도가 낮다고, 특정 문서에서만 자주 등장하는 단어는 중요도가 높다고 판단
 - 문서의 유사도, 검색 시스템에서 검색 결과의 중요도 부여, 문서 내의 특정 단어의 중요도 측정 등에 사용
 ```python
@@ -218,7 +218,7 @@ tfidf_
 ### Cosine Similarity
 - BoW 기반 표현방법(DTM, TF-IDF), Word2Vec 등을 통해 문장을 벡터화
 - 두 벡터 간의 cosine 각도를 이용하여 두 벡터의 유사도를 측정<br>
-![Cosine Similarity](../Attatched/cosine_similarity.jpg)
+![Cosine Similarity](../../Attatched/cosine_similarity.jpg)
 ```python
 import numpy as np
 from numpy import dot
@@ -237,7 +237,7 @@ print('문서 2와 문서3의 유사도 :',cos_sim(doc2, doc3))
 ```
 ### Euclidean Distance
 - 공간에 위치한 두 점 p, q사이의 직선거리<br>
-![Euclidean Distance](../Attatched/euclidean_distance.jpg)
+![Euclidean Distance](../../Attatched/euclidean_distance.jpg)
 ```python
 import numpy as np
 
@@ -256,7 +256,7 @@ print('문서3과 문서Q의 거리 :',dist(doc3,docQ))
 
 ### Jaccard Similarity
 - 교집합을 갖는 서로 다른 집합 A, B에서 합집합에 대한 교집합의 비율
-![Jaccard Similarity](../Attatched/jaccard_similarity.jpg)
+![Jaccard Similarity](../../Attatched/jaccard_similarity.jpg)
 
-## [Machine_Learning](Machine_Learning.md)
-## [Deep_Learning](Deep_Learning.md)
+## [Machine_Learning](ML/Machine_Learning.md)
+## [Deep_Learning](ML/Deep_Learning.md)

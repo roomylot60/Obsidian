@@ -17,11 +17,11 @@
 - Sample : 종속 변수 y를 예측하는데 사용하는 독립 변수 x의 모음(행)
 - Feature : 종속 변수 y를 예측하는 데 사용하는 각각의 독립 젼수 x(열)
 - Confusion Matrix(혼동 행렬) : 머신 러닝에서 사용하는 참/거짓 데이터에 대해 예측한 참/거짓값을 행렬로 나타낸 것
-    * TP, FP, FN, TN ![혼동 행렬 값](../Attatched/TP,FP,FN,TN.jpg)
+    * TP, FP, FN, TN ![혼동 행렬 값](../../Attatched/TP,FP,FN,TN.jpg)
     * Precision(정밀도) : TP/(TP+FP)
     * Recall(재현율) : TP/(TP+FN)
     * Accuracy(정확도) : (TP+TN)/(TP+FN+FP+TN) -> 더 중요한 데이터의 수가 적을 때 부적절
-		![Confusion Matrix](../Attatched/Confusion_matrix.jpg)
+		![Confusion Matrix](../../Attatched/Confusion_matrix.jpg)
 ---
 ## Classification
 - Classification(분류) : 주어진 선택지(이산적인 범위)에 대한 답을 결정하는 알고리즘
@@ -38,13 +38,13 @@
     - Multiple LR
     - Hypothesis : weight(가중치)와 bias(편향)을 통해 x와 y간의 관계를 식으로 나타내는 것
     - Cost Function(비용 함수) : `w`와 `b`를 찾기 위해서 세운 실제값과 예측값의 오차를 계산하는 식
-    - Mean Squared Error; MSE(평균 제곱 오차) : 오차의 제곱합에 대한 평균 ![MSE](../Attatched/MSE.jpg)
+    - Mean Squared Error; MSE(평균 제곱 오차) : 오차의 제곱합에 대한 평균 ![MSE](../../Attatched/MSE.jpg)
     - Optimizer(최적화 알고리즘) : 비용 함수를 최소화 하는 매개 변수 w, b를 찾을 때 사용하는 알고리즘 (ex - Gradient Descent)
 ### Logistic Regression
 * Logistic Regression : BCF에 사용하는 알고리즘으로, 연속적인 범위의 입력에 대해 결과를 2가지로 출력
-    - **Sigmoid Function** : x, y간의 관계에서 y값이 0과 1사이의 값을 가지면서 S자 형태로 그려지는 함수 ![Sigmoid Function](../Attatched/sigmoid.jpg)
-    - **Cross Entropy** : 가중치 `w`를 최소로하는 비용함수를 만들 때, y값이 0일 때와 1일 때에 대한 값을 고려하여 생성한 Objective Function ![Cross Entropy](../Attatched/Cross_Entropy.jpg)
+    - **Sigmoid Function** : x, y간의 관계에서 y값이 0과 1사이의 값을 가지면서 S자 형태로 그려지는 함수 ![Sigmoid Function](../../Attatched/sigmoid.jpg)
+    - **Cross Entropy** : 가중치 `w`를 최소로하는 비용함수를 만들 때, y값이 0일 때와 1일 때에 대한 값을 고려하여 생성한 Objective Function ![Cross Entropy](../../Attatched/Cross_Entropy.jpg)
     
 ### Softmax Regression
 * Softmax Regression : 3개 이상의 선택지에 대한 다중 클래스 분류 문제에 사용
-    - Softmax Function : 선택지의 수 k에 대해 k차원의 벡터 z를 입력받아 각 클래스에 대한 확률을 추정 ![softmax Function](../Attatched/softmax.jpg)<br> 입력값으로 들어오는 독립변수 x의 차원수가 m 일 때, 이를 k 차원으로 축소시키는 작업이 필요(가중치 벡터 `m x k`)하고 이 때의 비용 함수는 Cross Entropy 함수 ![Cross Entropy in Softmax](../Attatched/Cross_Entropy_SF.jpg)
+    - Softmax Function : 선택지의 수 k에 대해 k차원의 벡터 z를 입력받아 각 클래스에 대한 확률을 추정 ![softmax Function](../../Attatched/softmax.jpg)<br> 입력값으로 들어오는 독립변수 x의 차원수가 m 일 때, 이를 k 차원으로 축소시키는 작업이 필요(가중치 벡터 `m x k`)하고 이 때의 비용 함수는 Cross Entropy 함수 ![Cross Entropy in Softmax](../../Attatched/Cross_Entropy_SF.jpg)
