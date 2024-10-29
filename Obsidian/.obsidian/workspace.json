@@ -11,8 +11,12 @@
             "id": "f0e1dd1541296a6e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Notes/TTS.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -61,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -83,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/TTS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/TTS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/TTS.md"
+              }
             }
           },
           {
@@ -158,8 +165,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "db15642cef95d071",
+  "active": "f0e1dd1541296a6e",
   "lastOpenFiles": [
+    "Notes/Untitled.md",
+    "Notes/TTS.md",
     "1.Daily/2024-10-06.md",
     "Notes/ML/Transformer.md",
     "Notes/ML/Sequence-to-Sequence.md",
@@ -178,7 +187,6 @@
     "Coding Test/탐색",
     "Attatched/Pasted image 20240903211216.png",
     "Attatched/Pasted image 20240903211047.png",
-    "Notes/Untitled.md",
     "Coding Test",
     "Paper/Attention Is All You Need (2017).md",
     "Paper/YourTTS - Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone.md",
@@ -190,7 +198,6 @@
     "Notes/Natural_Language_Processing.md",
     "Notes/Machine_Learning.md",
     "Notes/Long_Short-Term_Memory.md",
-    "Notes/Deep_Learning.md",
     "Notes/Attatched/Pasted image 20240827090127.png",
     "Notes/Attatched",
     "Error",
