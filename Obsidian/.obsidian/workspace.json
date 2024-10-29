@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d04d55ac864fdff8",
+        "id": "6908ba7d4ba40806",
         "type": "tabs",
         "children": [
           {
-            "id": "470c2f96daae3e20",
+            "id": "f0e1dd1541296a6e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1.Daily/2024-10-06.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -65,11 +61,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f8fe5afc0c615da",
@@ -85,7 +83,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.Daily/2024-10-06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +99,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1.Daily/2024-10-06.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +120,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "1.Daily/2024-10-06.md"
-              }
+              "state": {}
             }
           },
           {
@@ -146,7 +140,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -164,8 +158,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "470c2f96daae3e20",
+  "active": "db15642cef95d071",
   "lastOpenFiles": [
+    "1.Daily/2024-10-06.md",
     "Notes/ML/Transformer.md",
     "Notes/ML/Sequence-to-Sequence.md",
     "Notes/ML/Subword_Tokenizer.md",
@@ -179,7 +174,6 @@
     "Notes/ML/Attention_Machanism.md",
     "Notes/ML",
     "Error/2024-01-11.md",
-    "1.Daily/2024-10-06.md",
     "Coding Test/탐색/아이템_줍기.md",
     "Coding Test/탐색",
     "Attatched/Pasted image 20240903211216.png",
