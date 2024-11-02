@@ -18,8 +18,8 @@ import argparse
 
 # 프로젝트 라이브러리 import
 from hparams import defaults # hyperparameter 설정 : dictinoary 형태
-from model import Tacotron2
-from layers import TacotronSTFT, STFT
+from model import Tacotron2 # Pytorch 기반
+from layers import TacotronSTFT, STFT # STFT(Short Time Fourier Transform)
 from audio_processing import griffin_lim
 from tacotron2.train import load_model
 from text import text_to_sequence
