@@ -17,7 +17,7 @@ import os
 import argparse
 
 # 프로젝트 라이브러리 import
-from hparams import defaults
+from hparams import defaults # hyperparameter 설정 : dictinoary 형태
 from model import Tacotron2
 from layers import TacotronSTFT, STFT
 from audio_processing import griffin_lim
